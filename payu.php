@@ -15,7 +15,7 @@ $action = '';
 $posted = array();
 //echo "<pre>";
 if(!empty($_POST)) {
-   print_r($_POST);//die;
+ //  print_r($_POST);//die;
   foreach($_POST as $key => $value) {    
     $posted[$key] = $value; 
 	
@@ -82,7 +82,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
   </script>
   </head>
   <body onload="submitPayuForm()">
-    <h2>PayU Form</h2>
+    <div style="display:none;" class="form_div"><h2>PayU Form</h2>
     <br/>
     <?php if($formError) { ?>
 	
@@ -91,9 +91,9 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
       <br/>
     <?php } ?>
     <form action="<?php echo $action; ?>" method="post" name="payuForm">
-      <input type="hidden1" name="key" value="<?php echo $MERCHANT_KEY ?>" />
-      <input type="hidden1" name="hash" value="<?php echo $hash ?>"/>
-      <input type="hidden1" name="txnid" value="<?php echo $txnid ?>" />
+      <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
+      <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
+      <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
       <table>
         <tr>
           <td><b>Mandatory Parameters</b></td>
@@ -179,5 +179,9 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
         </tr>
       </table>
     </form>
+	</div>
+	<div class="loader">
+	Please wait...
+	</div>
   </body>
 </html>

@@ -11,9 +11,9 @@ $PAYU_BASE_URL = "https://test.payu.in";
 $action = '';
 
 $posted = array();
-echo "<pre>";
+//echo "<pre>";
 if(!empty($_POST)) {
-   print_r($_POST);//die;
+   //print_r($_POST);//die;
   foreach($_POST as $key => $value) {    
     $posted[$key] = $value; 
 	
@@ -31,7 +31,7 @@ if(empty($posted['txnid'])) {
 $hash = '';
 // Hash Sequence
 $hashSequence = "key|txnid|amount|productinfo|firstname|email|udf1|udf2|udf3|udf4|udf5|udf6|udf7|udf8|udf9|udf10";
-print_R( $posted);;//die;
+//print_R( $posted);;//die;
 if(empty($posted['hash']) && sizeof($posted) > 0) {
   if(
           empty($posted['key'])
@@ -80,7 +80,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
   </script>
   </head>
   <body onload="submitPayuForm()">
-    <h2>PayU Form</h2>
+   <div style="display:none;" class="form_div"> <h2>PayU Form</h2>
     <br/>
     <?php if($formError) { ?>
 	
@@ -177,5 +177,9 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
         </tr>
       </table>
     </form>
+	</div>
+	<div class="loader">
+		Please wait...
+	</div>
   </body>
 </html>
