@@ -14,13 +14,13 @@
     h1.heading{padding-top: 0px;}
     .col-sm-8{width: 100%;}
     .col-sm-8 .col-sm-8{width: initial;}
-	.bg{min-height: 475px;}
+	/*.bg{min-height: 475px;}*/
 }
 @media only screen and (max-width: 950px) {
-	.bg{min-height: 395px;}
+	/*.bg{min-height: 395px;}*/
 }
 @media only screen and (max-width: 850px) {
-	.bg{min-height: 345px;}
+	/*.bg{min-height: 345px;}*/
 }
 @media only screen  and (max-width: 767px){
     #about .col-sm-4{text-align: center;}
@@ -34,17 +34,17 @@
     .col-xs-1{width:20%;}
     .col-xs-11{width:80%;}
     .abt-arrow {display: none;}
-	.bg{min-height: 430px;}
+	.bg{min-height: 375px;}
 	
 }
 @media only screen and (max-width: 600px) {
-	.bg{min-height: 390px;}
+	.bg{min-height: 305px;}
 }
 @media only screen and (max-width: 550px) {
-	.bg{min-height: 320;}
+	.bg{min-height: 275px;}
 }
 @media only screen and (max-width: 500px) {
-	.bg{min-height: 295px;}
+	.bg{min-height: 255px;}
 }
 @media only screen and (max-width: 440px) {
     .bg{background:url('../images/bg4.jpg') no-repeat top; background-size:100%;padding-top:30px;}
@@ -53,19 +53,17 @@
     .col-sm-8{padding-right:0px;}
     .heading{padding-top: 50px;margin-bottom: 20px;font-family: 'Source Sans Pro'; font-size:25px; line-height:21px;font-weight: bold;color:#ffffff;}
     .heading1{margin-bottom: 20px;font-family: 'Source Sans Pro'; font-size:25px; line-height:15px;color:#ffffff;}  
-	.bg{min-height: 255px;}
+	.bg{min-height: 225px;}
 }
 @media only screen and (max-width: 414px){
-	.bg{background:url('../images/bg5.jpg') no-repeat top; background-size:100%;padding-top:30px;}
-    
     .aftersales-bg {border-top: 5px solid #f8a605;}
-	.bg{min-height: 195px;}
+	.bg{min-height: 175px;}
 }
 @media only screen and (max-width:384px) {
     .bg{padding-top: 20px;}
     .horgange{font-size: 33px;}
     .hwhite{font-size: 15px;}
-	 .bg{min-height: 186px;}
+	 .bg{min-height: 187px;}
 }
 @media only screen and (max-width:360px) {
     .bg{padding-top: 15px;}
@@ -73,6 +71,6 @@
 }
 @media only screen and (max-width:320px) {
     .or{color:#ffffff;font-size:20px; margin-left:130px; text-align:center;}
-    .bg{min-height: 165px;}
+    .bg{min-height: 145px;}
     .bg-text {font-size: 16px;}
 }
