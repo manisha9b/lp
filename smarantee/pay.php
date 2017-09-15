@@ -11,7 +11,7 @@
 	$name=$_POST['name'];
 	$email=$_POST['email'];
     $phone=$_POST['contact'];
-    $Brand='karbonn smarantee';
+    $Brand='smarantee1';
    // $frmtype="SSP_float";
    // $source=$_POST['source'];
 	$city=$_POST['city'];

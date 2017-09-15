@@ -50,7 +50,7 @@ $order_no = "";
 			
     	
     	<div class="clear"></div>
-    	<nav class="navbar navbar-default top-nav-collapse" role="navigation" >
+    	<!-- <nav class="navbar navbar-default top-nav-collapse" role="navigation" >
 	        <div class="container">
 	            <div class="navbar-header page-scroll">
 	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -59,13 +59,10 @@ $order_no = "";
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <!--<a class="navbar-head"><img src="images/ssp.png" title="SSP Advantage" align="middle"></a>-->
 	            </div>
  
-	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse navbar-ex1-collapse">
 	                <ul class="nav navbar-nav">
-	                    <li> </li><!-- Hidden li included to remove active class from about link when scrolled up past about section -->
 	                    <li class="hidden">
 	                        <a class="page-scroll" href="#page-top"></a>
 	                    </li>
@@ -73,16 +70,19 @@ $order_no = "";
 	                </ul>
 	                <div style="float:right; padding-top:17px; margin-right:80px;"> <img src="images/Karbonn_logo.png" width="105px" /></div>
 	            </div>
-	            <!-- /.navbar-collapse -->
 	        </div>
-	        <!-- /.container -->
-		</nav>
+		</nav> -->
 	    <!--  main wrapper -->
-	   
+			
            <section id="thankyou" class="main-row no-pb">
 	    	<div class="container">
 		    	<div class="row">
-	    			<div class="col-sm-8">
+	    			<div class="col-sm-3 col-sm-offset-4">
+						<a href="<?php echo WEBSITE_URL;?>"><img src="images/Karbonn_logo.png" width="105px" class="center-block" />
+					</div>
+				</div>
+					<div class="row">
+	    			<div class="col-sm-8 col-sm-offset-3">
 	    				<div>
 	    					<br/><br/>
 	    					Dear <?php echo $_SESSION['firstname']; ?>,<br/><br/>
@@ -90,16 +90,16 @@ $order_no = "";
 							if($_SESSION['ord_status']==1){
 								echo "Thank You. Your order status is place successfully<br/><br/>";
 							    echo "Your Transaction ID for this transaction is ".$_SESSION['txnid'].".<br/><br/>";
-							    echo "We have received a payment of Rs. " .$_SESSION['amount'] . ".<br/><br/>";
+							    echo "We have received a payment of Rs. " .$_SESSION['amount'] . ".";
 							}
 							else
 							{
 								echo "Your transaction is failed .Please try again later.<br/><br/>";
 								echo "Your transaction transaction id for this transaction is".$_SESSION['txnid'];
 							}
-							//unset($_SESSION['ord_status']);
-							//unset($_SESSION['txnid']);
-							//unset($_SESSION['amount']);
+							unset($_SESSION['ord_status']);
+							unset($_SESSION['txnid']);
+							unset($_SESSION['amount']);
 		  
 		  ?>
 		    			</div>
@@ -110,29 +110,13 @@ $order_no = "";
            <section id="invoice"  class="main-row no-pb">
 		   <div class="container" style="min-height:230px;">
 		    	<div class="row">
-	    			<div class="col-sm-8">
+	    			<div class="col-sm-8 col-sm-offset-3">
 		   <?php if($_SESSION['ord_status']==1){include_once('invoice.php');}?>
 		   </div>
 	    			</div>
 		    	</div>
 		   </section>
-	  <footer>
-	    	<div class="container">
-	    		<div class="row">
-	    			<div class="col-sm-12 no-padding">
-	    				<div class="col-sm-9 ftext">
-	    					&copy;  <?php echo date('Y'); ?>   All Rights Reserved
-                              
-	    				</div>
-	    				<div class="col-sm-3">
-	    					<div class="text-right" >
-	                            
-	    					</div>
-	    				</div>
-	    			</div>
-	    		</div>
-	    	</div>		
-	    </footer>
+	 
 	    <script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.min.js"></script>

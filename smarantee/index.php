@@ -97,7 +97,7 @@ else
 										<div class="col-sm-12">
 											<div class="col-sm-6">
 												<div class="frmfield">
-													<input type="text" name="city" maxlength="100" id="df_city"  value="" placeholder="city*" />
+													<input type="text" name="city" maxlength="100" id="df_city"  value="" placeholder="City*" />
 													
 												</div>	
 											</div>
@@ -217,7 +217,7 @@ else
 		                    		</div>
                                     <div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="city" maxlength="100" id="df2_city"  value="" placeholder="city*" />
+		                    				<input type="text" name="city" maxlength="100" id="df2_city"  value="" placeholder="City*" />
                                             
 		                    			</div>	
 		                    		</div>
@@ -268,7 +268,7 @@ else
 	                    				</div>							
 	                    				</div>	-->			
 										
-	                    			</div>									
+	                    											
 		                    		<div>
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
@@ -280,7 +280,8 @@ else
 			                    		<div class="col-sm-6">
 			                    			<div class="frmfield">
 			                    				<input type="text" maxlength="3" name="captchya1" id="captchya1" autocomplete="off" oncopy="return false;" onpaste="return false;" oncut="return false;" onmouseleave="CheckCapchac1(this.value)" onKeyUp="CheckCapchac1(this.value)" onMouseUp="CheckCapchac1(this.value)" onKeyPress="CheckCapchac1(this.value)" placeholder="Verify Code*" value=""   />
-			                    			</div>
+											
+											</div>
 			                    		</div>
 			                    		<div class="clear"></div>
 		                    		</div>
@@ -293,6 +294,7 @@ else
 		                    			<div class="clear"></div>
 		                    		</div>
 								</form>	
+								</div>	
 								<div class="clear"></div>
 		    				</div>
 		    			</div>
