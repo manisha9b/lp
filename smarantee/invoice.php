@@ -51,11 +51,7 @@ width:5%;
 <h1>Invoice</h1>
 <p>
 <table class="pdf_invoice_heading_table">
-<tbody>
-	<tr><th>Invoice No.</th><td>[wcj_invoice_number]</td></tr>
-	<tr><th>Invoice Date</th><td><?php echo $invoice_date;?></td></tr>
-	<tr><th>Order No.</th><td><?php echo str_pad((string)$order_no, 6, "0", STR_PAD_LEFT)?></td></tr>
-</tbody>
+<tbody>	<tr><th>Invoice No.</th><td><?php echo str_pad((string)$order_no, 6, "0", STR_PAD_LEFT)?></td></tr>	<tr><th>Invoice Date</th><td><?php echo $invoice_date;?></td></tr>	<tr><th>Order No.</th><td><?php echo str_pad((string)$order_no, 6, "0", STR_PAD_LEFT)?></td></tr></tbody>
 </table>
 </p>
 <p>
@@ -92,7 +88,7 @@ width:5%;
 	
 	<tr><th>CGST @ 9%</th><td>18.99</td></tr>
         <tr><th>SGST @ 9%</th><td>18.99</td></tr>
-	<tr><th>Order Total</th><td>248.98</td></tr>
+	<tr><th>Order Total</th><td><?php echo $_SESSION['amount'];?></td></tr>
 </tbody>
 </table>
 </p>

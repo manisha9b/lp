@@ -57,8 +57,8 @@ else
 	    <!--  main wrapper -->
 	    <section>
 	    	<div class="wrapper container1" id="section_bg" >
-		    	<div class="row" style="
-    background-color: #FDC70D;
+		    	<div class="col-sm-8" style="
+    background-color: #FDC70D;padding-left:0;padding-right:0;
 ">
 		    		<div class="col-sm-8" style="
     padding-right: 0px;
