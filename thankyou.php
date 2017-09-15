@@ -50,7 +50,7 @@ $order_no = "";
 			
     	
     	<div class="clear"></div>
-    	<nav class="navbar navbar-default top-nav-collapse" role="navigation">
+    	<nav class="navbar navbar-default top-nav-collapse" role="navigation" >
 	        <div class="container">
 	            <div class="navbar-header page-scroll">
 	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -92,6 +92,11 @@ $order_no = "";
 							    echo "Your Transaction ID for this transaction is ".$_SESSION['txnid'].".<br/><br/>";
 							    echo "We have received a payment of Rs. " .$_SESSION['amount'] . ".<br/><br/>";
 							}
+							else
+							{
+								echo "Your transaction is failed .Please try again later.<br/><br/>";
+								echo "Your transaction transaction id for this transaction is".$_SESSION['txnid'];
+							}
 							//unset($_SESSION['ord_status']);
 							//unset($_SESSION['txnid']);
 							//unset($_SESSION['amount']);
@@ -103,10 +108,10 @@ $order_no = "";
 	    	</div>
 	    </section>
            <section id="invoice"  class="main-row no-pb">
-		   <div class="container">
+		   <div class="container" style="min-height:230px;">
 		    	<div class="row">
 	    			<div class="col-sm-8">
-		   <?php include_once('invoice.php')?>
+		   <?php if($_SESSION['ord_status']==1){include_once('invoice.php');}?>
 		   </div>
 	    			</div>
 		    	</div>

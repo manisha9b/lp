@@ -54,7 +54,7 @@ width:5%;
 <tbody>
 	<tr><th>Invoice No.</th><td>[wcj_invoice_number]</td></tr>
 	<tr><th>Invoice Date</th><td><?php echo $invoice_date;?></td></tr>
-	<tr><th>Order No.</th><td><?php echo str_pad((string)$number, $width, "0", STR_PAD_LEFT)?></td></tr>
+	<tr><th>Order No.</th><td><?php echo str_pad((string)$order_no, 6, "0", STR_PAD_LEFT)?></td></tr>
 </tbody>
 </table>
 </p>
