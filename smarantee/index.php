@@ -44,7 +44,7 @@ else
 		</style>
 	</head>
     
-	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" cz-shortcut-listen="true" style="">
 		<header id="header">
 			<div class="container">
 				
@@ -53,45 +53,23 @@ else
 			
     	
     	<div class="clear"></div>
-    	<nav class="navbar navbar-default top-nav-collapse" role="navigation">
-	        <div class="container">
-	            <div class="navbar-header page-scroll">
-	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-	                <!--<a class="navbar-head"><img src="images/ssp.png" title="SSP Advantage" align="middle"></a>-->	                
-	           </div>
- 
-	            <!-- Collect the nav links, forms, and other content for toggling -->
-	            <div class="collapse navbar-collapse navbar-ex1-collapse">
-	                <ul class="nav navbar-nav">
-	                    <li> </li><!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-	                    <li class="hidden">
-	                        <a class="page-scroll" href="#page-top"></a>
-	                    </li>
-	                    
-	                </ul>
-                   <div style="float:right; padding-top:17px; margin-right:80px;"> <img src="images/Karbonn_logo.png" width="105px" /></div>
-	            </div>
-	            <!-- /.navbar-collapse -->
-                
-	        </div>
-            
-	        <!-- /.container -->
-		</nav>
+    	
 	    <!--  main wrapper -->
-	    <section class="bg">
-	    	<div class="container" id="section_bg">
-		    	<div class="row">
-		    		 
-		    		<div id="dpfrm" class="col-sm-4" style="float:right">
+	    <section>
+	    	<div class="wrapper container1" id="section_bg" >
+		    	<div class="row" style="
+    background-color: #FDC70D;
+">
+		    		<div class="col-sm-8" style="
+    padding-right: 0px;
+">
+					<img src="images/banner.jpg" class="img-responsive"> 
+					</div>
+		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #1B242D;padding-left: 0px;">
 		    			<div class="formbg">
 		    				<h3 class="text-center fw-b">Buy NOW</h3>
 		    				<div class="heading_f text-center">
-		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;Call us on 1800-120-2177<br/>Or Fill in the Form
+		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;Call us on 1800-120-2177<br>Or Fill in the Form
 		    				</div>
 		    				<div class="fform">
 		    					<form name="DetailForm" id="DetailForm" method="post">
@@ -146,7 +124,7 @@ else
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												<select name="price" id="price"  /> 
+												<select name="price" id="price"> 
 													<option value="">Price Range</option>
 													<option value="Above_5000">Above 5000</option>
 													<option value="Below_5000">Below 5000</option>
@@ -180,14 +158,14 @@ else
 			                    		</div>
 			                    		<div class="col-sm-6">
 			                    			<div class="frmfield">
-			                    				<input type="text" maxlength="3" name="captchya" id="captchya" autocomplete="off" oncopy="return false;" onpaste="return false;" oncut="return false;" onmouseleave="CheckCapchac(this.value)" onKeyUp="CheckCapchac(this.value)" onMouseUp="CheckCapchac(this.value)" onKeyPress="CheckCapchac(this.value)" placeholder="Verify Code*" value=""  />
+			                    				<input type="text" maxlength="3" name="captchya" id="captchya" autocomplete="off" oncopy="return false;" onpaste="return false;" oncut="return false;" onmouseleave="CheckCapchac(this.value)" onkeyup="CheckCapchac(this.value)" onmouseup="CheckCapchac(this.value)" onkeypress="CheckCapchac(this.value)" placeholder="Verify Code*" value="">
 			                    			</div>
 			                    		</div>
 			                    		<div class="clear"></div>
 		                    		</div>
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
-		                    				<div class="frmfield" >
+		                    				<div class="frmfield">
 		                    					<input type="button" value="Buy Now" name="submit1" onClick="return validate()"  >
 		                    				</div>	
 		                    			</div>
@@ -199,13 +177,14 @@ else
 		    			</div>
 		    		</div>
 		    		<div class="clear"></div>
-		    		<div class="padding-20 no-pt"></div>
+		    		
 		    	</div>	
 	    	</div>
 	    </section>
        
         
         <section id="resfrm" class="responsiveform">
+
 	    	<div class="container">
 		    	<div class="row">
 	    			<div class="col-sm-8">
@@ -319,18 +298,31 @@ else
 		    			</div>
 	    			</div>
 		    	</div>
-	    	</div>
+	    	
 	    </section>
-      <footer>
+       <section id="aftersales" class="aftersales-bg">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-sm-8 aftersales1">
+	    				<h1 class="hblue" style="color:#FFFFFF;">
+							SMARANTEE 
+	    				</h1>
+						<span class="horgange">@ Rs. 499/- </span><span class="hwhite"></span>
+                       </div>
+                 </div>
+           </div>
+        </section>
+	  
+	  <footer>
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-sm-12 no-padding">
-	    				<div class="col-sm-9 ftext">
+	    				<div class="col-sm-9 ftext" style="text-align:center;">
 	    					&copy;  <?php echo date('Y'); ?>   All Rights Reserved
                               
 	    				</div>
 	    				<div class="col-sm-3">
-	    					<div class="text-right" >
+	    					<div class="text-right">
 	                         
 	    					</div>
 	    				</div>
@@ -376,5 +368,5 @@ else
 		Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
 		-->
 
-	</body>
+</body>
 </html>
