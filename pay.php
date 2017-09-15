@@ -11,13 +11,13 @@
 	$name=$_POST['name'];
 	$email=$_POST['email'];
     $phone=$_POST['contact'];
-    $Brand=$_POST['Brand'];
+    $Brand='karbonn';
    // $frmtype="SSP_float";
    // $source=$_POST['source'];
 	$city=$_POST['city'];
 	$model=$_POST['model'];
 	$imei_no=$_POST['imei_no'];
-	$amount=$_POST['amount'] = 1;
+	$amount= 1;
 	$p_range=$_POST['price'];
 	/*$_POST['productinfo'] = $_POST['Brand'];
 	$_POST['udf1'] = $_POST['model'];

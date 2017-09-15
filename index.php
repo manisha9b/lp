@@ -120,17 +120,21 @@ else
 		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email*" />
 		                    			</div>	
 		                    		</div>
-                                    <div class="col-sm-6">
-		                    			<div class="frmfield">
-		                    				<input type="text" name="city" maxlength="100" id="df_city"  value="" placeholder="city*" />
-                                            
-		                    			</div>	
-		                    		</div>
-	                    			<div class="col-sm-6">
+									<div class="row">	
+										<div class="col-sm-12">
+											<div class="col-sm-6">
+												<div class="frmfield">
+													<input type="text" name="city" maxlength="100" id="df_city"  value="" placeholder="city*" />
+													
+												</div>	
+											</div>
+										</div>
+									</div>
+	                    			<!-- <div class="col-sm-6">
                           				<div class="frmfield">
                           					<input type="text" name="Brand" maxlength="100" id="Brand"  value="Karbonn" readonly />
                           				</div>
-	                    			</div>
+	                    			</div> -->
 									<div class="col-sm-6">
 		                    			<div class="frmfield">
 		                    				<input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" />
@@ -158,7 +162,7 @@ else
 										</div>
 										</div>
 										</div>
-										<div class="row">	
+										<!-- <div class="row">	
 											<div class="col-sm-12">										
 											<div class="col-sm-6 text-right">
 												Amount :
@@ -170,7 +174,7 @@ else
 												</div>	
 											</div>							
 	                    				</div>							
-	                    				</div>							
+	                    				</div>	-->						
 		                    		<div>
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
@@ -254,11 +258,11 @@ else
                                             
 		                    			</div>	
 		                    		</div>
-	                    			<div class="col-sm-6">
+	                    			<!-- <div class="col-sm-6">
                           				<div class="frmfield">
                           					<input type="text" name="Brand" maxlength="100" id="Brand"  value="Karbaan" readonly />
                           				</div>
-	                    			</div>
+	                    			</div> -->
 									<div class="col-sm-6">
 		                    			<div class="frmfield">
 		                    				<input type="text" name="model" maxlength="100" id="df2_model"  value="" placeholder="Model*" />
@@ -287,7 +291,7 @@ else
 										</div>
 										</div>
 										</div>
-										<div class="row">	
+										<!-- <div class="row">	
 											<div class="col-sm-12">										
 											<div class="col-sm-6 ">
 												Amount :
@@ -299,7 +303,7 @@ else
 												</div>	
 											</div>							
 	                    				</div>							
-	                    				</div>				
+	                    				</div>	-->			
 										
 	                    			</div>									
 		                    		<div>

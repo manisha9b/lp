@@ -576,14 +576,14 @@ function validate()
 
 	}//email validation	
 	
-	if(document.DetailForm.Brand.value=="Brand*" || document.DetailForm.Brand.value=="")
+	/*if(document.DetailForm.Brand.value=="Brand*" || document.DetailForm.Brand.value=="")
 	{
 		alt_null();
 		document.getElementById("alt_error").style.display="block";
 	    document.getElementById("alt_error").innerHTML="Please Select Your Mobile Brand";
 		document.DetailForm.Brand.focus();
 		return false;
-	}
+	}*/
 	
 	//city 
 	var city = trim($("#df_city").val());
@@ -945,14 +945,14 @@ function validate1()
 			return false;
 		}
 		//---------model end----------
-	if(document.DetailFormres.Brand.value=="Brand*" || document.DetailFormres.Brand.value=="")
+	/*if(document.DetailFormres.Brand.value=="Brand*" || document.DetailFormres.Brand.value=="")
 	{
 		alt_null();
 		document.getElementById("alt_error1").style.display="block";
 	    document.getElementById("alt_error1").innerHTML="Please Select Your Mobile Brand";
 		document.DetailFormres.Brand.focus();
 		return false;
-	}
+	}*/
 	//---Secutrity Code ----
 	if (document.DetailFormres.captchya1.value=="" || document.DetailFormres.captchya1.value=="Verify Code*")
 	{

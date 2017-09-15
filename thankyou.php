@@ -1,5 +1,7 @@
 <?php
 session_start();
+include("includes/connectdb.php");
+	include_once("includes/define.php");
 if (isset($_GET["sourcetype"]))
 {
 	$_SESSION["sourcetype"]=$_GET["sourcetype"];
@@ -12,6 +14,15 @@ else
 {
 	$source="Adwords";	
 }
+$invoice_date = "";
+$order_no = "";
+ $select_query="select ord_id,DATE_FORMAT(udate,'%d, %M %Y') AS invoice_date from orders where transaction_id = '".$_SESSION['txnid']."'";		
+			$query = mysql_query($select_query);
+			if ($query) {
+				$r = mysql_fetch_assoc($query);
+				$invoice_date = $r['invoice_date'];
+				$order_no = $r['ord_id'];
+			}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -60,46 +71,14 @@ else
 	                    </li>
 	                   
 	                </ul>
-	                <div style="float:right; padding-top:17px; margin-right:80px;"> <img src="images/logo1.png" width="105px" /></div>
+	                <div style="float:right; padding-top:17px; margin-right:80px;"> <img src="images/Karbonn_logo.png" width="105px" /></div>
 	            </div>
 	            <!-- /.navbar-collapse -->
 	        </div>
 	        <!-- /.container -->
 		</nav>
 	    <!--  main wrapper -->
-	    <section class="bg">
-	    	<div class="container">
-		    	<div class="row">
-		    		<div class="col-sm-8">
-		    			<img src="images/ssp.png" />
-		    			<h1 class="heading">
-		    				The Smart Addition
-		    			</h1>
-                        <h1 class="heading1">to your Smartphone</h1><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"></i> <span class="bg-text">Doorstep Inspection, Pickup & Drop</span><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"> </i> <span class="bg-text">Genuine Assessment for your Device</span><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"></i> <span class="bg-text">FREE Antivirus Coupon worth Rs. 500/-</span><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"></i> <span class="bg-text">Genuine Quotation</span>
-                       	<div class="padding-50"></div>
-		    		</div>
-		    		
-		    		<div class="clear"></div>
-		    		<div class="padding-20 no-pt"></div>
-		    	</div>	
-	    	</div>
-	    </section>
-        <section id="aftersales"  class="aftersales-bg">
-	    	<div class="container" >
-	    		<div class="row">
-	    			<div class="col-sm-8 aftersales1">
-	    				<h1 class="hblue" style="color:#FFFFFF;">
-							SMART After Sales Solutions for your Smartphone
-	    				</h1>
-						<span class="horgange">@ Rs. 249/- </span><span class="hwhite">(for the Whole Year!)</span>
-                       </div>
-                 </div>
-           </div>
-        </section>
+	   
            <section id="thankyou" class="main-row no-pb">
 	    	<div class="container">
 		    	<div class="row">
@@ -113,9 +92,9 @@ else
 							    echo "Your Transaction ID for this transaction is ".$_SESSION['txnid'].".<br/><br/>";
 							    echo "We have received a payment of Rs. " .$_SESSION['amount'] . ".<br/><br/>";
 							}
-							unset($_SESSION['ord_status']);
-							unset($_SESSION['txnid']);
-							unset($_SESSION['amount']);
+							//unset($_SESSION['ord_status']);
+							//unset($_SESSION['txnid']);
+							//unset($_SESSION['amount']);
 		  
 		  ?>
 		    			</div>
@@ -123,7 +102,15 @@ else
 		    	</div>
 	    	</div>
 	    </section>
-           
+           <section id="invoice"  class="main-row no-pb">
+		   <div class="container">
+		    	<div class="row">
+	    			<div class="col-sm-8">
+		   <?php include_once('invoice.php')?>
+		   </div>
+	    			</div>
+		    	</div>
+		   </section>
 	  <footer>
 	    	<div class="container">
 	    		<div class="row">

@@ -48,7 +48,7 @@ If (isset($_POST["additionalCharges"])) {
 			//echo $query."";
 			if ($query) {
 				$r = mysql_fetch_array($query);
-				$ord_id = mysql_insert_id()	;
+				$ord_id = $r['ord_id']	;
 				 $insert_query="INSERT INTO `order_log` (`ord_id`, `cdate`,status) VALUES
 								( '".$ord_id."',  now(),1);";		
 				mysql_query($insert_query);
