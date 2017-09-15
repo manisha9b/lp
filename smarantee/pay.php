@@ -61,7 +61,7 @@
   </head>
   <body onload="submitPayuForm()">
 <form action="PayUMoney_form.php"  name="payuForm" method=POST >
-<input type="hidden" name="key"value="rjQUPktU" />
+<input type="hidden" name="key"value="<?php echo PAYU_KEY;?>" />
 <input type="hidden" name="hash_string" value="" />
 <input type="hidden" name="hash" />
 <input type="hidden" name="txnid" value="<?php echo $txnid;?>"/>

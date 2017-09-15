@@ -78,7 +78,7 @@ $order_no = "";
 	    	<div class="container">
 		    	<div class="row">
 	    			<div class="col-sm-3 col-sm-offset-4">
-						<a href="<?php echo WEBSITE_URL;?>"><img src="images/Karbonn_logo.png" width="105px" class="center-block" />
+						<a href="<?php echo WEBSITE_URL;?>"><img src="images/Karbonn_logo.png" width="105px" class="center-block" /></a>
 					</div>
 				</div>
 					<div class="row">
@@ -97,9 +97,7 @@ $order_no = "";
 								echo "Your transaction is failed .Please try again later.<br/><br/>";
 								echo "Your transaction transaction id for this transaction is".$_SESSION['txnid'];
 							}
-							unset($_SESSION['ord_status']);
-							unset($_SESSION['txnid']);
-							unset($_SESSION['amount']);
+							
 		  
 		  ?>
 		    			</div>
@@ -111,7 +109,11 @@ $order_no = "";
 		   <div class="container" style="min-height:230px;">
 		    	<div class="row">
 	    			<div class="col-sm-8 col-sm-offset-3">
-		   <?php if($_SESSION['ord_status']==1){include_once('invoice.php');}?>
+		   <?php if($_SESSION['ord_status']==1){include_once('invoice.php');}
+		   //unset($_SESSION['ord_status']);
+			//				unset($_SESSION['txnid']);
+			//				unset($_SESSION['amount']);
+		   ?>
 		   </div>
 	    			</div>
 		    	</div>
