@@ -11,13 +11,13 @@
 	$name=$_POST['name'];
 	$email=$_POST['email'];
     $phone=$_POST['contact'];
-    $Brand='smarantee1';
+    $Brand='smarantee2';
    // $frmtype="SSP_float";
    // $source=$_POST['source'];
 	$city=$_POST['city'];
 	$model=$_POST['model'];
 	$imei_no=$_POST['imei_no'];
-	$amount= 499;
+	$amount= 899;
 	$p_range=$_POST['price'];
 	/*$_POST['productinfo'] = $_POST['Brand'];
 	$_POST['udf1'] = $_POST['model'];

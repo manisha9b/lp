@@ -309,7 +309,7 @@ else
 	    				<h1 class="hblue" style="color:#FFFFFF;">
 							SMARANTEE 
 	    				</h1>
-						<span class="horgange">@ Rs. 499/- </span><span class="hwhite"></span>
+						<span class="horgange">@ Rs. 899/- </span><span class="hwhite"></span>
                        </div>
                  </div>
            </div>
