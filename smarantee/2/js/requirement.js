@@ -677,7 +677,7 @@ function validate1()
 		alt_null1();	
 		document.getElementById("alt_error1").style.display="block";
         document.getElementById("alt_error1").innerHTML="Please Enter Your Name";
-		alert("hello");
+		//alert("hello");
 		document.DetailFormres.name.focus();
 		return false;
 	}

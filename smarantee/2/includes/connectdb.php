@@ -1,5 +1,5 @@
 <?php
- $connectionflg =2;
+ $connectionflg =1;
   global $DB_HOST,$DB_USER,$DB_PASS;
   
   if($connectionflg == 1)
