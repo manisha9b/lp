@@ -1,5 +1,6 @@
 <?php
 session_start();
+//print_r($_SESSION);
 include("includes/connectdb.php");
 	include_once("includes/define.php");
 if (isset($_GET["sourcetype"]))
@@ -110,9 +111,11 @@ $order_no = "";
 		    	<div class="row">
 	    			<div class="col-sm-8 col-sm-offset-3">
 		   <?php if($_SESSION['ord_status']==1){include_once('invoice.php');}
-		   //unset($_SESSION['ord_status']);
-			//				unset($_SESSION['txnid']);
-			//				unset($_SESSION['amount']);
+		   unset($_SESSION['ord_status']);
+							unset($_SESSION['txnid']);
+							unset($_SESSION['firstname']);
+							unset($_SESSION['amount']);
+							unset($_SESSION['otp_uid']);
 		   ?>
 		   </div>
 	    			</div>
