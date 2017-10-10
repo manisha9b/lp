@@ -9,7 +9,7 @@
 	$city=$_POST['city'];
 	$model=$_POST['model'];
 	$imei_no=$_POST['imei_no'];
-	$amount= 499;
+	$amount= BRAND_PRICE;
 	//$p_range=$_POST['price'];
 	$purchase_date_arr=explode('/',$_POST['purchase_date']);;
 	$purchase_date = $purchase_date_arr['2'].'-'.$purchase_date_arr['1'].'-'.$purchase_date_arr['0'];

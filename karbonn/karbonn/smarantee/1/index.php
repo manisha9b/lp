@@ -1,6 +1,10 @@
 <?php
 session_start();
-unset($_SESSION['otp_uid']);
+		   unset($_SESSION['ord_status']);
+							unset($_SESSION['txnid']);
+							unset($_SESSION['firstname']);
+							unset($_SESSION['amount']);
+							unset($_SESSION['otp_uid']);
 if (isset($_GET["sourcetype"]))
 {
 	$_SESSION["sourcetype"]=$_GET["sourcetype"];
@@ -436,7 +440,7 @@ else
 	    				<h1 class="hblue text-center" style="color:#FFFFFF;">
 							SMARANTEE 
 	    				</h1><center>
-						<span class="horgange">@ ₹ 499/- </span><span class="hwhite"></span></center>
+						<span class="horgange">@ ₹ <?php echo BRAND_PRICE;?>/- </span><span class="hwhite"></span></center>
                        </div>
                  </div>
            </div>
@@ -466,7 +470,7 @@ else
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
-		<script type="text/javascript" src="js/requirement.js"></script>
+		<script type="text/javascript" src="js/requirement.js?v=0.0001"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.smoothscroll').on('click', function(){
