@@ -70,7 +70,7 @@ else
 	    	<div class="wrapper container" id="section_bg" >
 		    	<div class="row" style="background-color: #FDC70D;">
 		    		<div class="col-md-8" style="padding-right: 0px; padding-left:0px;">
-					<img src="images/banner_final-5.jpg" class="img-responsive"> 
+					<img src="images/banner_final-6.jpg" class="img-responsive"> 
 					</div>
 		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #1B242D;padding-left: 1%;">
 		    			<div class="formbg">
@@ -470,7 +470,7 @@ else
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
-		<script type="text/javascript" src="js/requirement.js"></script>
+		<script type="text/javascript" src="js/requirement.js?v=0.0001"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.smoothscroll').on('click', function(){
