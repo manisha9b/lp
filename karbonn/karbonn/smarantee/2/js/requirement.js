@@ -1380,18 +1380,17 @@ function validate()
 	DetailForm.submit1.disabled = true;
 
     DetailForm.submit1.value = "Please wait...";
-
-	document.DetailForm.action = "pay.php";
-
-	document.DetailForm.submit();
+//alert($("#cod").is(':checked'));
+			if($("#cod").is(':checked')){			codForm(1,'#DetailForm');		}else{	document.DetailForm.action = "pay.php";	document.DetailForm.submit();		}
 
 }
-
+	function codForm(div_no,form_id){		var myData = $(form_id).serialize();		//alert(myData);		jQuery.ajax({			type: "POST",			url: "otp.php",			 dataType: "json",			data:myData,			success:function(response){				if(response.uid!='')				{				$("#DetailForm_div"+div_no).hide();				$("#cod_div"+div_no).show();				$("#uid"+div_no).val(response.uid);				}			},		});		}			function resendOTP(div_no){			var myData = $("#cod_form"+div_no).serialize();
+			myData = myData+"&resend=1";			//alert(myData);			jQuery.ajax({				type: "POST",				url: "otp.php",				 dataType: "json",				data:myData,				success:function(response){					if(response.uid!='')					{					//$("#DetailForm_div"+div_no).hide();					//$("#cod_div"+div_no).show();					$("#uid"+div_no).val(response.uid);					}				},			});		}		function validateOtp(div_no){			var myData = $("#cod_form"+div_no).serialize();			//alert(myData);			jQuery.ajax({				type: "POST",				url: "otp.php",				 dataType: "json",				data:myData,				success:function(response){					if(response.verified=='1')					{						window.location= 'thankyou.php';					}else{						$("#msg"+div_no).html(response.msg);					}				},			});		}
 function validate1()
 
 {
 
-	
+	//alert("hello");
 
 	if (document.DetailFormres.name.value=="Name*" || document.DetailFormres.name.value=="")
 
@@ -1924,12 +1923,12 @@ function validate1()
 			return_success = false;
 
 	}
-
+//alert(return_success);
 	if(!return_success){
 
-			document.getElementById("alt_error").style.display="block";
+			document.getElementById("alt_error1").style.display="block";
 
-            document.getElementById("alt_error").innerHTML=error_msg;			
+            document.getElementById("alt_error1").innerHTML=error_msg;			
 
 	        $("#df2_model").focus();
 
@@ -1938,27 +1937,11 @@ function validate1()
 			return false;
 
 		}
+//alert("i am heee");
 
-		//---------model end----------
-
-	/*if(document.DetailFormres.Brand.value=="Brand*" || document.DetailFormres.Brand.value=="")
-
-	{
-
-		alt_null();
-
-		document.getElementById("alt_error1").style.display="block";
-
-	    document.getElementById("alt_error1").innerHTML="Please Select Your Mobile Brand";
-
-		document.DetailFormres.Brand.focus();
-
-		return false;
-
-	}*/
 
 	var imei_no = trim($("#df2_imei_no").val());
-
+//alert(imei_no);
 	var error_msg = "";
 
 	var return_success = true;
@@ -1977,9 +1960,9 @@ function validate1()
 
 	if(!return_success){
 
-			document.getElementById("alt_error").style.display="block";
+			document.getElementById("alt_error1").style.display="block";
 
-            document.getElementById("alt_error").innerHTML=error_msg;			
+            document.getElementById("alt_error1").innerHTML=error_msg;			
 
 	        $("#df2_imei_no").focus();
 
@@ -1988,16 +1971,17 @@ function validate1()
 			return false;
 
 		}
-var strcnt2=mytext.length;
+var strcnt2=imei_no.length;
+//alert(strcnt2)
 		if(strcnt2!=15)
 
 		{
 
 			alt_null1();
 
-			document.getElementById("alt_error").style.display="block";
+			document.getElementById("alt_error1").style.display="block";
 
-			document.getElementById("alt_error").innerHTML="Enter 15 IMEI No.";
+			document.getElementById("alt_error1").innerHTML="Enter 15 IMEI No.";
 
  $("#df2_imei_no").focus();
 
@@ -2007,7 +1991,7 @@ var strcnt2=mytext.length;
 
 		}
 	//---Secutrity Code ----
-
+//alert("I am here");
 	if (document.DetailFormres.captchya1.value=="" || document.DetailFormres.captchya1.value=="Verify Code*")
 
 	{
@@ -2023,9 +2007,9 @@ var strcnt2=mytext.length;
 		return false;
 
 	}else{
-
+//alert("hi");
 		CheckCapchac1(document.DetailFormres.captchya1.value);
-
+//alert(document.DetailFormres.ccodec1.value!="OK");
 		if(document.DetailFormres.ccodec1.value!="OK")
 
 		{
@@ -2049,10 +2033,17 @@ var strcnt2=mytext.length;
 	DetailFormres.submit1.disabled = true;
 
     DetailFormres.submit1.value = "Please wait...";
-
+//alert($("#cod2").is(':checked'));
+			if($("#cod2").is(':checked')){
+			codForm(2,'#DetailFormres');
+		}else{
 	document.DetailFormres.action = "pay.php";
 
 	document.DetailFormres.submit();
+		}
+//	document.DetailFormres.action = "pay.php";
+
+//	document.DetailFormres.submit();
 
 }
 
