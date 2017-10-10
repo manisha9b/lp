@@ -6,7 +6,7 @@ define("FAILURE_URL",WEBSITE_URL.'/payu/failure.php');
 define("PAYU_SALT","e5iIg1jwi8");
 define("PAYU_KEY","rjQUPktU");
 define("PAYU_URL","https://test.payu.in");
-define("BRAND_PRICE",899);
+define("BRAND_PRICE",400);
 define("BRAND_NAME",'ezeeassure1');
 /*define("PAYU_SALT","qL2jVYYrvL");
 define("PAYU_KEY","llRZqSU5");
