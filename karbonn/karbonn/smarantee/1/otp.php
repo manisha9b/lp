@@ -4,6 +4,10 @@
 
 	include("includes/connectdb.php");
 	include_once("includes/define.php");
+	
+	if(isset($_POST['resend'])){
+		unset($_POST['verify_otp']);
+	}
 	if(isset($_POST['verify_otp'])){
 		$otp = isset($_POST['otp'])?$_POST['otp']:'';
 		$uid = isset($_POST['uid'])?$_POST['uid']:'';
@@ -29,7 +33,7 @@
 					$r = mysql_fetch_array($query);
 					$ord_id = $r['ord_id']	;
 					$query = mysql_query($select_query); 
-					$update_query="update `orders` set status = 1, udate = NOW() where ord_id = '".$ord_id."'";	
+					$update_query="update `orders` set status = 1,msg = 'OTP Verified', udate = NOW() where ord_id = '".$ord_id."'";	
 					mysql_query($update_query);					
 					 $insert_query="INSERT INTO `order_log` (`ord_id`, `cdate`,status) VALUES
 									( '".$ord_id."',  now(),1);";		
@@ -45,24 +49,33 @@
 		echo json_encode($return);
 		
 	}else{
-		
+	//	print_r($_POST);
 		if(isset($_POST['resend'])){
-			$user_id = $_SESSION['otp_uid'] ;
+			
+			$user_id = $_POST['uid'] ;
+			
 		}else{
 			include('submit_user.php');
 			$update_query="update `orders` set payment_mode = 'cod', udate = NOW() where ord_id = '".$ord_id."'";	
 					mysql_query($update_query);
 			$_SESSION['txnid'] = $txnid;					
 			$_SESSION['firstname'] = $name;					
-			$_SESSION['amount'] = $amount;					
+			$_SESSION['amount'] = $amount;		
+			$_SESSION['otp_uid'] = $user_id;			
 		}
 		$_SESSION['ord_status'] = 0;
+		$sql = "UPDATE `tbl_otp` SET `is_active`='0' WHERE  `user_id`=$user_id";
+		mysql_query($sql);	
+		if(isset($_SESSION['otp_uid'])){
+				$sql = "UPDATE `tbl_otp` SET `is_active`='0' WHERE  `user_id`=".$_SESSION['otp_uid'];
+				mysql_query($sql);
+		}
 		$otp = rand(100000,999999);
 		$sql = "INSERT INTO `tbl_otp` (`otp`, `cdate`, `exptime`, `user_id`) VALUES ($otp , NOW(), SUBDATE(NOW(),INTERVAL -10 Minute), $user_id);";
 		mysql_query($sql);
 	//	$return['otp'] = $otp;
 		$return['uid'] = $user_id;
-		$_SESSION['otp_uid'] = $user_id;
+		
 		//print_r($_SESSION);
 		echo json_encode($return);
 	}

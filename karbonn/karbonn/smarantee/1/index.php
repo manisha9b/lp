@@ -13,6 +13,10 @@ else
 {
 	$source="Adwords";	
 }
+	include("includes/connectdb.php");
+	include_once("includes/define.php");
+	$model_result = getModelLess();
+	$model_options = $model_result['html'];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -71,7 +75,7 @@ else
 		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;Call us on 1800-120-2177<br>Or Fill in the form
 		    				</div>
 		    				<div class="fform">
-		    				<div  id="DetailForm_div1" style="display:none;">
+		    				<div  id="DetailForm_div1" style="display:block;">
 		    					<form name="DetailForm" id="DetailForm" method="post">
 									<input type="hidden" name="source" value="<?=$source?>" />
 									<input type="hidden" name="ccodec" id="ccodeidc" value="" />
@@ -90,7 +94,7 @@ else
 		                    		</div>
 		                    		<div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email*" />
+		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email" />
 		                    			</div>	
 		                    		</div>
 									<div class="row">	
@@ -110,8 +114,11 @@ else
 	                    			</div> -->
 									<div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" />
-                                            
+		                    				<!-- <input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" /> -->
+											<select name="model" id="df_model">
+											<option value="">Select Model</option>
+											<?php echo $model_options;?>
+                                            </select>
 		                    			</div>	
 		                    		</div>
 	                    			<div class="col-sm-6">
@@ -197,9 +204,9 @@ else
 								<div class="clear"></div>
 								</div>
 		    				
-		    				<div id="cod_div1" style="display:block;min-height:350px;">
+		    				<div id="cod_div1" style="display:none;min-height:350px;">
 							<form name="cod_form1" id="cod_form1" method="post">
-							<input type="hidden" name="uid" id="uid" value="" />
+							<input type="hidden" name="uid" id="uid1" value="" />
 							<input type="hidden" name="verify_otp" value="1" />
 									<div class="row-margin-top">
 	                    				&nbsp;
@@ -216,7 +223,7 @@ else
 	                    			</div>
 	                    			</div>
 									
-                                    <div class="col-sm-12"><div id="alt_error" class="errormsg" style="display: block;padding-bottom:10px"><div id="msg1"></div></div></div>
+                                    <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg1"></div></div></div></div>
                                    <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
                                     <div class="col-sm-12">
                                     <div class="col-sm-6">
@@ -249,7 +256,8 @@ else
 		    				<h4 class="text-center">
 		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; Call us on 1800-120-2177<br/>Or Fill in the form
 		    				</h4>
-		    				<div class="fform" id="DetailForm_div2">
+		    				<div class="fform" >
+		    				<div  id="DetailForm_div2">
 		    					<form name="DetailFormres" id="DetailFormres" method="post">
 									<input type="hidden" name="source" value="<?=$source?>" />
 									<input type="hidden" name="ccodec1" id="ccodeidc1" value="" />
@@ -271,41 +279,52 @@ else
 		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email*" />
 		                    			</div>	
 		                    		</div>
+									<div class="row">	
+										<div class="col-sm-12">
                                     <div class="col-sm-6">
 		                    			<div class="frmfield">
 		                    				<input type="text" name="city" maxlength="100" id="df2_city"  value="" placeholder="City*" />
                                             
 		                    			</div>	
 		                    		</div>
+									</div>	
+		                    		</div>
 	                    			<!-- <div class="col-sm-6">
                           				<div class="frmfield">
                           					<input type="text" name="Brand" maxlength="100" id="Brand"  value="Karbaan" readonly />
                           				</div>
 	                    			</div> -->
+
 									<div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="model" maxlength="100" id="df2_model"  value="" placeholder="Model*" />
-                                            
+		                    				<!-- <input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" /> -->
+											<select name="model" id="df2_model">
+											<option value="">Select Model</option>
+											<?php echo $model_options;?>
+                                            </select>
 		                    			</div>	
 		                    		</div>
 	                    			<div class="col-sm-6">
                           				<div class="frmfield">
-                          					<input type="text" name="imei_no" maxlength="100" id="imei_no"  value="" placeholder="IMEI No." />
+                          					<input type="text" name="imei_no" maxlength="100" id="df2_imei_no"  value="" placeholder="IMEI No." />
                           				</div>
 	                    			</div>
-									
-										<div class="row">	
+	<div class="row">	
 									<div class="col-sm-12">
+									
+											<!-- <label for="inputEmail3" class="col-sm-6 control-label">Date of Purchase</label> -->
+	                    				
+												      
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
+											
+										
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												<select name="price" id="price"  /> 
-													<option value="">Price Range</option>
-													<option value="Above_5000">Above 5000</option>
-													<option value="Below_5000">Below 5000</option>
-												 
-												
-												</select>
+												      <input type="text" name="purchase_date" maxlength="100" id="datepicker2"  value="" placeholder="Purchase Date" />
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
 											</div>	
 										</div>
 										</div>
@@ -366,7 +385,42 @@ else
 		                    			</div>
 		                    			<div class="clear"></div>
 		                    		</div>
-								</form>	
+								</form>
+
+							
+								</div>
+<div id="cod_div2" style="display:none;">
+							<form name="cod_form2" id="cod_form2" method="post">
+							<input type="hidden" name="uid" id="uid2" value="" />
+							<input type="hidden" name="verify_otp" value="1" />
+									<div class="row-margin-top">
+	                    				&nbsp;
+	                    			</div>
+						
+								<div class="col-sm-12">
+								<div class="col-sm-8">
+	                    				<div class="frmfield">
+	                    					<input type="text" name="otp" maxlength="50" id="otp1" onKeyPress="return validData(event,'num')" value="" placeholder="OTP*" />
+	                    				</div>	
+	                    			</div>
+									<div class="col-sm-4">
+	                    				<a href="javascript:void(0);" onClick="resendOTP(2);">Resend OTP</a>
+	                    			</div>
+	                    			</div>
+									
+                                    <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg2"></div></div></div></div>
+                                   <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
+                                    <div class="col-sm-12">
+                                    <div class="col-sm-6">
+		                    			<div class="frmfield">
+	                          					<input type="button" value="Verify OTP" name="submit_otp2" name="submit_otp2" style="font-size:18px;  height:28px; background:#fdc70d;" onClick="return validateOtp(2)"  >
+	                          				</div>
+		                    		</div>
+		                    		</div>
+									
+		                    		
+							</form>
+		    				</div>								
 								</div>	
 								<div class="clear"></div>
 		    				</div>
@@ -446,6 +500,11 @@ else
 		<script>
   $(function () {
 		 $('#datepicker').datepicker({
+			  autoclose: true,
+			   format: 'dd/mm/yyyy'
+			});
+		
+	$('#datepicker2').datepicker({
 			  autoclose: true,
 			   format: 'dd/mm/yyyy'
 			});
