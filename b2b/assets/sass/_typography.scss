@@ -1,0 +1,91 @@
+/*------------------------------------------------
+                TYPOGRAPHY
+-------------------------------------------------*/
+
+body {
+    font-family: $body-font;
+    font-size: $font-size-default;
+    color: $body-color;
+    line-height: $default-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    color: $heading-color;
+    line-height: $default-line-height;
+    font-weight: $font-weight-700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: $font-size-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+}
+
+h3 {
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+}
+
+h5 {
+    font-size: $font-size-h5;
+    font-weight: $font-weight-600;
+}
+
+h6 {
+    font-size: $font-size-h6;
+    font-weight: $font-weight-600;
+}
+
+a {
+    font-family: $heading-font;
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+        color: #222;
+    }
+
+    img {
+        border: none;
+    }
+}
+
+a:hover, a:visited, a:focus {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    border: none !important;
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}

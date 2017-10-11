@@ -1,0 +1,95 @@
+/*------------------------------------------------
+                APPOINTMENT AREA
+-------------------------------------------------*/
+
+/*=========== Accordion ===========
+-----------------------------------*/
+.appointment-area {
+    padding-top: 50px;
+}
+
+.hospital-department {
+    padding-right: 50px;
+
+    .panel-group {
+        .panel {
+            border: inherit;
+
+            .panel-heading {
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .panel-title {
+
+                a {
+                    i {
+                        margin-right: 20px;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .panel-collapse {
+            > .panel-body {
+                border: inherit;
+                overflow: hidden;
+                line-height: 24px;
+
+                img {
+                    width: 150px;
+                    height: auto;
+                }
+
+                .pull-left {
+                    margin-right: 20px;
+                }
+
+                .pull-right {
+                    margin-left: 20px;
+                }
+
+                @media #{$smallMobileScreen} {
+                    padding: 10px 0;
+                    line-height: 20px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .row-margin-top {
+        margin-top: 30px;
+    }
+}
+
+/*=========== Appointment Form ===========
+-----------------------------------------*/
+
+.appointment-form {
+    .form-group {
+        .form-control {
+            height: 45px;
+            color: #777;
+            border-radius: 0px;
+
+            &:focus {
+                border-color: $primary-color;
+            }
+        }
+
+        textarea.form-control {
+            height: auto;
+            resize: inherit;
+        }
+    }
+
+    .row-margin-top {
+        margin-top: 30px;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+}

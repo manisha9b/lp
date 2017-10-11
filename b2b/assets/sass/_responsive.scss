@@ -1,0 +1,233 @@
+/*
+***************************************************************
+            Responsive Css
+***************************************************************
+
+    
+*======================================= -->
+* Medium Screen [992px into 1280px]
+*======================================= -->
+*/
+
+@media #{$mediumScreen} {
+    .header-top-area {
+        span {
+            margin-right: 5px;
+        }
+    }
+
+    .main-menu-area {
+        ul.navbar-nav {
+            > li {
+                > a {
+                    padding: 29px 15px;
+                }
+            }
+        }
+    }
+
+    .hospital-department {
+        padding-right: 7px;
+    }
+
+    .padding-right-20 {
+        padding-right: 0;
+    }
+}
+
+/*
+*======================================= -->
+* Tablet Screen [768px into 991px]
+*======================================= -->
+*/
+
+@media #{$tabletScreen} {
+    .header-top-area {
+        span {
+            margin-right: 8px;
+            margin-bottom: 15px;
+        }
+
+        .text-right {
+            text-align: center;
+        }
+
+        .header-right-content {}
+    }
+
+    .main-menu-area {
+        ul.navbar-nav {
+            > li {
+                > a {
+                    padding: 22px 7px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .video-img, .appointment-form, .counter, .single-widget {
+        margin-top: 30px;
+    }
+
+    .video-img img {
+        margin: 0 auto;
+    }
+
+    .section-heading p, .hospital-department, .padding-right-20 {
+        padding: 0;
+    }
+
+    .service-area {
+        .section-heading p {
+            padding: 0;
+        }
+    }
+
+    .text-right {
+        text-align: inherit;
+    }
+
+    .best-img {
+        margin: 30px 0;
+    }
+
+    .happy-patients, .logo {
+        text-align: center;
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+/*
+*======================================= -->
+* Mobile Screen [320px into 767px]
+*======================================= -->
+*/
+
+@media #{$smallMobileScreen} {
+    /*====== Css For Bootstrap Navbar =============
+    ===============================================*/
+    .navbar {
+        min-height: 0;
+    }
+
+    .navbar-nav {
+        margin: 0;
+        position: relative;
+        background-color: $primary-color;
+        z-index: 99;
+    }
+
+    .navbar-toggle {
+        border: 1px solid $primary-color;
+        margin-top: -45px;
+        margin-right: 0;
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: $primary-color;
+    }
+
+    .navbar-collapse {
+        border-top: 0px solid;
+        box-shadow: inherit;
+    }
+
+    .navbar-collapse.in {
+        min-height: 375px;
+    }
+
+    .header-top-area {
+        text-align: center;
+
+        span {
+            margin: 0 5px 5px 0;
+            font-size: 11px;
+
+            i {
+                font-size: 12px;
+            }
+        }
+
+        .text-right {
+            text-align: center;
+        }
+    }
+
+    .btn {
+        padding: 0 1.5rem;
+    }
+
+    .btn, .white-btn {
+        font-size: 14px;
+    }
+
+    .section-padding-100 {
+        padding: 50px 0;
+    }
+
+    .video-img, .appointment-form, .counter, .single-widget {
+        margin-top: 30px;
+    }
+
+    .video-img img {
+        margin: 0 auto;
+    }
+
+    .section-heading p, .hospital-department, .best-img, .padding-right-20 {
+        padding: 0;
+    }
+
+    .section-heading {
+        h3 {
+            font-size: 21px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+
+    .service-area {
+        .section-heading p {
+            padding: 0;
+        }
+    }
+
+    .text-right {
+        text-align: inherit;
+    }
+
+    .best-img {
+        margin: 30px 0;
+    }
+
+    .hospital-department h3 {
+        font-size: 21px;
+    }
+
+    .row-margin-top {
+        margin-top: 40px;
+    }
+}
+
+/*
+*======================================= -->
+* Wide Mobile Screen [480px into 767px]
+*======================================= -->
+*/
+
+@media #{$wideMobileScreen} {
+    .header-top-area {
+        text-align: center;
+
+        span {
+            font-size: 13px;
+        }
+    }
+}

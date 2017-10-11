@@ -1,0 +1,77 @@
+//$colors: "34A853, 0aacbf 52BED9 D05141 34495e 8e44ad 2ecc71 e74c3c 16a085 d35400 F94B71 455A64 3F51B5";
+
+//-------------------- Google Font ----------------------//
+//=======================================================//
+$body-font: 'Roboto', sans-serif;
+$heading-font: "Raleway", sans-serif;
+
+//-------------------- Line Height ----------------------//
+//=======================================================//
+
+$default-line-height: 1.7em;
+$content-line-height: 1.7em;
+
+//----------------------- Color -------------------------//
+//=======================================================//
+
+$body-color: #666;
+$heading-color: #333;
+$primary-color: #0D6B9A;
+
+// Primary Color is your Template/Theme color     //
+$button-color: $primary-color;
+
+// You may need to edit your button color.Default is Primary Color     //
+$white-color: #fff;
+
+// You may need to edit your button color.Default is Primary Color     //
+
+//--------------------- Font Size -----------------------//
+//=======================================================//
+
+$font-size-default: 14px;
+$font-size-h1: 48px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: $font-size-default;
+$font-size-h6: 12px;
+
+//------------------- Font Weight -----------------------//
+//=======================================================//
+
+$font-weight-700: 100;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+
+//---------------------- Helper -------------------------//
+//=======================================================//
+
+$section-padding-100: 80px;
+$row-margin-top: 70px;
+
+//-------------------- Responsive -----------------------//
+//=======================================================//
+
+$mediumScreen: "only screen and (min-width: 992px) and (max-width: 1280px)";
+$tabletScreen: "only screen and (min-width: 768px) and (max-width: 991px)";
+$smallMobileScreen: "only screen and (max-width: 767px)";
+$wideMobileScreen: "only screen and (min-width: 480px) and (max-width: 767px)";
+
+//-------------------- Background -----------------------//
+//=======================================================//
+$slide-bg-img-1: "../img/slide-bg-1.jpg";
+$slide-bg-img-2: "../img/slide-bg-2.jpg";
+$slide-bg-img-3: "../img/cta-bg.jpg";
+$cta-bg-img: "../img/cta-bg.jpg";
+$counter-bg-img: "../img/cta-bg.jpg";
+
+//-------------- Footer Overlay Control -----------------//
+//=======================================================//
+
+$footer-overlay-height:auto;
+
+// support value are: auto / 100% / any custom height. It should be in px (415px)//

@@ -1,0 +1,92 @@
+/*------------------------------------------------
+                COUNTER AREA
+-------------------------------------------------*/
+
+.counter-area {
+    padding: 60px 0;
+
+    @extend .relative;
+
+    background-image: url($counter-bg-img);
+
+    @extend .background;
+
+    background-position: inherit;
+    color: $white-color;
+
+    &:before {
+        @extend .absolute;
+
+        background-color: rgba($primary-color, 0.8);
+        color: $white-color;
+    }
+
+    .happy-patients {
+        margin-top: 50px;
+
+        @media #{$smallMobileScreen} {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 35px;
+            color: $white-color;
+
+            @media #{$smallMobileScreen} {
+                font-size: 22px;
+            }
+        }
+
+        .counter-btn {
+            @extend .white-btn;
+        }
+    }
+
+    .counter {
+        overflow: hidden;
+
+        .single-counter {
+            width: 50%;
+            float: left;
+            overflow: hidden;
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+            padding: 10px 20px;
+
+            @media #{$smallMobileScreen} {
+                padding: 10px 5px;
+            }
+
+            h2 {
+                color: $white-color;
+                margin: 5px 0;
+                font-size: 35px;
+            }
+
+            p {
+                text-transform: capitalize;
+            }
+
+            i {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 35px;
+                margin: 0 auto;
+            }
+
+            &:last-child {
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+            }
+
+            &:nth-child(2n+3) {
+                border-bottom: 1px solid transparent;
+            }
+
+            &:nth-child(2n+2) {
+                border-right: 1px solid transparent;
+            }
+        }
+    }
+}

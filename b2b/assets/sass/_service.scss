@@ -1,0 +1,62 @@
+/*------------------------------------------------
+                SERVICES AREA
+-------------------------------------------------*/
+
+.service-area {
+    background-image: url(../img/pattern-bg.png);
+
+    @extend .background;
+
+    background-size: inherit;
+    background-repeat: repeat;
+
+    .row-margin-top > div {
+        padding: 0;
+    }
+
+    .section-heading p {
+        font-size: 15px;
+        padding: 0 180px;
+        line-height: 24px;
+    }
+
+    .single-service-item {
+        background-color: #fff;
+        padding: 30px 25px 20px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+
+        @include transition(all 0.4s ease);
+        @include boxShadow(0 0 10px rgba(0, 0, 0, 0.1));
+
+        i {
+			width: 45px;
+			height: 45px;
+			line-height: 51px;
+            font-size: 45px;
+            margin-bottom: 6px;
+            color: $primary-color;
+        }
+
+        &:hover {
+            @include boxShadow(0 0 10px rgba(0, 0, 0, 0.2));
+
+            background-color: $primary-color;
+            color: $white-color;
+        }
+
+        &:hover i, &:hover h4 {
+            color: $white-color;
+        }
+
+        h4 {
+            margin: 8px;
+            font-weight: 600;
+        }
+		
+		p {
+			line-height: 24px;
+		}
+		
+    }
+}

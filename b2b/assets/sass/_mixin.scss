@@ -1,0 +1,44 @@
+//----------------------- Mixin ------------------------//
+//=======================================================//
+
+@mixin transition($val) {
+    -webkit-transition: $val;
+    -moz-transition: $val;
+    -o-transition: $val;
+    transition: $val;
+}
+
+@mixin boxShadow($val) {
+    -moz-box-shadow: $val;
+    -webkit-box-shadow: $val;
+    box-shadow: $val;
+}
+
+@mixin boxShadowAll($val, $val2, $val3) {
+    -moz-box-shadow: $val, $val2, $val3;
+    -webkit-box-shadow: $val, $val2, $val3;
+    box-shadow: $val, $val2, $val3;
+}
+
+@mixin translateY($val) {
+    -webkit-transform: translateY($val);
+    -ms-transform: translateY($val);
+    transform: translateY($val);
+}
+
+@mixin scaleY($val) {
+    -webkit-transform: scaleY($val);
+    -ms-transform: scaleY($val);
+    transform: scaleY($val);
+}
+
+@mixin scaleX($val) {
+    -webkit-transform: scaleX($val);
+    -ms-transform: scaleX($val);
+    transform: scaleX($val);
+}
+
+@mixin animationDelay($val) {
+    -webkit-animation-delay: $val;
+    animation-delay: $val;
+}

@@ -1,0 +1,116 @@
+/*------------------------------------------------
+                GALLERY AREA
+-------------------------------------------------*/
+
+.gallery-area {
+    background-image: url(../img/pattern-bg.png);
+
+    @extend .background;
+
+    background-repeat: repeat;
+    background-size: inherit;
+
+    @include boxShadow(0 0 10px rgba(0, 0, 0, 0.1));
+
+    .gallery-content > div {
+        padding: 0;
+    }
+
+    .single-gallery-item {
+        @extend .relative;
+
+        &:before {
+            @extend .absolute;
+
+            background-color: rgba($primary-color, 0.8);
+            opacity: 0;
+            visiblity: hidden;
+
+            @include transition(all 0.35s linear 0s);
+        }
+
+        .gallery-text {
+            position: absolute;
+            top: 35px;
+            left: 30px;
+            width: calc(100% - 60px);
+            height: calc(100% - 70px);
+            padding: 15px;
+            color: $white-color;
+
+            &:before, &:after {
+                @extend .absolute;
+
+                right: 0;
+                bottom: 0;
+            }
+
+            &:before, &:after, h4, span {
+                opacity: 0;
+                visiblity: hidden;
+
+                @include transition(all 0.35s linear 0s);
+            }
+
+            &:before {
+                border-top: 1px double $white-color;
+                border-bottom: 1px double $white-color;
+
+                @include scaleX(0);
+            }
+
+            &:after {
+                border-left: 1px double $white-color;
+                border-right: 1px double $white-color;
+
+                @include scaleY(0);
+            }
+
+            h4 {
+                color: $white-color;
+                margin-top: 70px;
+
+                @media #{$mediumScreen} {
+                    margin-top: 45px;
+                }
+
+                @media #{$smallMobileScreen} {
+                    margin-top: 45px;
+                }
+
+                @media #{$wideMobileScreen} {
+                    margin-top: 70px;
+                }
+
+                margin-bottom: 5px;
+
+                @include translateY(100px);
+            }
+
+            span {
+                color: $white-color;
+                display: block;
+                letter-spacing: .5px;
+
+                @include translateY(-100px);
+            }
+        }
+
+        &:hover .gallery-text h4, &:hover .gallery-text span {
+            @include translateY(0px);
+        }
+
+        &:hover .gallery-text:before, &:hover .gallery-text:after, &:hover .gallery-text h4, &:hover .gallery-text span, &:hover:before {
+            opacity: 1;
+            visiblity: visible;
+        }
+
+        &:hover .gallery-text:before {
+            @include scaleX(1);
+        }
+
+        &:hover .gallery-text:after {
+            @include scaleY(1);
+        }
+    }
+}
