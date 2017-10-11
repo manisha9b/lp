@@ -1,0 +1,222 @@
+/*------------------------------------------------
+                SLIDER AREA
+-------------------------------------------------*/
+
+.single-slide-item, .video {
+    height: 630px;
+
+    @media #{$mediumScreen} {
+        height: 550px;
+    }
+    @media #{$tabletScreen} {
+        height: 425px;
+    }
+
+    @media #{$smallMobileScreen} {
+        height: 320px;
+    }
+
+    @extend .relative;
+
+    @extend .background;
+
+    background-position: inherit;
+
+    &:before {
+        @extend .absolute;
+
+        background-color: rgba($primary-color, 0.60);
+    }
+
+    .slide-displayTable {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide-diplayTableCell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    h3, h1, p {
+        color: $white-color;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        color: $white-color;
+
+        @include animationDelay(0.5s);
+
+        @media #{$smallMobileScreen} {
+            font-size: 13px;
+            letter-spacing: .5px;
+        }
+    }
+
+    h1 {
+        font-size: 46px;
+        text-transform: capitalize;
+        line-height: 1.2em;
+        margin: 10px 0;
+
+        @include animationDelay(1.2s);
+
+        @media #{$mediumScreen} {
+            font-size: 48px;
+        }
+		
+        @media #{$smallMobileScreen} {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 28px;
+        letter-spacing: .3px;
+
+        @include animationDelay(2s);
+
+        @media #{$smallMobileScreen} {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    .slide-btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+        letter-spacing: .5px;
+        @include animationDelay(2.9s);
+		
+		@media #{$smallMobileScreen} {
+            margin-top: 10px;
+        }
+    }
+}
+
+.slide-bg-1 {
+    background-image: url($slide-bg-img-1);
+}
+
+.slide-bg-2 {
+    background-image: url($slide-bg-img-2);
+}
+
+.slide-bg-3 {
+    background-image: url($slide-bg-img-3);
+}
+
+/**
+ * Fade effect for carousel
+ */
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+.slider-wrapper {
+    .carousel-indicators {
+        bottom: 50px;
+
+        @media #{$tabletScreen} {
+            bottom: 20px;
+        }
+        @media #{$smallMobileScreen} {
+            bottom: 5px;
+        }
+
+        @media #{$wideMobileScreen} {
+            bottom: 5px;
+        }
+
+        > li {
+            width: 35px;
+            height: 5px;
+            margin: 3px;
+            background-color: $white-color;
+            border: 0px solid transparent;
+            border-radius: 0;
+
+            &.active {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    .slider-nav {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        line-height: 47px;
+        background: $white-color;
+        color: $primary-color;
+        text-align: center;
+        font-size: 45px;
+        top: 50%;
+        margin-top: -40px;
+        z-index: 99;
+
+        @include transition(0.25s);
+
+        opacity: 0;
+        visibility: hidden;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
+    }
+
+    &:hover .slider-nav {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:hover .left {
+        left: 35px;
+    }
+
+    &:hover .right {
+        right: 35px;
+    }
+}
+
+.video {
+    background-color: inherit;
+}

@@ -1,0 +1,191 @@
+/*------------------------------------------------
+                HELPER
+-------------------------------------------------*/
+.container .row {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 0;
+}
+
+.section-padding-100 {
+    padding: $section-padding-100 0;
+    @media #{$tabletScreen} {
+        padding: 50px 0;
+    }
+}
+
+.row-margin-top {
+    margin-top: $row-margin-top;
+}
+
+.padding-right-20 {
+    padding-right: 20px;
+}
+
+.section-heading h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    letter-spacing: .5px;
+}
+
+.section-heading p {
+    font-size: 16px;
+    letter-spacing: .2px;
+    padding: 0 150px;
+    line-height: 26px;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.background {
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.btn, .btn-large, .btn-flat {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border-top: 1px solid transparent;
+    font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
+
+    @include transition(0.2s ease-out);
+    @include boxShadowAll(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
+	
+	@media #{$smallMobileScreen} {
+		height: 35px;
+		line-height: 35px;
+	}
+    &:hover {
+        border-top: 1px solid $primary-color;
+        color: $primary-color;
+        background-color: transparent;
+        @include boxShadowAll(0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2));
+    }
+}
+
+.btn {
+    background-color: $primary-color;
+}
+
+.btn-large {
+    height: 54px;
+    line-height: 54px;
+    &:hover {
+        background-color: transparent;
+        @include boxShadowAll(0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2));
+    }
+}
+
+
+.btn:focus, .btn-large:focus, .btn-floating:focus {
+    background-color: $primary-color;
+    color: #fff;
+}
+
+.white-btn {
+    color: $primary-color;
+    background-color: #fff;
+    font-size: 16px;
+    margin-top: 30px;
+    font-weight: 600;
+	@media #{$smallMobileScreen} {
+		font-size: 13px;
+	}
+    &:hover {
+        background-color: $primary-color;
+        color: #fff;
+    }
+
+    i {
+        font-size: 17px;
+        margin-left: 5px;
+    }
+}
+
+span {
+    color: $primary-color;
+}
+
+nav {
+    background-color: transparent;
+
+    @include boxShadow(inherit);
+}
+
+.navbar {
+    margin: 0;
+    border: inherit;
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: inherit;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover,
+nav ul li.active {
+    background-color: transparent;
+}
+
+.material-icons {
+    font-size: 14px;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+
+/*
+============ Preloader Area ===========
+=======================================
+*/
+
+.site-preloader-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #fff;
+
+    .site-preloader {
+        background-image: url(../img/preloader.GIF);
+        width: 64px;
+        height: 64px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        margin-top: -32px;
+        margin-left: -32px;
+    }
+}

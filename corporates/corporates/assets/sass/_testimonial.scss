@@ -1,0 +1,55 @@
+/*------------------------------------------------
+                TESTIMONIAL AREA
+-------------------------------------------------*/
+.testimonial-area {
+    background-image: url(../img/pattern-bg.png);
+
+    @extend .background;
+
+    background-size: inherit;
+    background-repeat: repeat;
+
+    .single-testimonial {
+        .width-circle {
+            width: 85px;
+            height: 85px;
+            padding: 5px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid $primary-color;
+            border-radius: 50%;
+
+            > img {
+                border-radius: 50%;
+            }
+        }
+
+        .width-square {
+            width: 85px;
+            height: 85px;
+            padding: 5px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid $primary-color;
+        }
+
+        p {
+            margin: 40px 0;
+            font-size: 16px;
+			@media #{$mediumScreen} {
+				font-size: 14px;
+			}
+            line-height: 26px;
+        }
+
+        h4 {
+
+            small {
+                display: block;
+                color: $primary-color;
+                margin-top: 5px;
+				font-weight: 600;
+            }
+        }
+    }
+}

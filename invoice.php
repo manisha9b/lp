@@ -52,7 +52,7 @@ width:5%;
 <p>
 <table class="pdf_invoice_heading_table">
 <tbody>
-	<tr><th>Invoice No.</th><td>[wcj_invoice_number]</td></tr>
+	<tr><th>Invoice No.</th><td><?php echo str_pad((string)$order_no, 6, "0", STR_PAD_LEFT)?></td></tr>
 	<tr><th>Invoice Date</th><td><?php echo $invoice_date;?></td></tr>
 	<tr><th>Order No.</th><td><?php echo str_pad((string)$order_no, 6, "0", STR_PAD_LEFT)?></td></tr>
 </tbody>
@@ -63,7 +63,7 @@ width:5%;
 <tbody>
 	<tr><th>Seller</th><th>Buyer</th></tr>
 	<tr><td>PICKME ESOLUTIONS PVT LTD<br>Unit No.210, Second Floor, Quantum Tower, OFF S.V Road,
-<br>Near Chincholi Pathak, Malad West, Mumbai - 400064.<br></td><td>[wcj_order_billing_address]</td></tr>
+<br>Near Chincholi Pathak, Malad West, Mumbai - 400064.<br></td><td>-</td></tr>
 </tbody>
 </table>
 </p>
@@ -82,7 +82,7 @@ width:5%;
         <td style="width:55%">ZMCN 249</td>
         <td style="width:20%">9985</td>
         <td style="width:15%">1</td>
-        <td style="text-align:right">211</td>
+        <td style="text-align:right"><?php echo $_SESSION['amount'];?></td>
 </tr>
 </tbody>
 </table>
@@ -92,7 +92,7 @@ width:5%;
 	
 	<tr><th>CGST @ 9%</th><td>18.99</td></tr>
         <tr><th>SGST @ 9%</th><td>18.99</td></tr>
-	<tr><th>Order Total</th><td>248.98</td></tr>
+	<tr><th>Order Total</th><td><?php echo $_SESSION['amount'];?></td></tr>
 </tbody>
 </table>
 </p>

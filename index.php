@@ -37,6 +37,11 @@ else
 		  ga('send', 'pageview');
 
 		</script>
+		<style>
+		.none{
+			display:none;
+		}
+		</style>
 	</head>
     
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
@@ -81,17 +86,7 @@ else
 	    <section class="bg">
 	    	<div class="container" id="section_bg">
 		    	<div class="row">
-		    		 <div class="col-sm-8">
-                    	<img src="images/Karbonn_logo2.png" />
-		    			<h1 class="heading">
-		    				The Smart Addition
-		    			</h1>
-                        <h1 class="heading1">to your Smartphone</h1><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"></i> <span class="bg-text">Doorstep Inspection, Pickup & Drop</span><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"> </i> <span class="bg-text">Genuine Assessment for your Device</span><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"></i> <span class="bg-text">FREE Antivirus Coupon worth Rs. 500/-</span><br/><br/>
-                       	<i class="fa fa-check" aria-hidden="true" style="color:#f5bb4c;font-size: 25px;"></i> <span class="bg-text">Genuine Quotation</span>
-		    		</div>
+		    		 
 		    		<div id="dpfrm" class="col-sm-4" style="float:right">
 		    			<div class="formbg">
 		    				<h3 class="text-center fw-b">Buy NOW</h3>
@@ -193,7 +188,7 @@ else
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
 		                    				<div class="frmfield" >
-		                    					<input type="button" value="I want to know more" name="submit1" onClick="return validate()"  >
+		                    					<input type="button" value="Buy Now" name="submit1" onClick="return validate()"  >
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
@@ -208,18 +203,7 @@ else
 		    	</div>	
 	    	</div>
 	    </section>
-        <section id="aftersales"  class="aftersales-bg">
-	    	<div class="container" >
-	    		<div class="row">
-	    			<div class="col-sm-8 aftersales1">
-	    				<h1 class="hblue" style="color:#FFFFFF;">
-							SMART After Sales Solutions for your Smartphone
-	    				</h1>
-						<span class="horgange">@ Rs. 249/- </span><span class="hwhite">(for the Whole Year!)</span>
-                       </div>
-                 </div>
-           </div>
-        </section>
+       
         
         <section id="resfrm" class="responsiveform">
 	    	<div class="container">
@@ -324,7 +308,7 @@ else
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto;float: none; ">
 		                    				<div class="fform1 frmfield">
-		                    					<input type="button" value="I want to know more" name="submit1" onClick="return validate1()"   >
+		                    					<input type="button" value="Buy Now" name="submit1" onClick="return validate1()"   >
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>

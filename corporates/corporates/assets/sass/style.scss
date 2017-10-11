@@ -1,0 +1,57 @@
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: HealthCare - Onepage Health and Medical Business Template
+    Theme URI: http://golamnabi.com/th/healthcare-demo
+    Description: It's a one page business template for health, medical, dental or other like service related website 
+    Author: golam
+    Author URI: http://themeforest.net/user/templatehut
+
+    @NOTE: This file contains the stylesheet for this template.
+    you may be need to edit this file to change your content style.
+    This files contents are outlined below
+
+-----------------------------------------------------------------------------------
+
+---------------------------------------------------
+================ TABLE OF CONTENTS ================
+---------------------------------------------------
+
+    01. TYPOGRAPHY
+    02. HELPER
+    03. HEADER AREA
+        - Header Top Area
+        - Main Menu Area
+    04. SLIDER AREA
+    05. ABOUT US AREA
+    06. SERVICES AREA
+    07. WHY WE ARE THE BEST AREA
+    08. APPOINTMENT AREA
+        - Accordion
+        - Appointment Form
+    09. GALLERY AREA
+    10. COUNTER AREA
+    11. TEAM AREA
+    12. PRICING AREA
+    13. TESTIMONIAL AREA
+    14. MAP AREA
+
+*/
+@import "variable";
+@import "mixin";
+@import "typography";
+@import "helper";
+@import "header";
+@import "slider";
+@import "about";
+@import "service";
+@import "cta-area";
+@import "why-we-are-best";
+@import "appointment";
+@import "gallery";
+@import "counter";
+@import "team";
+@import "pricing";
+@import "testimonial";
+@import "map";
+@import "footer";
+@import "responsive";

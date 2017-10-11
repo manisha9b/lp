@@ -1,5 +1,5 @@
 <?php
- $connectionflg =1;
+ $connectionflg =2;
   global $DB_HOST,$DB_USER,$DB_PASS;
   
   if($connectionflg == 1)
@@ -13,9 +13,9 @@
 	if($connectionflg == 2)
 	{
 		$DB_HOST = "localhost";
-	    $DB_USER = "sspadvan_campaig";
-	    $DB_PASS = "HfQO7JG4DXG5";
-	    $DB_NAME = "sspadvan_campaign";	
+	    $DB_USER = "root";
+	    $DB_PASS = "";
+	    $DB_NAME = "test";	
 					
 	}
   

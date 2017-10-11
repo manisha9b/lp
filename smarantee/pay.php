@@ -19,6 +19,8 @@
 	$imei_no=$_POST['imei_no'];
 	$amount= 499;
 	$p_range=$_POST['price'];
+	$purchase_date_arr=explode('/',$_POST['purchase_date']);;
+	$purchase_date = $purchase_date_arr['2'].'-'.$purchase_date_arr['1'].'-'.$purchase_date_arr['0'];
 	/*$_POST['productinfo'] = $_POST['Brand'];
 	$_POST['udf1'] = $_POST['model'];
 	$_POST['surl'] = SUCCESS_URL;
@@ -30,8 +32,8 @@
 	{
 		//echo '';
 	}else{
-	 $insert_query="INSERT INTO `user` (`user_id`, `name`, `contact`, `email`,`city`, `Brand`,`model`, `amount`, `imei_no`, `p_range`,`cdate`) VALUES
-	('', '".$name."', '".$phone."', '".$email."','".$city."','".$Brand."','".$model."', '".$amount."', '".$imei_no."','".$p_range."', now());";		
+	 $insert_query="INSERT INTO `user` (`user_id`, `name`, `contact`, `email`,`city`, `Brand`,`model`, `amount`, `imei_no`, purchase_date,`cdate`) VALUES
+	('', '".$name."', '".$phone."', '".$email."','".$city."','".$Brand."','".$model."', '".$amount."', '".$imei_no."', '".$purchase_date."', now());";		
 	mysql_query($insert_query);
 	$user_id = mysql_insert_id();
 	

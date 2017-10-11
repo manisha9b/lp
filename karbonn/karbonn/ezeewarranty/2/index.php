@@ -199,7 +199,7 @@ else
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
 		                    				<div class="frmfield">
-		                    					<input type="button" value="Buy Now" name="submit1" name="submit1" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" onClick="return validate()"  >
+		                    					<input type="button" value="Buy Now" name="submit1" name="submit1" style="font-size:24px; width:94%; height:38px; background:#eb1c22;" onClick="return validate()"  >
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
@@ -232,7 +232,7 @@ else
                                     <div class="col-sm-12">
                                     <div class="col-sm-6">
 		                    			<div class="frmfield">
-	                          					<input type="button" value="Verify OTP" name="submit_otp1" name="submit_otp1" style="font-size:18px;  height:28px; background:#fdc70d;" onClick="return validateOtp(1)"  >
+	                          					<input type="button" value="Verify OTP" name="submit_otp1" name="submit_otp1" style="font-size:18px;  height:28px; background:#eb1c22;" onClick="return validateOtp(1)"  >
 	                          				</div>
 		                    		</div>
 		                    		</div>
@@ -384,7 +384,7 @@ else
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto;float: none; ">
 		                    				<div class="fform1 frmfield">
-		                    					<input type="button" value="Buy Now" style="font-size:24px; width:94%; height:38px; background:#18bcbb;" name="submit1" onClick="return validate1()"   >
+		                    					<input type="button" value="Buy Now" style="font-size:24px; width:94%; height:38px; background:#eb1c22;" name="submit1" onClick="return validate1()"   >
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
@@ -417,7 +417,7 @@ else
                                     <div class="col-sm-12">
                                     <div class="col-sm-6">
 		                    			<div class="frmfield">
-	                          					<input type="button" value="Verify OTP" name="submit_otp2" name="submit_otp2" style="font-size:18px;  height:28px; background:#fdc70d;" onClick="return validateOtp(2)"  >
+	                          					<input type="button" value="Verify OTP" name="submit_otp2" name="submit_otp2" style="font-size:18px;  height:28px; background:#eb1c22;" onClick="return validateOtp(2)"  >
 	                          				</div>
 		                    		</div>
 		                    		</div>

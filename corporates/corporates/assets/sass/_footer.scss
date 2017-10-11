@@ -1,0 +1,389 @@
+/*------------------------------------------------
+                FOOTER AREA
+-------------------------------------------------*/
+
+.footer-area {
+    padding: 120px 0 30px 0;
+    background-color: #222;
+    color: $white-color;
+
+    @extend .relative;
+
+    .footer-contact-info {
+        padding: 10px 20px 15px;
+
+        @extend .absolute;
+
+        background-color: $primary-color;
+        height: $footer-overlay-height;
+        width: calc(100% - 200px);
+
+        @media #{$mediumScreen} {
+            width: calc(100% - 100px);
+            height: auto;
+        }
+
+        @media #{$tabletScreen} {
+            width: calc(100% - 100px);
+            height: auto;
+        }
+
+        @media #{$smallMobileScreen} {
+            width: calc(100% - 50px);
+            height: auto;
+        }
+
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: -50px;
+
+        &:before, &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            top: 0;
+        }
+
+        &:before {
+            border-top: 50px solid transparent;
+            border-left: 60px solid transparent;
+            border-right: 40px solid rgba($primary-color, 0.8);
+            left: -100px;
+
+            @media #{$mediumScreen} {
+                border-left: 0px solid transparent;
+                border-right: 30px solid rgba($primary-color, 0.8);
+                left: -30px;
+            }
+
+            @media #{$tabletScreen} {
+                border-left: 0px solid transparent;
+                border-right: 30px solid rgba($primary-color, 0.8);
+                left: -30px;
+            }
+
+            @media #{$smallMobileScreen} {
+                border-left: 0px solid transparent;
+                border-right: 10px solid rgba($primary-color, 0.8);
+                left: -10px;
+            }
+        }
+
+        &:after {
+            border-top: 50px solid transparent;
+            border-right: 60px solid transparent;
+            border-left: 40px solid rgba($primary-color, 0.8);
+            right: -100px;
+
+            @media #{$mediumScreen} {
+                border-right: 0px solid transparent;
+                border-left: 30px solid rgba($primary-color, 0.8);
+                right: -30px;
+            }
+
+            @media #{$tabletScreen} {
+                border-right: 0px solid transparent;
+                border-left: 30px solid rgba($primary-color, 0.8);
+                right: -30px;
+            }
+
+            @media #{$smallMobileScreen} {
+                border-right: 0px solid transparent;
+                border-left: 10px solid rgba($primary-color, 0.8);
+                right: -10px;
+            }
+        }
+
+        .single-info {
+            padding-left: 70px;
+
+            @extend .relative;
+
+            overflow: hidden;
+            margin-top: 15px;
+            margin-left: 60px;
+
+            @media #{$mediumScreen} {
+                margin-left: 0;
+            }
+
+            @media #{$tabletScreen} {
+                margin-left: 0;
+                font-size: 12px;
+                padding-left: 50px;
+                line-height: 18px;
+            }
+
+            @media #{$smallMobileScreen} {
+                margin-left: 0;
+                font-size: 12px;
+                padding-left: 50px;
+                line-height: 18px;
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                top: 5px;
+                font-size: 24px;
+                border: 1px solid $white-color;
+
+                @media #{$tabletScreen} {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                }
+
+                @media #{$smallMobileScreen} {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                }
+            }
+
+            h5 {
+                color: $white-color;
+                font-size: 16px;
+                margin: 0 0 5px;
+                text-transform: capitalize;
+
+                @media #{$tabletScreen} {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /*======== Widget Css ========*/
+    .footer-widget {
+        overflow: hidden;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $white-color;
+
+        @extend .relative;
+
+        z-index: 1;
+
+        @media #{$smallMobileScreen} {
+            margin-top: 160px;
+        }
+
+        .single-widget {
+            overflow: hidden;
+
+            .footer-logo {
+                overflow: hidden;
+
+                a {
+                    h2 {
+                        color: $white-color;
+                        font-size: 30px;
+                        margin: 5px 0 15px;
+                        text-transform: capitalize;
+
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+
+            .opening-hour-list {
+                margin-top: 20px;
+
+                li {
+                    overflow: hidden;
+                    text-transform: capitalize;
+                    padding: 5px 0 5px 20px;
+
+                    @extend .relative;
+
+                    span {
+                        float: right;
+                        color: $white-color;
+                    }
+
+                    &:before {
+                        position: absolute;
+                        content: "\f017";
+                        font-family: fontawesome;
+                        top: 50%;
+                        left: 0;
+                        margin-right: 4px;
+                        margin-top: -9px;
+                    }
+                }
+            }
+
+            h3 {
+                color: $white-color;
+                margin-bottom: 20px;
+                margin-top: 10px;
+            }
+
+            .service-list {
+                margin-top: 5px;
+
+                li {
+                    display: inline-block;
+                    width: 49%;
+
+                    @extend .relative;
+
+                    a {
+                        color: $white-color;
+                        display: inline-block;
+                        text-transform: capitalize;
+                        padding: 5px 0 5px 18px;
+
+                        &:hover {
+                            opacity: .6;
+                        }
+                    }
+
+                    &:before {
+                        position: absolute;
+                        content: "\f046";
+                        font-family: fontawesome;
+                        left: 0;
+                        top: 50%;
+                        margin-top: -10px;
+                        margin-right: 5px;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            .contact-form {
+                .form-group {
+                    margin-bottom: 10px;
+
+                    .form-control {
+                        height: 45px;
+                        border-radius: 2px;
+                        font-size: 16px;
+                        color: #777;
+
+                        &:focus {
+                            border-color: $primary-color;
+                        }
+
+                        @media #{$mediumScreen} {
+                            background-color: #222;
+                        }
+
+                        @media #{$tabletScreen} {
+                            background-color: #222;
+                        }
+
+                        @media #{$smallMobileScreen} {
+                            background-color: #222;
+                        }
+                    }
+                }
+
+                textarea.form-control {
+                    &:focus {
+                        border-color: $primary-color;
+                    }
+
+                    @media #{$mediumScreen} {
+                        background-color: #222;
+                    }
+
+                    @media #{$tabletScreen} {
+                        background-color: #222;
+                    }
+
+                    @media #{$smallMobileScreen} {
+                        background-color: #222;
+                    }
+                }
+
+                .submit-btn {
+                    height: 40px;
+                    border: 1px solid transparent;
+
+                    &:hover {
+                        border: 1px solid $white-color;
+                    }
+                }
+
+                .msg-box {
+                    .alert-msg {
+                        border: 1px solid #000;
+                        color: $primary-color;
+                        font-size: 16px;
+                        line-height: 1.5em;
+                        background-color: $white-color;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+
+                    .alert-msg .close {
+                        opacity: .8;
+                        filter: alpha(opacity = 80);
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+                        top: 50%;
+                        margin-top: -1px;
+                    }
+
+                    .alert-msg .close:hover {
+                        opacity: 1;
+                        filter: alpha(opacity = 100);
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-area {
+        padding: 28px 0 40px;
+        overflow: hidden;
+
+        @media #{$smallMobileScreen} {
+            text-align: center;
+        }
+
+        .copyright-text {
+            text-transform: capitalize;
+        }
+
+        .footer-menu {
+            @media #{$smallMobileScreen} {
+                margin-top: 15px;
+            }
+
+            > ul {
+                > li {
+                    display: inline-block;
+
+                    > a {
+                        display: block;
+                        padding: 5px 10px;
+
+                        @media #{$smallMobileScreen} {
+                            padding: 5px;
+                        }
+
+                        color: $white-color;
+                        text-transform: capitalize;
+
+                        &:hover {
+                            opacity: .6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

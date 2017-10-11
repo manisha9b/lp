@@ -127,7 +127,7 @@ else
 		                    		</div>
 	                    			<div class="col-sm-6">
                           				<div class="frmfield">
-                          					<input type="text" name="imei_no" maxlength="100" id="df_imei_no"  value="" placeholder="IMEI No." />
+                          					<input type="text" name="imei_no" maxlength="100" id="df_imei_no"  value="" onKeyPress="return validData(event,'num')"  placeholder="IMEI No.*" />
                           				</div>
 	                    			</div>
 									<div class="row">	
@@ -198,8 +198,8 @@ else
 		                    		</div>
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
-		                    				<div class="frmfield">
-		                    					<input type="button" value="Buy Now" name="submit1" name="submit1" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" onClick="return validate()"  >
+		                    				<div class="frmfield"><center>
+		                    					<input type="button" value="अभी खरीदें" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" name="submit1" onClick="return validate()"  ></center>
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
@@ -310,7 +310,7 @@ else
 		                    		</div>
 	                    			<div class="col-sm-6">
                           				<div class="frmfield">
-                          					<input type="text" name="imei_no" maxlength="100" id="df2_imei_no"  value="" placeholder="IMEI No." />
+                          					<input type="text" name="imei_no" maxlength="100" id="df2_imei_no"  onKeyPress="return validData(event,'num')"   value="" placeholder="IMEI No." />
                           				</div>
 	                    			</div>
 	<div class="row">	

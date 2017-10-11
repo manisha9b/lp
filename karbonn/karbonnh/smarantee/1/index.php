@@ -1,4 +1,10 @@
 <?php
+session_start();
+		   unset($_SESSION['ord_status']);
+							unset($_SESSION['txnid']);
+							unset($_SESSION['firstname']);
+							unset($_SESSION['amount']);
+							unset($_SESSION['otp_uid']);
 if (isset($_GET["sourcetype"]))
 {
 	$_SESSION["sourcetype"]=$_GET["sourcetype"];
@@ -11,6 +17,10 @@ else
 {
 	$source="Adwords";	
 }
+	include("includes/connectdb.php");
+	include_once("includes/define.php");
+	$model_result = getModelLess();
+	$model_options = $model_result['html'];
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -25,6 +35,7 @@ else
     	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<link rel="stylesheet" type="text/css" href="style/responsive.css">
+		<link rel="stylesheet" type="text/css" href="style/bootstrap-datepicker.css">
          <link href="style/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<script>
@@ -63,11 +74,12 @@ else
 					</div>
 		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #1B242D;padding-left: 1%;">
 		    			<div class="formbg">
-		    				<h3 class="text-center fw-b">Buy Now</h3>
+		    					<h3 class="text-center fw-b">अभी खरीदें</h3>
 		    				<div class="heading_f text-center">
-		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;Call us on 1800-120-2177<br>Or Fill in the form
+		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;संपर्क करें 1800-120-2177<br> <span style="font-size:12px; text-align:center;">अथवा</span><br> मिस कॉल दें <b>8291939913</b><hr>कृप्या फॉर्म भरे
 		    				</div>
 		    				<div class="fform">
+		    				<div  id="DetailForm_div1" style="display:block;">
 		    					<form name="DetailForm" id="DetailForm" method="post">
 									<input type="hidden" name="source" value="<?=$source?>" />
 									<input type="hidden" name="ccodec" id="ccodeidc" value="" />
@@ -86,7 +98,7 @@ else
 		                    		</div>
 		                    		<div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email*" />
+		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email" />
 		                    			</div>	
 		                    		</div>
 									<div class="row">	
@@ -106,45 +118,66 @@ else
 	                    			</div> -->
 									<div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" />
-                                            
+		                    				<!-- <input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" /> -->
+											<select name="model" id="df_model">
+											<option value="">Select Model</option>
+											<?php echo $model_options;?>
+                                            </select>
 		                    			</div>	
 		                    		</div>
 	                    			<div class="col-sm-6">
                           				<div class="frmfield">
-                          					<input type="text" name="imei_no" maxlength="100" id="df_imei_no"  value="" placeholder="IMEI No." />
+                          					<input type="text" name="imei_no" maxlength="100" id="df_imei_no"  value="" onKeyPress="return validData(event,'num')"  placeholder="IMEI No.*" />
                           				</div>
 	                    			</div>
 									<div class="row">	
 									<div class="col-sm-12">
+									
+											<!-- <label for="inputEmail3" class="col-sm-6 control-label">Date of Purchase</label> -->
+	                    				
+												      
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
+											
+										
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												<select name="price" id="price"> 
-													<option value="">Price Range</option>
-													<option value="Above_5000">Above 5000</option>
-													<option value="Below_5000">Below 5000</option>
-												 
-												
-												</select>
+												      <input type="text" name="purchase_date" maxlength="100" id="datepicker"  value="" placeholder="Purchase Date" />
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
 											</div>	
 										</div>
 										</div>
 										</div>
-										<!-- <div class="row">	
-											<div class="col-sm-12">										
-											<div class="col-sm-6 text-right">
-												Amount :
-											</div>	
-											<div class="col-sm-6">
-												<div class="frmfield">
-											
-													<input type="text" name="amount" maxlength="100" id="amount"  value="249" readonly />
-												</div>	
-											</div>							
-	                    				</div>							
-	                    				</div>	-->						
-		                    		<div>
+										<div class="row">	
+										<div class="col-sm-12">
+			                    			<div class="frmfield">
+			                    				 <div class=" col-sm-6" >
+													
+													  <input type="radio" name="payment_method" id="online" value="online" checked />
+													 Online Payment
+													
+												  </div>
+												  <div class=" col-sm-6">
+													
+													  <input type="radio" name="payment_method" id="cod" value="cod">
+													 Cash on Delivery
+													
+												  </div>
+			                    			</div>
+			                    		
+			                    			<div class="clear"></div>
+			                    		</div>
+			                    		</div>
+										<div>
+		                    		
+			                    		<div class="row" style="height:20px;">&nbsp;</div>
+		                    		</div>
+									
+		                    		
+										
+										<div>
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
 			                    				<div class="secu">
@@ -159,17 +192,55 @@ else
 			                    		</div>
 			                    		<div class="clear"></div>
 		                    		</div>
+									<div>
+		                    			
+
+		                    		</div>
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
-		                    				<div class="frmfield">
-		                    					<input type="button" value="Buy Now" name="submit1" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" onClick="return validate()"  >
+		                    				<div class="frmfield"><center>
+		                    					<input type="button" value="अभी खरीदें" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" name="submit1" onClick="return validate()"  ></center>
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
 		                    		</div>
 								</form>	
 								<div class="clear"></div>
+								</div>
+		    				
+		    				<div id="cod_div1" style="display:none;min-height:350px;">
+							<form name="cod_form1" id="cod_form1" method="post">
+							<input type="hidden" name="uid" id="uid1" value="" />
+							<input type="hidden" name="verify_otp" value="1" />
+									<div class="row-margin-top">
+	                    				&nbsp;
+	                    			</div>
+						
+								<div class="col-sm-12">
+								<div class="col-sm-8">
+	                    				<div class="frmfield">
+	                    					<input type="text" name="otp" maxlength="50" id="otp1" onKeyPress="return validData(event,'num')" value="" placeholder="OTP*" />
+	                    				</div>	
+	                    			</div>
+									<div class="col-sm-4">
+	                    				<a href="javascript:void(0);" onClick="resendOTP(1);">Resend OTP</a>
+	                    			</div>
+	                    			</div>
+									
+                                    <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg1"></div></div></div></div>
+                                   <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
+                                    <div class="col-sm-12">
+                                    <div class="col-sm-6">
+		                    			<div class="frmfield">
+	                          					<input type="button" value="Verify OTP" name="submit_otp1" name="submit_otp1" style="font-size:18px;  height:28px; background:#fdc70d;" onClick="return validateOtp(1)"  >
+	                          				</div>
+		                    		</div>
+		                    		</div>
+									
+		                    		
+							</form>
 		    				</div>
+							</div>
 		    			</div>
 		    		</div>
 		    		<div class="clear"></div>
@@ -185,11 +256,12 @@ else
 		    	<div class="row">
 	    			<div class="col-sm-8">
 	    				<div>
-		    				<h3 class="text-center fw-b">Buy Now</h3>
+		    			<h3 class="text-center fw-b">अभी खरीदें</h3>
 		    				<h4 class="text-center">
-		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; Call us on 1800-120-2177<br/>Or Fill in the form
+		    					   <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; संपर्क करें 1800-120-2177<br> <span style="font-size:12px; text-align:center;">अथवा</span><br> मिस कॉल दें <b>8291939913</b><hr> कृप्या फॉर्म भरे
 		    				</h4>
-		    				<div class="fform">
+		    				<div class="fform" >
+		    				<div  id="DetailForm_div2">
 		    					<form name="DetailFormres" id="DetailFormres" method="post">
 									<input type="hidden" name="source" value="<?=$source?>" />
 									<input type="hidden" name="ccodec1" id="ccodeidc1" value="" />
@@ -211,58 +283,81 @@ else
 		                    				<input type="text" name="email" maxlength="100" id="user_email" oncopy="return false;" onpaste="return false;" oncut="return false;" value="" Placeholder="Email*" />
 		                    			</div>	
 		                    		</div>
+									<div class="row">	
+										<div class="col-sm-12">
                                     <div class="col-sm-6">
 		                    			<div class="frmfield">
 		                    				<input type="text" name="city" maxlength="100" id="df2_city"  value="" placeholder="City*" />
                                             
 		                    			</div>	
 		                    		</div>
+									</div>	
+		                    		</div>
 	                    			<!-- <div class="col-sm-6">
                           				<div class="frmfield">
                           					<input type="text" name="Brand" maxlength="100" id="Brand"  value="Karbaan" readonly />
                           				</div>
 	                    			</div> -->
+
 									<div class="col-sm-6">
 		                    			<div class="frmfield">
-		                    				<input type="text" name="model" maxlength="100" id="df2_model"  value="" placeholder="Model*" />
-                                            
+		                    				<!-- <input type="text" name="model" maxlength="100" id="df_model"  value="" placeholder="Model*" /> -->
+											<select name="model" id="df2_model">
+											<option value="">Select Model</option>
+											<?php echo $model_options;?>
+                                            </select>
 		                    			</div>	
 		                    		</div>
 	                    			<div class="col-sm-6">
                           				<div class="frmfield">
-                          					<input type="text" name="imei_no" maxlength="100" id="imei_no"  value="" placeholder="IMEI No." />
+                          					<input type="text" name="imei_no" maxlength="100" id="df2_imei_no"  onKeyPress="return validData(event,'num')"   value="" placeholder="IMEI No." />
                           				</div>
 	                    			</div>
-									
-										<div class="row">	
+	<div class="row">	
 									<div class="col-sm-12">
+									
+											<!-- <label for="inputEmail3" class="col-sm-6 control-label">Date of Purchase</label> -->
+	                    				
+												      
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
+											
+										
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												<select name="price" id="price"  /> 
-													<option value="">Price Range</option>
-													<option value="Above_5000">Above 5000</option>
-													<option value="Below_5000">Below 5000</option>
-												 
-												
-												</select>
+												      <input type="text" name="purchase_date" maxlength="100" id="datepicker2"  value="" placeholder="Purchase Date" />
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
 											</div>	
 										</div>
 										</div>
 										</div>
-										<!-- <div class="row">	
-											<div class="col-sm-12">										
-											<div class="col-sm-6 ">
-												Amount :
-											</div>	
-											<div class="col-sm-6">
-												<div class="frmfield">
-											
-													<input type="text" name="amount" maxlength="100" id="amount"  value="249" readonly />
-												</div>	
-											</div>							
-	                    				</div>							
-	                    				</div>	-->			
+										<div class="row">	
+										<div class="col-sm-12">
+			                    			<div class="frmfield">
+			                    				 <div class=" col-sm-6" >
+													
+													  <input type="radio" name="payment_method" id="online2" value="online" checked />
+													 Online Payment
+													
+												  </div>
+												  <div class=" col-sm-6">
+													
+													  <input type="radio" name="payment_method" id="cod2" value="cod">
+													 Cash on Delivery
+													
+												  </div>
+			                    			</div>
+			                    		
+			                    			<div class="clear"></div>
+			                    		</div>
+			                    		</div>
+										<div>
+		                    		
+			                    		<div class="row" style="height:20px;">&nbsp;</div>
+		                    		</div>
+					
 										
 	                    											
 		                    		<div>
@@ -281,15 +376,55 @@ else
 			                    		</div>
 			                    		<div class="clear"></div>
 		                    		</div>
+									
+									<div>
+		                    		
+			                    		<div class="clear"></div>
+		                    		</div>
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto;float: none; ">
 		                    				<div class="fform1 frmfield">
-		                    					<input type="button" value="Buy Now" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" name="submit1" onClick="return validate1()"   >
+		                    					<center><input type="button" value="अभी खरीदें" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" name="submit1" onClick="return validate1()"  ></center>
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
 		                    		</div>
-								</form>	
+								</form>
+
+							
+								</div>
+<div id="cod_div2" style="display:none;">
+							<form name="cod_form2" id="cod_form2" method="post">
+							<input type="hidden" name="uid" id="uid2" value="" />
+							<input type="hidden" name="verify_otp" value="1" />
+									<div class="row-margin-top">
+	                    				&nbsp;
+	                    			</div>
+						
+								<div class="col-sm-12">
+								<div class="col-sm-8">
+	                    				<div class="frmfield">
+	                    					<input type="text" name="otp" maxlength="50" id="otp1" onKeyPress="return validData(event,'num')" value="" placeholder="OTP*" />
+	                    				</div>	
+	                    			</div>
+									<div class="col-sm-4">
+	                    				<a href="javascript:void(0);" onClick="resendOTP(2);">Resend OTP</a>
+	                    			</div>
+	                    			</div>
+									
+                                    <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg2"></div></div></div></div>
+                                   <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
+                                    <div class="col-sm-12">
+                                    <div class="col-sm-6">
+		                    			<div class="frmfield">
+	                          					<input type="button" value="Verify OTP" name="submit_otp2" name="submit_otp2" style="font-size:18px;  height:28px; background:#fdc70d;" onClick="return validateOtp(2)"  >
+	                          				</div>
+		                    		</div>
+		                    		</div>
+									
+		                    		
+							</form>
+		    				</div>								
 								</div>	
 								<div class="clear"></div>
 		    				</div>
@@ -302,10 +437,11 @@ else
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-sm-12 aftersales1">
-	    				<h1 class="hblue text-center" style="color:#FFFFFF;">
-							SMARANTEE 
-	    				</h1><center>
-						<span class="horgange">@ ₹ 499/- </span><span class="hwhite"></span></center>
+	    			<!--	<h1 class="hblue text-center" style="color:#FFFFFF;">
+							EZEEWARRANTY 
+	    				</h1>--><center>
+	    				<img src="images/ezee-warrantyb1.png" class="img-responsive">
+	    				<span class="horgange">@ ₹ <?php echo BRAND_PRICE;?>//- </span><span class="hwhite"></span></center>
                        </div>
                  </div>
            </div>
@@ -333,8 +469,9 @@ else
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
-		<script type="text/javascript" src="js/requirement.js"></script>
+		<script type="text/javascript" src="js/requirement.js?v=0.0001"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.smoothscroll').on('click', function(){
@@ -365,6 +502,23 @@ else
 		<!--
 		Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
 		-->
-
+		<script>
+  $(function () {
+		 $('#datepicker').datepicker({
+			  autoclose: true,
+			   format: 'dd/mm/yyyy'
+			});
+		
+	$('#datepicker2').datepicker({
+			  autoclose: true,
+			   format: 'dd/mm/yyyy'
+			});
+	});
+		</script>
+		<style>
+		.row-margin-top{
+			margin-top:35px;
+		}
+		</style>
 </body>
 </html>

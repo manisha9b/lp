@@ -25,6 +25,7 @@ else
     	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<link rel="stylesheet" type="text/css" href="style/responsive.css">
+		<link rel="stylesheet" type="text/css" href="style/bootstrap-datepicker.css">
          <link href="style/font-awesome.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<script>
@@ -57,19 +58,15 @@ else
 	    <!--  main wrapper -->
 	    <section>
 	    	<div class="wrapper container" id="section_bg" >
-		    	<div class="row" style="
-    background-color: #FDC70D;
-">
-		    		<div class="col-md-8" style="
-    padding-right: 0px;
-">
-					<img src="images/banner.jpg" class="img-responsive"> 
+		    	<div class="row" style="background-color: #FDC70D;">
+		    		<div class="col-md-8" style="padding-right: 0px; padding-left:0px;">
+					<img src="images/banner_final-5.jpg" class="img-responsive"> 
 					</div>
-		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #1B242D;padding-left: 0px;">
+		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #1B242D;padding-left: 1%;">
 		    			<div class="formbg">
-		    				<h3 class="text-center fw-b">Buy NOW</h3>
+		    				<h3 class="text-center fw-b">Buy Now</h3>
 		    				<div class="heading_f text-center">
-		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;Call us on 1800-120-2177<br>Or Fill in the Form
+		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;Call us on 1800-120-2177<br>Or Fill in the form
 		    				</div>
 		    				<div class="fform">
 		    					<form name="DetailForm" id="DetailForm" method="post">
@@ -121,16 +118,20 @@ else
 	                    			</div>
 									<div class="row">	
 									<div class="col-sm-12">
+									
+											<!-- <label for="inputEmail3" class="col-sm-6 control-label">Date of Purchase</label> -->
+	                    				
+												      
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
+											
+										
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												<select name="price" id="price"> 
-													<option value="">Price Range</option>
-													<option value="Above_5000">Above 5000</option>
-													<option value="Below_5000">Below 5000</option>
-												 
-												
-												</select>
+												      <input type="text" name="purchase_date" maxlength="100" id="datepicker"  value="" placeholder="Purchase Date" />
+                <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
+               
 											</div>	
 										</div>
 										</div>
@@ -166,7 +167,7 @@ else
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
 		                    				<div class="frmfield">
-		                    					<input type="button" value="Buy Now" name="submit1" onClick="return validate()"  >
+		                    					<input type="button" value="Buy Now" name="submit1" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" onClick="return validate()"  >
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
@@ -189,9 +190,9 @@ else
 		    	<div class="row">
 	    			<div class="col-sm-8">
 	    				<div>
-		    				<h3 class="text-center fw-b">Buy NOW</h3>
+		    				<h3 class="text-center fw-b">Buy Now</h3>
 		    				<h4 class="text-center">
-		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; Call us on 1800-120-2177<br/>Or Fill in the Form
+		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; Call us on 1800-120-2177<br/>Or Fill in the form
 		    				</h4>
 		    				<div class="fform">
 		    					<form name="DetailFormres" id="DetailFormres" method="post">
@@ -288,7 +289,7 @@ else
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto;float: none; ">
 		                    				<div class="fform1 frmfield">
-		                    					<input type="button" value="Buy Now" name="submit1" onClick="return validate1()"   >
+		                    					<input type="button" value="Buy Now" style="font-size:24px; width:94%; height:38px; background:#fdc70d;" name="submit1" onClick="return validate1()"   >
 		                    				</div>	
 		                    			</div>
 		                    			<div class="clear"></div>
@@ -305,11 +306,11 @@ else
        <section id="aftersales" class="aftersales-bg">
 	    	<div class="container">
 	    		<div class="row">
-	    			<div class="col-sm-8 aftersales1">
-	    				<h1 class="hblue" style="color:#FFFFFF;">
+	    			<div class="col-sm-12 aftersales1">
+	    				<h1 class="hblue text-center" style="color:#FFFFFF;">
 							SMARANTEE 
-	    				</h1>
-						<span class="horgange">@ Rs. 499/- </span><span class="hwhite"></span>
+	    				</h1><center>
+						<span class="horgange">@ ₹ 499/- </span><span class="hwhite"></span></center>
                        </div>
                  </div>
            </div>
@@ -319,15 +320,15 @@ else
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-sm-12 no-padding">
-	    				<div class="col-sm-9 ftext" style="text-align:center;">
+	    				<div class="col-sm-12 ftext" style="text-align:center; color:#fff;">
 	    					&copy;  <?php echo date('Y'); ?>   All Rights Reserved
                               
 	    				</div>
-	    				<div class="col-sm-3">
+	    				<!--<div class="col-sm-3">
 	    					<div class="text-right">
 	                         
 	    					</div>
-	    				</div>
+	    				</div>-->
 	    			</div>
 	    		</div>
 	    	</div>		
@@ -337,6 +338,7 @@ else
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
 		<script type="text/javascript" src="js/requirement.js"></script>
 		<script type="text/javascript">
@@ -369,6 +371,13 @@ else
 		<!--
 		Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
 		-->
-
+		<script>
+  $(function () {
+		 $('#datepicker').datepicker({
+			  autoclose: true,
+			   format: 'dd/mm/yyyy'
+			});
+	});
+		</script>
 </body>
 </html>

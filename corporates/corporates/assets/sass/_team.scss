@@ -1,0 +1,73 @@
+/*------------------------------------------------
+                TEAM AREA
+-------------------------------------------------*/
+.team-area {
+    padding-bottom: 0;
+}
+
+.single-doctor-info {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba($primary-color, 0.5);
+
+    @include boxShadow(0 0 10px rgba(0, 0, 0, 0.25));
+    @include transition(all 0.2s ease-in 0s);
+
+    &:hover {
+        border: 1px solid transparent;
+    }
+
+    .doctor-img {
+        > img {
+            margin: 0 auto;
+        }
+    }
+
+    h4 {
+        font-size: 16px;
+        margin: 20px 0 0;
+    }
+
+    a {
+        display: block;
+        color: #777;
+        overflow: hidden;
+    }
+}
+.social-profile {
+    margin-top: 15px;
+
+    li {
+        display: inline-block;
+
+        a {
+            margin-right: 2px;
+            margin-bottom: 5px;
+            display: block;
+
+            i {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                font-size: 18px;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+
+                @include transition(all 0.2s ease-in 0s);
+            }
+
+            span {
+                &:hover {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &:hover i {
+            background-color: $primary-color;
+            border: 1px solid transparent;
+            color: $white-color;
+        }
+    }
+}

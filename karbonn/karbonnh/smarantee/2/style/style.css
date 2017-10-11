@@ -88,7 +88,7 @@ h1.hblue{font-size:32px;}
 .pbg{background: #03366b;color: #FFFFFF;padding:3px 10px;}
 .cta{font-size: 16px;margin-top:45px;}
 
-.formbg{background: #ffffff;border-radius: 10px;padding:20px;width: 400px; margin-top:-19px; border-top:20px solid #1B242D;}
+.formbg{background: #ffffff;border-radius: 10px;padding:20px;width: 400px; margin-top:-19px; border-top:10px solid #373131;}
 .call{padding-right: 8px;vertical-align: middle;}
 .form-fixed{position:fixed;background: #00a6c8;color:#FFFFFF; top:15%; border-top:5px solid #1B242D!important; border-bottom:5px solid #1B242D!important;}
 .form-fixed .heading_f{color:#ffffff;font-family: 'Source Sans Pro';font-size:18px; line-height: 20px;}

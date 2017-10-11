@@ -1,0 +1,35 @@
+/*------------------------------------------------
+                CTA AREA
+-------------------------------------------------*/
+.cta-area {
+    padding: 100px 0;
+    background-image: url($cta-bg-img);
+
+    @extend .background;
+
+    background-position: inherit;
+    background-repeat: repeat-y;
+
+    @extend .relative;
+
+    &:before {
+        @extend .absolute;
+
+        background-color: rgba($primary-color, 0.8);
+    }
+
+    h2 {
+        color: $white-color;
+        margin: 0;
+        letter-spacing: .5px;
+
+        @media #{$smallMobileScreen} {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .cta-btn {
+        @extend .white-btn;
+    }
+}
