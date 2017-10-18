@@ -11,6 +11,12 @@ $brandArray['ezeeassure1'] = 'EZEEASSURE 400';
 $brandArray['ezeeassure2'] = 'EZEEASSURE 650';
 $brandArray['ezeewarranty1'] = 'EZEEWARRANTY 449';
 $brandArray['ezeewarranty2'] = 'EZEEWARRANTY 729';
+$brandArray['smaranteeh1'] = 'SMARANTEE H 499';
+$brandArray['smaranteeh2'] = 'SMARANTEE H 899';
+$brandArray['ezeeassureh1'] = 'EZEEASSURE H 400';
+$brandArray['ezeeassureh2'] = 'EZEEASSURE H 650';
+$brandArray['ezeewarrantyh1'] = 'EZEEWARRANTY H 449';
+$brandArray['ezeewarrantyh2'] = 'EZEEWARRANTY H 729';
 // Create new PHPExcel object
 $objPHPExcel = new PHPExcel();
 $excel_name = 'list';
@@ -28,16 +34,19 @@ $objPHPExcel->setActiveSheetIndex(0)
 			->setCellValue('D1', 'Phone')
 			->setCellValue('E1', 'Email')
 			->setCellValue('F1', 'City')
-			->setCellValue('G1', 'IMEI No.')
+			->setCellValue('G1', 'Model')
 			->setCellValue('H1', 'IMEI No.')
 			->setCellValue('I1', 'Amount')
 			->setCellValue('J1', 'Payment')
-			->setCellValue('K1', 'Trasaction No.');
+			->setCellValue('K1', 'Trasaction No.')
+			->setCellValue('L1', 'Payment Mode');
 			$where = $_SESSION['where_export'];
-$select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.transaction_id,o.udate,u.name,u.contact,u.Brand,u.email,u.city,u.model,u.imei_no,u.amount,o.ord_id,o.`status`
+$select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.transaction_id,o.udate,u.name,u.contact,u.Brand,u.email,u.city,m.model,u.imei_no,u.amount,o.ord_id,o.`status`,o.payment_mode  
 			FROM user u
-			LEFT JOIN orders o ON o.user_id=u.user_id $where order by u.cdate desc 
+			LEFT JOIN orders o ON o.user_id=u.user_id left join tbl_model m on m.model_id=u.model $where order by u.cdate desc 
 			";
+		/*	 $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.transaction_id,o.udate,u.name,u.contact,u.Brand,u.email,u.city,u.model,u.imei_no,u.amount,o.ord_id,o.`status FROM user u LEFT JOIN orders o ON o.user_id=u.user_id left join tbl_model m on m.model_id=u.model $where order by u.cdate desc
+			";*/
 			$query = mysql_query($select_query);
 						$query = mysql_query($select_query);
 				if ($query) {
@@ -56,6 +65,7 @@ $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.tran
 										$imei_no = $row['imei_no'];
 										$city 	 = $row['city'];
 										$email 	 = $row['email'];
+										$payment_mode 	 = $row['payment_mode'];
 										$transaction_id 	 = $row['transaction_id'];
 										$col_no=2;
 										$a= "A".($col_no+$r);
@@ -69,6 +79,7 @@ $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.tran
 										$i= "I".($col_no+$r);
 										$j= "J".($col_no+$r);
 										$k= "K".($col_no+$r);
+										$l= "L".($col_no+$r);
 										$objPHPExcel->setActiveSheetIndex(0)
 													->setCellValue($a, ($r+1))
 													->setCellValue($b, $brand)
@@ -81,6 +92,7 @@ $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.tran
 													->setCellValue($i, $amount)
 													->setCellValue($j, $payment)
 													->setCellValue($k, $transaction_id)
+														->setCellValue($l, $payment_mode)
 													;
 													
 										$r++;	

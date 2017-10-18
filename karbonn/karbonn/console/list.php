@@ -1,10 +1,16 @@
 <?php 
-	$brandArray['smarantee1'] = 'SMARANTEE 499';
-	$brandArray['smarantee2'] = 'SMARANTEE 899';
-	$brandArray['ezeeassure1'] = 'EZEEASSURE 400';
-	$brandArray['ezeeassure2'] = 'EZEEASSURE 650';
-	$brandArray['ezeewarranty1'] = 'EZEEWARRANTY 449';
-	$brandArray['ezeewarranty2'] = 'EZEEWARRANTY 729';
+$brandArray['smarantee1'] = 'SMARANTEE 499';
+$brandArray['smarantee2'] = 'SMARANTEE 899';
+$brandArray['ezeeassure1'] = 'EZEEASSURE 400';
+$brandArray['ezeeassure2'] = 'EZEEASSURE 650';
+$brandArray['ezeewarranty1'] = 'EZEEWARRANTY 449';
+$brandArray['ezeewarranty2'] = 'EZEEWARRANTY 729';
+$brandArray['smaranteeh1'] = 'SMARANTEE H 499';
+$brandArray['smaranteeh2'] = 'SMARANTEE H 899';
+$brandArray['ezeeassureh1'] = 'EZEEASSURE H 400';
+$brandArray['ezeeassureh2'] = 'EZEEASSURE H 650';
+$brandArray['ezeewarrantyh1'] = 'EZEEWARRANTY H 449';
+$brandArray['ezeewarrantyh2'] = 'EZEEWARRANTY H 729';
 /*$select_query = "SELECT count(1) as count FROM USER u";
 $query = mysql_query($select_query);
 $total = 0;
@@ -169,7 +175,7 @@ function searchData(){
 	  function onLoadFunctions(){
 			 $('#tabledata').DataTable({
 				  'paging'      : true,
-				  'lengthChange': false,
+				  'lengthChange': true,
 				  'searching'   : false,
 				  'ordering'    : false,
 				  'info'        : true,

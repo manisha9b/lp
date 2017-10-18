@@ -7,7 +7,12 @@ $brandArray['ezeeassure1'] = 'EZEEASSURE 400';
 $brandArray['ezeeassure2'] = 'EZEEASSURE 650';
 $brandArray['ezeewarranty1'] = 'EZEEWARRANTY 449';
 $brandArray['ezeewarranty2'] = 'EZEEWARRANTY 729';
-
+$brandArray['smaranteeh1'] = 'SMARANTEE H 499';
+$brandArray['smaranteeh2'] = 'SMARANTEE H 899';
+$brandArray['ezeeassureh1'] = 'EZEEASSURE H 400';
+$brandArray['ezeeassureh2'] = 'EZEEASSURE H 650';
+$brandArray['ezeewarrantyh1'] = 'EZEEWARRANTY H 449';
+$brandArray['ezeewarrantyh2'] = 'EZEEWARRANTY H 729';
 ?>
 <div> <button type="button" id="export_data" onClick="window.open('<?php echo ADMIN_WEBSITE_URL?>/export.php');" class="btn btn-danger pull-right">Export</button></div>
 <table class="table table-hover" id="tabledata">
@@ -16,10 +21,12 @@ $brandArray['ezeewarranty2'] = 'EZEEWARRANTY 729';
 				  <th style="width:5px;" class="visible-lg">#</th>
 				  <th width="23%" class="text-center">Registartion Date </th>
 				  <th class="text-center">Brand</th>
+				  <th class="text-center">Model</th>
 				  <th class="text-center">Name</th>
 				  <th class="text-center visible-lg">Phone</th>
 				  
 				  <th class="text-center" >Payment</th>
+				  <th class="text-center visible-lg">Payment Mode</th>
 				  <th class="text-center visible-lg">Amount</th>
 				  <th class="text-center"></th>
 				  </tr>
@@ -48,9 +55,7 @@ $brandArray['ezeewarranty2'] = 'EZEEWARRANTY 729';
 			}
 			session_start();
 $_SESSION['where_export'] = $where;
-			 $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,u.name,u.contact,u.Brand,u.email,u.city,u.model,u.imei_no,u.amount,o.ord_id,o.`status`
-			FROM user u
-			LEFT JOIN orders o ON o.user_id=u.user_id $where order by u.cdate desc 
+		 	 $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,u.name,u.contact,u.Brand,u.email,u.city,m.model,u.imei_no,u.amount,o.ord_id,o.`status`,o.payment_mode FROM user u LEFT JOIN orders o ON o.user_id=u.user_id left join tbl_model m on m.model_id=u.model $where order by u.cdate desc
 			";
 			$query = mysql_query($select_query);
 				if ($query) {
@@ -71,14 +76,17 @@ $_SESSION['where_export'] = $where;
 									$imei_no = $row['imei_no'];
 									$city 	 = $row['city'];
 									$email 	 = $row['email'];
+									$payment_mode = $row['payment_mode'];
 									?>
 									<tr>
 										<td class="visible-lg"><?php echo ($i+1)?></td>
 										<td class="text-center" id="date_<?php echo $user_id?>"><?php echo $date;?></td>
 										<td class="text-center" id="brand_<?php echo $user_id?>"><?php echo $brand;?></td>
+										<td class="text-center  visible-lg" id="model_nm_<?php echo $user_id?>"><?php echo $model;?></td>
 										<td class="text-center" id="name_<?php echo $user_id?>"><?php echo $name;?></td>
 										<td class="text-center visible-lg" id="phone_<?php echo $user_id?>"><?php echo $phone;?></td>
 										<td class="text-center" id="payment_<?php echo $user_id?>"><?php echo $payment;?></td>
+										<td class="text-center visible-lg" id="payment_mode_<?php echo $user_id?>"><?php echo $payment_mode;?></td>
 										<td class="text-center visible-lg" id="amount_<?php echo $user_id?>"><?php echo $amount;?></td>
 										<td class="text-center" id="date_<?php echo $user_id?>">
 										<a href="javascript:void(0);" onClick="viewDetail(<?php echo $user_id?>);">view</a>
