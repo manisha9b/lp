@@ -3,7 +3,7 @@
 	$name=$_POST['name'];
 	$email=$_POST['email'];
     $phone=$_POST['contact'];
-    $Brand='smarantee1';
+    $Brand='smarantee2';
    // $frmtype="SSP_float";
    // $source=$_POST['source'];
 	$city=$_POST['city'];

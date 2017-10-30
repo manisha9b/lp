@@ -414,11 +414,10 @@ else
 									
                                     <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg2"></div></div></div></div>
                                    <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
-                                    <div class="col-sm-12">
-                                    <div class="col-sm-6">
-		                    			<div class="frmfield">
+                                   <div class="col-sm-6 margin:0 auto;float: none; ">
+		                    			<div class=" fform1 frmfield">
 	                          					<input type="button" value="Verify OTP" name="submit_otp2" name="submit_otp2" style="font-size:18px;  height:28px; background:#fdc70d;" onClick="return validateOtp(2)"  >
-	                          				</div>
+	                          			
 		                    		</div>
 		                    		</div>
 									
@@ -470,7 +469,7 @@ else
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
-		<script type="text/javascript" src="js/requirement.js?v=0.0001"></script>
+		<script type="text/javascript" src="js/requirement.js?v=0.001"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.smoothscroll').on('click', function(){
