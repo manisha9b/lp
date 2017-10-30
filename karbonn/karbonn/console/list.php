@@ -128,6 +128,12 @@ $end = $start+$limit-1;*/
 							<div class="col-sm-8" id="payment_text"></div>
 						</div>
 					</div>
+					<div class="col-sm-6">
+						<div class="row">
+							<div class="col-sm-4"><b>Status</b></div>
+							<div class="col-sm-8" id="user_status"></div>
+						</div>
+					</div>
 				</div>
               </div>
               <div class="modal-footer">
@@ -155,6 +161,7 @@ function viewDetail(id){
 		$('#imei_text').text($('#imei_no_'+id).val());
 		$('#amount_text').text($('#amount_'+id).text());
 		$('#payment_text').text($('#payment_'+id).text());
+		$('#user_status').text($('#user_status_'+id).text());
 	$('#view_detail').modal('show');
 }
 function searchData(){
@@ -165,6 +172,21 @@ function searchData(){
 		dataType: 'html',				
 		async: false,				
 		data: $('#search-form').serialize(),				
+		success: function(response) {	
+//alert("t");
+			$("#table_list").html(response);
+			onLoadFunctions();
+		}
+	});
+}
+function submitData(){
+
+	$.ajax({				
+		url: 'list_ajax.php',				
+		type: 'POST',				
+		dataType: 'html',				
+		async: false,				
+		data: $('#k_form').serialize(),				
 		success: function(response) {	
 //alert("t");
 			$("#table_list").html(response);
@@ -195,5 +217,30 @@ function searchData(){
 			 $('#date_range').on('cancel.daterangepicker', function(ev, picker) {
 				  $(this).val('');
 			  });
+			$("#user_id_all").click(function(){
+			//alert("hi"+$("#user_id_all").is(':checked'));
+			if($("#user_id_all").is(':checked')){
+				$('.user_check').prop("checked", true);
+			}else{
+				$('.user_check').prop("checked", false);
+			}
+			
+			$(".user_check").click(function(){
+ //alert("hi--"+$(".user_check").length+" -- "+$(".user_check:checked").length);
+					if($(".user_check").length == $(".user_check:checked").length) {
+						$('#user_id_all').prop("checked", true);
+					} else {
+						$("#user_id_all").prop("checked", false);
+					}
+			  });
+			  $('select[name="tabledata_length"]').change(function() {
+				   // alert("hi--"+$(".user_check").length+" -- "+$(".user_check:checked").length);
+					if($(".user_check").length == $(".user_check:checked").length) {
+						$('#user_id_all').prop("checked", true);
+					} else {
+						$("#user_id_all").prop("checked", false);
+					}
+});
+		});
 	  }
 </script>

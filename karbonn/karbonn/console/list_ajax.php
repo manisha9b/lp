@@ -13,11 +13,40 @@ $brandArray['ezeeassureh1'] = 'EZEEASSURE H 400';
 $brandArray['ezeeassureh2'] = 'EZEEASSURE H 650';
 $brandArray['ezeewarrantyh1'] = 'EZEEWARRANTY H 449';
 $brandArray['ezeewarrantyh2'] = 'EZEEWARRANTY H 729';
+$statusArr['Declined'] = 'Declined';
+$statusArr['In-Process'] = 'In Process';
+$statusArr['Closed'] = 'Closed';
+if(isset($_POST['action']) && $_POST['action']!=''){
+	switch($_POST['action']){
+		case "submit_kform":
+				
+				 $status 		= isset($_POST['status'])?$_POST['status']:''; 
+				 if($status!=''){
+					 foreach($_POST['user_id'] as $key=>$user){
+						 $update_query="update `user` set status =  '$status' where user_id = '".$user."'";		
+		
+						$query = mysql_query($update_query);
+					 }
+					 echo '<div class="alert alert-success ">
+  <strong>Successfully Updated.</strong>
+</div>';
+				 }
+		break;
+	}
+}
 ?>
 <div> <button type="button" id="export_data" onClick="window.open('<?php echo ADMIN_WEBSITE_URL?>/export.php');" class="btn btn-danger pull-right">Export</button></div>
+ <form action="" method="post" id="k_form" >
+ <input type="hidden" name="action" value="submit_kform" />
+ <?php if(isset($_POST['brand'])){ ?>
+ <input type="hidden" name="brand" value="<?php echo $_POST['brand']?>" />
+ <?php } if(isset($_POST['date_range'])){ ?>
+ <input type="hidden" name="date_range" value="<?php echo $_POST['date_range']?>" />
+ <?php } ?>
 <table class="table table-hover" id="tabledata">
 			  <thead>
 				<tr>
+				<th id="check_all"><input type="checkbox" id="user_id_all" name="user_id_all" /></th>
 				  <th style="width:5px;" class="visible-lg">#</th>
 				  <th width="23%" class="text-center">Registartion Date </th>
 				  <th class="text-center">Brand</th>
@@ -28,6 +57,7 @@ $brandArray['ezeewarrantyh2'] = 'EZEEWARRANTY H 729';
 				  <th class="text-center" >Payment</th>
 				  <th class="text-center visible-lg">Payment Mode</th>
 				  <th class="text-center visible-lg">Amount</th>
+				  <th class="text-center visible-lg">Status</th>
 				  <th class="text-center"></th>
 				  </tr>
 			  <thead>
@@ -55,7 +85,7 @@ $brandArray['ezeewarrantyh2'] = 'EZEEWARRANTY H 729';
 			}
 			session_start();
 $_SESSION['where_export'] = $where;
-		 	 $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,u.name,u.contact,u.Brand,u.email,u.city,m.model,u.imei_no,u.amount,o.ord_id,o.`status`,o.payment_mode FROM user u LEFT JOIN orders o ON o.user_id=u.user_id left join tbl_model m on m.model_id=u.model $where order by u.cdate desc
+		 	 $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,u.name,u.contact,u.Brand,u.email,u.city,m.model,u.imei_no,u.amount,o.ord_id,o.`status`,o.payment_mode,u.status as user_status FROM user u LEFT JOIN orders o ON o.user_id=u.user_id left join tbl_model m on m.model_id=u.model $where order by u.cdate desc
 			";
 			$query = mysql_query($select_query);
 				if ($query) {
@@ -76,9 +106,11 @@ $_SESSION['where_export'] = $where;
 									$imei_no = $row['imei_no'];
 									$city 	 = $row['city'];
 									$email 	 = $row['email'];
+									$user_status 	 = $row['user_status'];
 									$payment_mode = $row['payment_mode'];
 									?>
 									<tr>
+										<td id="check_<?php echo $user_id?>"><input class="user_check" type="checkbox" id="user_id_<?php echo $user_id?>" name="user_id[]" value="<?php echo $user_id?>" /></td>
 										<td class="visible-lg"><?php echo ($i+1)?></td>
 										<td class="text-center" id="date_<?php echo $user_id?>"><?php echo $date;?></td>
 										<td class="text-center" id="brand_<?php echo $user_id?>"><?php echo $brand;?></td>
@@ -88,6 +120,7 @@ $_SESSION['where_export'] = $where;
 										<td class="text-center" id="payment_<?php echo $user_id?>"><?php echo $payment;?></td>
 										<td class="text-center visible-lg" id="payment_mode_<?php echo $user_id?>"><?php echo $payment_mode;?></td>
 										<td class="text-center visible-lg" id="amount_<?php echo $user_id?>"><?php echo $amount;?></td>
+										<td class="text-center visible-lg" id="user_status_<?php echo $user_id?>"><?php echo $user_status;?></td>
 										<td class="text-center" id="date_<?php echo $user_id?>">
 										<a href="javascript:void(0);" onClick="viewDetail(<?php echo $user_id?>);">view</a>
 										<input type="hidden" name="model" id="model_<?php echo $user_id?>" value="<?php echo $model;?>" />
@@ -108,4 +141,26 @@ $_SESSION['where_export'] = $where;
 			?>
 				</tbody>
 			</table>
-		
+			 <div class="col-md-12">
+		    <div class="row">
+			<div class="col-md-4">
+              <div class="form-group">
+              
+                <select class="form-control select2" name="status" id="status" style="width: 100%;">
+                  <option value="" selected="">Select Status</option>
+				  <?php foreach($statusArr as $key=>$val){
+					  echo "<option value='$key'>$val</option>";
+				  }?>
+
+                </select>
+              </div>
+              </div>
+				 <div class="col-md-2">
+                <button type="button" id="submit_data" onClick="submitData();" class="btn btn-info pull-right">Submit</button>
+				</div>
+			 <!-- <div class="col-md-6">
+					<button type="button" id="clear_btn" class="btn btn-default ">Clear</button>
+				</div> -->
+		   </div>
+		   </div>
+		</form>

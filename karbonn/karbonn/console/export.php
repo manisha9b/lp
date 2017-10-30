@@ -39,9 +39,10 @@ $objPHPExcel->setActiveSheetIndex(0)
 			->setCellValue('I1', 'Amount')
 			->setCellValue('J1', 'Payment')
 			->setCellValue('K1', 'Trasaction No.')
-			->setCellValue('L1', 'Payment Mode');
+			->setCellValue('L1', 'Payment Mode')
+			->setCellValue('M1', 'Status');
 			$where = $_SESSION['where_export'];
-$select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.transaction_id,o.udate,u.name,u.contact,u.Brand,u.email,u.city,m.model,u.imei_no,u.amount,o.ord_id,o.`status`,o.payment_mode  
+$select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.transaction_id,o.udate,u.name,u.contact,u.Brand,u.email,u.city,m.model,u.imei_no,u.amount,o.ord_id,o.`status`,o.payment_mode ,u.status as user_status 
 			FROM user u
 			LEFT JOIN orders o ON o.user_id=u.user_id left join tbl_model m on m.model_id=u.model $where order by u.cdate desc 
 			";
@@ -65,6 +66,7 @@ $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.tran
 										$imei_no = $row['imei_no'];
 										$city 	 = $row['city'];
 										$email 	 = $row['email'];
+										$user_status 	 = $row['user_status'];
 										$payment_mode 	 = $row['payment_mode'];
 										$transaction_id 	 = $row['transaction_id'];
 										$col_no=2;
@@ -80,6 +82,7 @@ $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.tran
 										$j= "J".($col_no+$r);
 										$k= "K".($col_no+$r);
 										$l= "L".($col_no+$r);
+										$m= "M".($col_no+$r);
 										$objPHPExcel->setActiveSheetIndex(0)
 													->setCellValue($a, ($r+1))
 													->setCellValue($b, $brand)
@@ -93,6 +96,7 @@ $select_query = "SELECT u.user_id,DATE_FORMAT(u.cdate,'%d/%m/%Y') as date,o.tran
 													->setCellValue($j, $payment)
 													->setCellValue($k, $transaction_id)
 														->setCellValue($l, $payment_mode)
+														->setCellValue($m, $user_status)
 													;
 													
 										$r++;	

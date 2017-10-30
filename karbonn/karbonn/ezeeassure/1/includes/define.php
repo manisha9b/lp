@@ -8,6 +8,7 @@ define("PAYU_KEY","rjQUPktU");
 define("PAYU_URL","https://test.payu.in");
 define("BRAND_PRICE",400);
 define("BRAND_NAME",'ezeeassure1');
+define("PRODUCT_NAME",'EZEEASSURE 400');
 /*define("PAYU_SALT","qL2jVYYrvL");
 define("PAYU_KEY","llRZqSU5");
 define("PAYU_URL","https://secure.payu.in");*/

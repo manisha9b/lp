@@ -1,0 +1,76 @@
+@media only screen and (min-width: 1024px) and (max-width: 1100px){
+    .formbg{max-width: 300px;min-width: 300px;}
+	
+}
+@media only screen and (min-width: 768px){
+    .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse{padding:0 15px }
+}
+@media only screen and (max-width: 1023px){
+    .formbg{display:none;}
+    .responsiveform{display: block;}
+    .mov{display: block;}
+    .dov{display: none;}
+    .responsiveform .col-sm-8{width: 70%;margin:0 auto; float: none;}
+    h1.heading{padding-top: 0px;}
+    .col-sm-8{width: 100%;}
+    .col-sm-8 .col-sm-8{width: initial;}
+	/*.bg{min-height: 475px;}*/
+}
+@media only screen and (max-width: 950px) {
+	/*.bg{min-height: 395px;}*/
+}
+@media only screen and (max-width: 850px) {
+	/*.bg{min-height: 345px;}*/
+}
+@media only screen  and (max-width: 767px){
+    #about .col-sm-4{text-align: center;}
+    h1{font-size:24px;}
+    .responsiveform .col-sm-8{width: 100%;}
+    .pbg{display: block;}
+    #production .col-sm-1 {padding:0 0 15px 15px;}
+    .navbar{display: none;}
+    footer .col-sm-9, footer .col-sm-3, footer .text-right{text-align: center;}
+    footer .col-sm-3{padding-top:5px;}
+    .col-xs-1{width:20%;}
+    .col-xs-11{width:80%;}
+    .abt-arrow {display: none;}
+	.bg{min-height: 375px;}
+	
+}
+@media only screen and (max-width: 600px) {
+	.bg{min-height: 305px;}
+}
+@media only screen and (max-width: 550px) {
+	.bg{min-height: 275px;}
+}
+@media only screen and (max-width: 500px) {
+	.bg{min-height: 255px;}
+}
+@media only screen and (max-width: 440px) {
+    .bg{background:url('../images/bg4.jpg') no-repeat top; background-size:100%;padding-top:30px;}
+    .buynow-bg {background:url('../images/gbg.jpg') no-repeat; background-size:cover;min-height: 260px;}
+    .abt-arrow{ display:none;}
+    .col-sm-8{padding-right:0px;}
+    .heading{padding-top: 50px;margin-bottom: 20px;font-family: 'Source Sans Pro'; font-size:25px; line-height:21px;font-weight: bold;color:#ffffff;}
+    .heading1{margin-bottom: 20px;font-family: 'Source Sans Pro'; font-size:25px; line-height:15px;color:#ffffff;}  
+	.bg{min-height: 225px;}
+}
+@media only screen and (max-width: 414px){
+    .aftersales-bg {border-top: 5px solid #f8a605;}
+	.bg{min-height: 175px;}
+}
+@media only screen and (max-width:384px) {
+    .bg{padding-top: 20px;}
+    .horgange{font-size: 33px;}
+    .hwhite{font-size: 15px;}
+	 .bg{min-height: 187px;}
+}
+@media only screen and (max-width:360px) {
+    .bg{padding-top: 15px;}
+    .bg-text {font-size: 18px;}
+}
+@media only screen and (max-width:320px) {
+    .or{color:#ffffff;font-size:20px; margin-left:130px; text-align:center;}
+    .bg{min-height: 145px;}
+    .bg-text {font-size: 16px;}
+}

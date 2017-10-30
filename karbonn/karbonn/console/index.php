@@ -5,7 +5,7 @@ if(isset($_SESSION['userLoginId']) && $_SESSION['userLoginId']>0){
 	header("Location: ".ADMIN_WEBSITE_URL.'/dashboard.php');
 }
 ?>
-<?php// include_once('session_set.php');?>
+<?php //include_once('session_set.php');?>
 <!DOCTYPE html>
 <html>
 <head>
