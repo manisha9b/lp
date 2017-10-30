@@ -73,10 +73,10 @@ else
 					<img src="images/ezee-assure2.jpg" class="img-responsive"> 
 					</div>
 		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #666666;padding-left: 0px;">
-		    			<div class="formbg">
-		    		<h3 class="text-center fw-b">अभी खरीदें</h3>
+		    			<div class="formbg" style="padding-top:0px;padding-bottom:0px;">
+		    		<h3 class="text-center fw-b" style="margin-top:8px;">अभी खरीदें</h3>
 		    				<div class="heading_f text-center">
-		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;संपर्क करें 1800-120-2177<br> <span style="font-size:12px; text-align:center;">अथवा</span><br> मिस कॉल दें <b>8291939913</b><hr>कृप्या फॉर्म भरे
+		    					    <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp;संपर्क करें 1800-120-2177<br> <span style="font-size:12px; text-align:center;">अथवा</span><br> मिस कॉल दें <b>8291939913</b>
 		    				</div>
 		    				<div class="fform">
 		    				<div  id="DetailForm_div1" style="display:block;">
@@ -194,10 +194,10 @@ else
 		                    		</div>
 									
 		                    			
-		                    		<div class="frmfield">
+		                    	<!--	<div class="frmfield">
 		                    			  <center>  <p style="font-weight:bold;">* डिलवरी पर नकदी<p></center>
 		                    			    <div class="clear"></div>
-		                    		</div>
+		                    		</div>-->
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
 		                    				<div class="frmfield"><center>
@@ -260,7 +260,7 @@ else
 	    				<div>
 	<h3 class="text-center fw-b">अभी खरीदें</h3>
 		    				<h4 class="text-center">
-		    					   <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; संपर्क करें 1800-120-2177<br> <span style="font-size:12px; text-align:center;">अथवा</span><br> मिस कॉल दें <b>8291939913</b><hr> कृप्या फॉर्म भरे
+		    					   <i class="fa fa-phone" aria-hidden="true" style="color:#6fcddf"></i>&nbsp; संपर्क करें 1800-120-2177<br> <span style="font-size:12px; text-align:center;">अथवा</span><br> मिस कॉल दें <b>8291939913</b>
 		    				</h4>
 		    				<div class="fform" >
 		    				<div  id="DetailForm_div2">
@@ -416,13 +416,12 @@ else
 									
                                     <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg2"></div></div></div></div>
                                    <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
-                                    <div class="col-sm-12">
-                                    <div class="col-sm-6">
-		                    			<div class="frmfield">
+                                    <div class="col-sm-6 margin:0 auto;float: none; ">
+		                    			<div class=" fform1 frmfield">
 	                          					<input type="button" value="Verify OTP" name="submit_otp2" name="submit_otp2" style="font-size:18px;  height:28px; background:#18bcbb;" onClick="return validateOtp(2)"  >
 	                          				</div>
 		                    		</div>
-		                    		</div>
+		                    		
 									
 		                    		
 							</form>

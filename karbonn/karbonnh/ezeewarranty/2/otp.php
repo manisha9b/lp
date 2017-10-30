@@ -33,7 +33,7 @@
 					$r = mysql_fetch_array($query);
 					$ord_id = $r['ord_id']	;
 					$query = mysql_query($select_query); 
-					$update_query="update `orders` set status = 1,msg = 'OTP Verified', udate = NOW() where ord_id = '".$ord_id."'";	
+					$update_query="update `orders` set status = 1,message = 'OTP Verified', udate = NOW() where ord_id = '".$ord_id."'";	
 					mysql_query($update_query);					
 					 $insert_query="INSERT INTO `order_log` (`ord_id`, `cdate`,status) VALUES
 									( '".$ord_id."',  now(),1);";		
