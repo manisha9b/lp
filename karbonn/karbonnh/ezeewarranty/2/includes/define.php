@@ -1,17 +1,17 @@
 <?php
-define("WEBSITE_URL","http://www.sspadvantage.com/karbonn/ezeewarranty/2");
-//define("WEBSITE_URL","http://localhost/lp/ezeewarranty/2");
+//define("WEBSITE_URL","http://www.sspadvantage.com/karbonnh/ezeewarranty/2");
+define("WEBSITE_URL","http://localhost/lp/karbonn/karbonnh/ezeewarranty/2");
 define("SUCCESS_URL",WEBSITE_URL.'/payu/success.php');
 define("FAILURE_URL",WEBSITE_URL.'/payu/failure.php');
-/*define("PAYU_SALT","e5iIg1jwi8");
+define("PAYU_SALT","e5iIg1jwi8");
 define("PAYU_KEY","rjQUPktU");
-define("PAYU_URL","https://test.payu.in");*/
-define("PAYU_SALT","qL2jVYYrvL");
+define("PAYU_URL","https://test.payu.in");
+/*define("PAYU_SALT","qL2jVYYrvL");
 define("PAYU_KEY","llRZqSU5");
-define("PAYU_URL","https://secure.payu.in");
+define("PAYU_URL","https://secure.payu.in");*/
 define("BRAND_PRICE",729);
 define("BRAND_NAME",'ezeewarrantyh2');
-
+define("PRODUCT_NAME", 'EZEEWARRANTY 729');
 function getModelLess($range = 5000){
 	$result = array();
 	$sql = "select model_id,model from tbl_model where price_range<=".$range;
@@ -42,5 +42,4 @@ function getModelMore($range = 5000){
 	$result['html'] = $html;
 	return $result;
 }
-
 ?>
