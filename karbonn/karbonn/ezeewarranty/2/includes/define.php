@@ -6,11 +6,12 @@ define("FAILURE_URL",WEBSITE_URL.'/payu/failure.php');
 define("PAYU_SALT","e5iIg1jwi8");
 define("PAYU_KEY","rjQUPktU");
 define("PAYU_URL","https://test.payu.in");
-define("BRAND_PRICE",729);
-define("BRAND_NAME",'ezeewarranty2');
 /*define("PAYU_SALT","qL2jVYYrvL");
 define("PAYU_KEY","llRZqSU5");
 define("PAYU_URL","https://secure.payu.in");*/
+define("BRAND_PRICE",729);
+define("BRAND_NAME",'ezeewarranty2');
+define("PRODUCT_NAME", 'EZEEWARRANTY 729');
 function getModelLess($range = 5000){
 	$result = array();
 	$sql = "select model_id,model from tbl_model where price_range<=".$range;
