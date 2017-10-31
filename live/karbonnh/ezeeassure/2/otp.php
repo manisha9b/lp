@@ -33,12 +33,12 @@
 					$r = mysql_fetch_array($query);
 					$ord_id = $r['ord_id']	;
 					$query = mysql_query($select_query); 
-					$update_query="update `orders` set status = 1,message = 'OTP Verified', udate = NOW() where ord_id = '".$ord_id."'";	
+					$update_query="update `orders` set status = 2,message = 'OTP Verified', udate = NOW() where ord_id = '".$ord_id."'";	
 					mysql_query($update_query);					
 					 $insert_query="INSERT INTO `order_log` (`ord_id`, `cdate`,status) VALUES
-									( '".$ord_id."',  now(),1);";		
+									( '".$ord_id."',  now(),2);";		
 					mysql_query($insert_query);
-					$_SESSION['ord_status'] = 1;
+					$_SESSION['ord_status'] = 2;
 				}							  
 			
 			//echo "<br/>
@@ -53,6 +53,13 @@
 		if(isset($_POST['resend'])){
 			
 			$user_id = $_POST['uid'] ;
+					 $select_query="select name,contact from user where user_id = '".$user_id."'";	
+				$query = mysql_query($select_query);
+				if ($query) {
+					$r = mysql_fetch_array($query);
+					$name = $r['name']	;
+					$phone = $r['contact']	;
+				}
 			
 		}else{
 			include('submit_user.php');
@@ -73,6 +80,7 @@
 		$otp = rand(100000,999999);
 		$sql = "INSERT INTO `tbl_otp` (`otp`, `cdate`, `exptime`, `user_id`) VALUES ($otp , NOW(), SUBDATE(NOW(),INTERVAL -10 Minute), $user_id);";
 		mysql_query($sql);
+		include('../../../send-sms.php');
 	//	$return['otp'] = $otp;
 		$return['uid'] = $user_id;
 		

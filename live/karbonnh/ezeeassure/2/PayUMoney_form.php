@@ -39,7 +39,7 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
           || empty($posted['txnid'])
           || empty($posted['amount'])
           || empty($posted['firstname'])
-          || empty($posted['email'])
+         
           || empty($posted['phone'])
           || empty($posted['productinfo'])
           || empty($posted['surl'])

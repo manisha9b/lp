@@ -3,6 +3,9 @@ session_start();
 //print_r($_SESSION);
 include("includes/connectdb.php");
 	include_once("includes/define.php");
+	if(!isset($_SESSION['txnid'])){
+		header("Location: ".WEBSITE_URL);die;
+	}
 if (isset($_GET["sourcetype"]))
 {
 	$_SESSION["sourcetype"]=$_GET["sourcetype"];
@@ -15,15 +18,7 @@ else
 {
 	$source="Adwords";	
 }
-$invoice_date = "";
-$order_no = "";
- $select_query="select ord_id,DATE_FORMAT(udate,'%d, %M %Y') AS invoice_date from orders where transaction_id = '".$_SESSION['txnid']."'";		
-			$query = mysql_query($select_query);
-			if ($query) {
-				$r = mysql_fetch_assoc($query);
-				$invoice_date = $r['invoice_date'];
-				$order_no = $r['ord_id'];
-			}
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -88,10 +83,14 @@ $order_no = "";
 	    					<br/><br/>
 	    					Dear <?php echo $_SESSION['firstname']; ?>,<br/><br/>
 	    					<?php 
+							
 							if($_SESSION['ord_status']==1){
 								echo "Thank You. Your order status is place successfully<br/><br/>";
 							    echo "Your Transaction ID for this transaction is ".$_SESSION['txnid'].".<br/><br/>";
 							    echo "We have received a payment of Rs. " .$_SESSION['amount'] . ".";
+							}else if($_SESSION['ord_status']==2){
+								echo "Thank You. Your order status is place successfully<br/><br/>";
+							    echo "Your Transaction ID for this transaction is ".$_SESSION['txnid'].".<br/><br/>";
 							}
 							else
 							{
@@ -110,7 +109,7 @@ $order_no = "";
 		   <div class="container" style="min-height:230px;">
 		    	<div class="row">
 	    			<div class="col-sm-8 col-sm-offset-3">
-		   <?php if($_SESSION['ord_status']==1){include_once('invoice.php');}
+		   <?php if($_SESSION['ord_status']==1 || $_SESSION['ord_status']==2){include_once('invoice.php');}
 		   unset($_SESSION['ord_status']);
 							unset($_SESSION['txnid']);
 							unset($_SESSION['firstname']);

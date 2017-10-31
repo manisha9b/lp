@@ -5,6 +5,7 @@ session_start();
 							unset($_SESSION['firstname']);
 							unset($_SESSION['amount']);
 							unset($_SESSION['otp_uid']);
+							
 if (isset($_GET["sourcetype"]))
 {
 	$_SESSION["sourcetype"]=$_GET["sourcetype"];
@@ -52,6 +53,22 @@ else
 		.none{
 			display:none;
 		}
+		@media screen and (max-width: 767px) {
+			.b_banner{
+				display:none;
+			}
+			.s_banner{
+				display:block;
+			}
+		}	
+		@media screen and (min-width: 768px) {
+			.b_banner{
+				display:block;
+			}
+			.s_banner{
+				display:none;
+			}
+		}
 		</style>
 	</head>
     
@@ -69,8 +86,11 @@ else
 	    <section>
 	    	<div class="wrapper container" id="section_bg" >
 		    	<div class="row" style="background-color: #666666;">
-		    		<div class="col-sm-8" style="padding-right: 0px; padding-left:0px;">
+		    		<div class="col-md-8 b_banner" style="padding-right: 0%; padding-left:0%	;">
 					<img src="images/ezee-assure2.jpg" class="img-responsive"> 
+					</div>
+					<div class="col-md-8 s_banner" style="padding-right: 12px; padding-left:12px;">
+					<img src="images/banner_s.jpg" class="img-responsive"> 
 					</div>
 		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #666666;padding-left: 0px;">
 		    			<div class="formbg" style="padding-top:0px;padding-bottom:0px;">
@@ -143,7 +163,7 @@ else
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												      <input type="text" name="purchase_date" maxlength="100" id="datepicker"  value="" placeholder="Purchase Date" />
+												      <input type="text" name="purchase_date" maxlength="100" id="datepicker"  value="" placeholder="Purchase Date" data-date-end-date="0d"/>
                 <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
                
 											</div>	
@@ -181,7 +201,7 @@ else
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
 			                    				<div class="secu">
-			                    					<img src="captcha/captcha_code_file.php?rand=<?php echo rand(); ?>"  />
+			                    					<img src="../../../captcha/captcha_code_file.php?b=<?php echo BRAND_NAME; ?>&rand=<?php echo rand(); ?>"  />
 			                    				</div>	
 			                    			</div>
 			                    		</div>
@@ -192,12 +212,10 @@ else
 			                    		</div>
 			                    		<div class="clear"></div>
 		                    		</div>
-									
+									<div>
 		                    			
-		                    	<!--	<div class="frmfield">
-		                    			  <center>  <p style="font-weight:bold;">* डिलवरी पर नकदी<p></center>
-		                    			    <div class="clear"></div>
-		                    		</div>-->
+
+		                    		</div>
 		                    		<div>
 		                    			<div class="col-sm-6" style="margin:0 auto; float:none; ">
 		                    				<div class="frmfield"><center>
@@ -206,6 +224,7 @@ else
 		                    			</div>
 		                    			<div class="clear"></div>
 		                    		</div>
+									
 								</form>	
 								<div class="clear"></div>
 								</div>
@@ -228,6 +247,7 @@ else
 	                    				<a href="javascript:void(0);" onClick="resendOTP(1);">Resend OTP</a>
 	                    			</div>
 	                    			</div>
+									<div class="col-sm-12"><div class="col-sm-12" id="timediv_1">OTP will expire  in <span id="time1">10:00</span> minutes!</div></div>
 									
                                     <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg1"></div></div></div></div>
                                    <!-- <div class="col-sm-12"><div class="alert alert-msg alert-dismissible alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fa fa-times"></i></button></div></div> -->
@@ -328,7 +348,7 @@ else
 										<div class="col-sm-6">
 											<div class="frmfield">
 	                    				
-												      <input type="text" name="purchase_date" maxlength="100" id="datepicker2"  value="" placeholder="Purchase Date" />
+												      <input type="text" name="purchase_date" maxlength="100" id="datepicker2"  value="" placeholder="Purchase Date" data-date-end-date="0d"/>
                 <!--  <input type="text" class=" pull-right" id="datepicker" placeholder="Date of Purchase"> -->
                
 											</div>	
@@ -366,7 +386,7 @@ else
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
 			                    				<div class="secu">
-			                    					<img src="captcha/captcha_code_file2.php?rand=<?php echo rand(); ?>"  />
+			                    					<img src="../../../captcha/captcha_code_file2.php?b=<?php echo BRAND_NAME; ?>&rand=<?php echo rand(); ?>"  />
 			                    				</div>	
 			                    			</div>
 			                    		</div>
@@ -379,8 +399,8 @@ else
 			                    		<div class="clear"></div>
 		                    		</div>
 									
-		                    		<div class="frmfield">
-		                    			  <center>  <p style="font-weight:bold;">* डिलवरी पर नकदी<p></center>
+									<div>
+		                    		
 			                    		<div class="clear"></div>
 		                    		</div>
 		                    		<div>
@@ -411,7 +431,7 @@ else
 	                    			</div>
 									<div class="col-sm-4">
 	                    				<a href="javascript:void(0);" onClick="resendOTP(2);">Resend OTP</a>
-	                    			</div>
+	                    			</div><div class="col-sm-12" id="timediv_2">OTP will expire  in<span id="time2">10:00</span> minutes!</div>
 	                    			</div>
 									
                                     <div class="col-sm-12"> <div class="col-sm-12"><div  class="errormsg" style="display: block;padding-bottom:10px"><div id="msg2"></div></div></div></div>
@@ -434,6 +454,7 @@ else
 		    	</div>
 	    	
 	    </section>
+
        <section id="aftersales" class="aftersales-bg">
 	    	<div class="container">
 	    		<div class="row">
@@ -466,16 +487,71 @@ else
 	    		</div>
 	    	</div>		
 	    </footer>
-        
+
+
 	    <script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
-		<script type="text/javascript" src="js/requirement.js?v=0.0001"></script>
+		<script type="text/javascript" src="js/requirement.js?v=0.00002"></script>
 		<script type="text/javascript">
+		function startTimer(duration, display) {
+			var timer = duration, minutes, seconds;
+			var refreshIntervalId =setInterval(function () {
+				minutes = parseInt(timer / 60, 10)
+				seconds = parseInt(timer % 60, 10);
+
+				minutes = minutes < 10 ? "0" + minutes : minutes;
+				seconds = seconds < 10 ? "0" + seconds : seconds;
+
+				display.textContent = minutes + ":" + seconds;
+
+				if (--timer < 0) {
+					timer = duration;
+					clearInterval(refreshIntervalId);
+				}else{
+					
+				}
+			}, 1000);
+		}
+/*function startTimer(duration, display) {
+    var start = Date.now(),
+        diff,
+        minutes,
+        seconds;
+    function timer() {
+        // get the number of seconds that have elapsed since 
+        // startTimer() was called
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        // does the same job as parseInt truncates the float
+        minutes = (diff / 60) | 0;
+        seconds = (diff % 60) | 0;
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds; 
+
+        if (diff <= 0) {
+            // add one second so that the count down starts at the full duration
+            // example 05:00 not 04:59
+			//alert('done');
+			//clearInterval(refreshIntervalId);
+            start = Date.now() + 1000;
+			
+        }else{
+
+		}
+    };
+    // we don't want to wait a full second before the timer starts
+    timer();
+    setInterval(timer, 1000);
+}*/
 			$(document).ready(function(){
+					
 				$('.smoothscroll').on('click', function(){
 					$target = $($(this).attr('href')).offset().top;
 					$('body, html').animate({scrollTop : $target}, "slow");
