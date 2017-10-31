@@ -1381,20 +1381,82 @@ function validate()
 
     DetailForm.submit1.value = "Please wait...";
 //alert($("#cod").is(':checked'));
-			if($("#cod").is(':checked')){			codForm(1,'#DetailForm');		}else{	document.DetailForm.action = "pay.php";	document.DetailForm.submit();		}
+			if($("#cod").is(':checked')){
+			codForm(1,'#DetailForm');
+		}else{
+	document.DetailForm.action = "pay.php";
+
+	document.DetailForm.submit();
+		}
 
 }
-	function codForm(div_no,form_id){		var myData = $(form_id).serialize();		//alert(myData);		jQuery.ajax({			type: "POST",			url: "otp.php",			 dataType: "json",			data:myData,			success:function(response){				if(response.uid!='')				{				$("#DetailForm_div"+div_no).hide();				$("#cod_div"+div_no).show();				$("#uid"+div_no).val(response.uid);
+	function codForm(div_no,form_id){
+		var myData = $(form_id).serialize();
+		//alert(myData);
+		jQuery.ajax({
+			type: "POST",
+			url: "otp.php",
+			 dataType: "json",
+			data:myData,
+			success:function(response){
+				if(response.uid!='')
+				{
+				$("#DetailForm_div"+div_no).hide();
+				$("#cod_div"+div_no).show();
+				$("#uid"+div_no).val(response.uid);
 				var fiveMinutes = 10*60,
 						display = document.querySelector('#time'+div_no);
-						alert(display);
+					//	alert(display);
 						startTimer(fiveMinutes, display);
-										}			},		});		}			function resendOTP(div_no){			var myData = $("#cod_form"+div_no).serialize();
-			myData = myData+"&resend=1";			//alert(myData);			jQuery.ajax({				type: "POST",				url: "otp.php",				 dataType: "json",				data:myData,				success:function(response){					if(response.uid!='')					{					//$("#DetailForm_div"+div_no).hide();					//$("#cod_div"+div_no).show();
+						
+				}
+			},
+
+		});
+		}	
+		function resendOTP(div_no){
+			var myData = $("#cod_form"+div_no).serialize();
+			myData = myData+"&resend=1";
+			//alert(myData);
+			jQuery.ajax({
+				type: "POST",
+				url: "otp.php",
+				 dataType: "json",
+				data:myData,
+				success:function(response){
+					if(response.uid!='')
+					{
+					//$("#DetailForm_div"+div_no).hide();
+					//$("#cod_div"+div_no).show();
 						var fiveMinutes = 10*60,
 						display = document.querySelector('#time'+div_no);
-						alert(display);
-						startTimer(fiveMinutes, display);						$("#uid"+div_no).val(response.uid);					}				},			});		}		function validateOtp(div_no){			var myData = $("#cod_form"+div_no).serialize();			//alert(myData);			jQuery.ajax({				type: "POST",				url: "otp.php",				 dataType: "json",				data:myData,				success:function(response){					if(response.verified=='1')					{						window.location= 'thankyou.php';					}else{						$("#msg"+div_no).html(response.msg);					}				},			});		}
+					//	alert(display);
+						startTimer(fiveMinutes, display);
+						$("#uid"+div_no).val(response.uid);
+					}
+				},
+
+			});
+		}
+		function validateOtp(div_no){
+			var myData = $("#cod_form"+div_no).serialize();
+			//alert(myData);
+			jQuery.ajax({
+				type: "POST",
+				url: "otp.php",
+				 dataType: "json",
+				data:myData,
+				success:function(response){
+					if(response.verified=='1')
+					{
+						window.location= 'thankyou.php';
+					}else{
+						$("#msg"+div_no).html(response.msg);
+					}
+				},
+
+			});
+		}
 function validate1()
 
 {
