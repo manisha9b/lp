@@ -438,7 +438,7 @@ else
 		    	</div>
 	    	
 	    </section>
-	    </section>
+
        <section id="aftersales" class="aftersales-bg">
 	    	<div class="container">
 	    		<div class="row">

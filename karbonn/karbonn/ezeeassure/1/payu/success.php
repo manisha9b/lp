@@ -11,7 +11,6 @@ $productinfo=$_POST["productinfo"];
 $email=$_POST["email"];
 $salt=PAYU_SALT;
 session_start();
-echo "I am here";
 If (isset($_POST["additionalCharges"])) {
        $additionalCharges=$_POST["additionalCharges"];
         $retHashSeq = $additionalCharges.'|'.$salt.'|'.$status.'|||||||||||'.$email.'|'.$firstname.'|'.$productinfo.'|'.$amount.'|'.$txnid.'|'.$key;
@@ -59,7 +58,6 @@ If (isset($_POST["additionalCharges"])) {
 			$_SESSION['ord_status'] = 	'1';		
 			$_SESSION['amount'] = 	$amount;		
 			$_SESSION['txnid'] = 	$txnid;		
-			
          /* echo "<h3>Thank You. Your order status is ". $status .".</h3>";
           echo "<h4>Your Transaction ID for this transaction is ".$txnid.".</h4>";
           echo "<h4>We have received a payment of Rs. " . $amount . ". Your order will soon be shipped.</h4>";
