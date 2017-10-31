@@ -87,9 +87,9 @@ else
 	    	<div class="wrapper container" id="section_bg" >
 		    	<div class="row" style="background-color: #666666;">
 		    		<div class="col-md-8 b_banner" style="padding-right: 0%; padding-left:0%	;">
-					<img src="images/ezee-assure1.jpg" class="img-responsive"> 
+					<img src="images/ezee-assure2.jpg" class="img-responsive"> 
 					</div>
-					<div class="col-md-8 s_banner" style="padding-right: 10px; padding-left:10px;">
+					<div class="col-md-8 s_banner" style="padding-right: 12px; padding-left:12px;">
 					<img src="images/banner_s.jpg" class="img-responsive"> 
 					</div>
 		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #666666;padding-left: 0px;">
