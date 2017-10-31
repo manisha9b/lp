@@ -276,7 +276,7 @@ function limitText(limitField, limitCount, limitNum)
 
 }
 
-/*function isValidEmail(email)
+function isValidEmail(email)
 
 { 
 
@@ -298,7 +298,7 @@ function limitText(limitField, limitCount, limitNum)
 
     } 
 
-}*/
+}
 
 function checkField(){ 
 
@@ -1150,7 +1150,7 @@ function validate()
 
 
 
-	}*/ 
+	}*/
 	//email validation	
 
 	
@@ -1288,8 +1288,8 @@ function validate()
 		}
 
 		//---------model end----------
-
-	var imei_no = trim($("#df_imei_no").val());
+		
+			var imei_no = trim($("#df_imei_no").val());
 
 	var error_msg = "";
 
@@ -1803,7 +1803,8 @@ function validate1()
 
 
 
-	}*///email validation	
+	}*/
+	//email validation	
 
 	
 
