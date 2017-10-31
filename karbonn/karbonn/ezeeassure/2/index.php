@@ -181,7 +181,7 @@ else
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
 			                    				<div class="secu">
-			                    					<img src="captcha/captcha_code_file.php?rand=<?php echo rand(); ?>"  />
+			                    					<img src="../../../captcha/captcha_code_file.php?rand=<?php echo rand(); ?>"  />
 			                    				</div>	
 			                    			</div>
 			                    		</div>
@@ -364,7 +364,7 @@ else
 		                    			<div class="col-sm-6">
 			                    			<div class="frmfield">
 			                    				<div class="secu">
-			                    					<img src="captcha/captcha_code_file2.php?rand=<?php echo rand(); ?>"  />
+			                    					<img src="../../../captcha/captcha_code_file2.php?rand=<?php echo rand(); ?>"  />
 			                    				</div>	
 			                    			</div>
 			                    		</div>

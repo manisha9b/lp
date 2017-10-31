@@ -226,7 +226,7 @@ File           : Active.js
         googleMap: function () {
             function map_init() {
                 var lat = 19.105674, // Put your latitude Number here and
-                    log = 72.88743199999999, // Put your longitude Number here
+                    log = 72.887431, // Put your longitude Number here
                     mapOptions = {
                         zoom: 14,
                         center: new google.maps.LatLng(lat, log), // New York

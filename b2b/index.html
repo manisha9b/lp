@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
-        <!--    [Site Title] -->
+        <!--    [Site Title] -->	
         <title>HealthCare - Onepage Health and Medical Business Template</title>
         <!--    [Favicon] -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -22,6 +22,7 @@
         <link href="assets/css/font-awesome.min.css" rel="stylesheet">
         <!--    [IonIcons Css] -->
         <link href="assets/css/ionicons.min.css" rel="stylesheet">
+		
         <!--    [Owl Carousel Css] -->
         <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
         <!--    [Magnific PopUp Css] -->
@@ -38,7 +39,24 @@
         <![endif]-->
     </head>
     <body>
-        
+  		<style>
+		@media (min-width:1200px){
+		.container {
+		width: 1200px;
+	}
+	}
+		@media (min-width:1028px) and (max-width:1200px){
+		.container {
+		width: 1028px;
+	}
+		@media (min-width:992px) and (max-width:1028px){
+		.container {
+		width: 992px;
+		font-size:10px;
+	}
+	}	
+		</style>
+
         <!--    [ START PRLOADER AREA]-->
         <div class="site-preloader-area">
             <div class="site-preloader"></div>
@@ -47,44 +65,31 @@
         
         <div class="site-wrapper">
             <!--    [ START HEADER AREA]-->
-            <header id="home" class="header-area">
-                <div class="header-top-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10">
-                                <span><i class="fa fa-phone"></i><strong>call us : </strong>+143 800 433 633 </span>
-                                <span><i class="fa fa-envelope"></i><strong>email : </strong>info@support.com </span>
-                                <span><i class="fa fa-clock-o"></i><strong>opening hour : </strong>Mon-Sat 9:00 PM - 5:00 PM | Sunday Closed </span>
-                            </div>
-                            <div class="col-md-2 text-right">
-                                <ul class="social-profile">
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <header id="home" class="header-area" style="height:56px">
+							
                 
                 <!--    [ start main menu area]-->
-            <div class="main-menu-area">
+            <div class="main-menu-area" style="height:56px;">
                 <div class="container">
                     <div class="row">
                         <!--    [ start logo]-->
-                        <div class="col-sm-3">
+                        <div class="col-sm-5">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index.html" class="brand-logo pull-left">
                                     <!-- <h1><span>health</span>Care</h1> -->
-                                    <img src="assets/img/logo.png" alt="">
+                                    <img src="assets/img/logo.png" alt="" class="img-responsive">									
                                 </a>
-                            </div>
+								<div class="page-cap-link-border pull-left hidden-xs"></div>
+							<div class="page-cap-phone hidden-xs">
+								<a href="tel:+912239659004" class="tel_icon"><i class="fa fa-phone fa-2x"></i></a>
+								Do you have any questions?<span>+91-22-3965-9004</span>
+							</div>
+                            </div>							
                         </div>
                         <!--    [finish logo]-->
                         
                         <!--    [ Start Menu]-->
-                        <div class="col-sm-9">
+                        <div class="col-sm-7 p0 m0">
                             <nav class="menu">
                                 <div class="navbar">
                                     <div class="navbar-header">
@@ -99,12 +104,12 @@
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="active"><a class="section-scroll" href="#home">Home</a></li>
                                             <li><a class="section-scroll" href="#about">About</a></li>
-                                            <li><a class="section-scroll" href="#services">Services</a></li>
-                                            <li><a class="section-scroll" href="#gallery">portfolio</a></li>
-                                            <li><a class="section-scroll" href="#team">team</a></li>
-                                            <li><a class="section-scroll" href="#pricing">pricing</a></li>
+                                            <li><a class="section-scroll" href="#appointment">Request a DEMO</a></li>
+                                            <li><a class="section-scroll" href="#appointment">Health Packages by Industry</a></li>
+
                                             <li><a class="section-scroll" href="#testimonial">testimonial</a></li>
                                             <li><a class="section-scroll" href="#contact">Contact</a></li>
+                                            <li><a class="section-scroll" href="#sign_in">Sign In </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -120,18 +125,18 @@
             
             <!--    [ START PROMO AREA]-->
             <section class="promo-area video-area" id="video">
-                <div id="youtubevideo" class="player" data-property="{videoURL:'nrJtHemSPW4',containment:'#video',autoPlay:true, mute:true, startAt:0, showControls:false, loop:true, opacity:1}"></div>
+                <div id="youtubevideo" class="player" data-property="{videoURL:'eJ-72bQPwL4',containment:'#video',autoPlay:true, mute:true, startAt:0, showControls:false, loop:true, opacity:1}"></div>
                 <!--    [ promo item]-->
                 <div class="video">
                     <div class="slide-displayTable">
                         <div class="slide-diplayTableCell">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-8 col-md-offset-2 col-sm-12">
+                                    <div class="col-md-8 col-md-offset-2 col-sm-12" style="z-index:1;">
                                         <div class="slide-content text-center">
-                                            <h2 class="animated bounceInDown">welcome to healthcare</h2>
-                                            <h1 class="animated lightSpeedIn" data-wow-delay=".2s">health &amp; medical service</h1>
-                                            <p class="animated bounceInLeft" data-wow-delay=".3s">Health services are the most visible functions of any health system, both to users and the general public.</p>
+                                            <h2 class="animated bounceInDown">Employee Healthcare Simplified</h2>
+                                            <h1 class="animated lightSpeedIn" data-wow-delay=".2s">Welcome to EasyBuyHealth</h1>
+                                            <p class="animated bounceInLeft" data-wow-delay=".3s">Preventive Healthcare and More for your Organization. Custom Built, Easy to Implement & Monitor.</p>
                                             <a href="#services" class="btn slide-btn white-btn animated fadeInUp">our services</a>
                                             <a href="#contact" class="btn slide-btn white-btn animated fadeInUp" data-wow-delay=".2s">contact us</a>
                                         </div>
@@ -146,14 +151,52 @@
             <!--    [FINISH PROMO AREA]-->
             
             <!--    [ START ABOUT US AREA]-->
+			<style>
+			.home_div p{
+			margin-bottom:0px;
+			margin-top:10px;
+			}
+			.h2_bb{
+			margin-bottom:0px;
+			margin-top:0px;
+			}
+			.row-margin-top2{
+			margin-top:20px;
+			}
+			@media (min-width:768px){
+				.list_div .col-md-offset-1{
+					margin-left:4.33333%;
+				}
+			}
+			@media (max-width:768px){
+				.list_div .col-md-offset-1{
+					margin-left:2.33333%;
+				}
+			}
+			.best_list .single-best-item{
+				margin-top:0;
+			}
+			</style>
             <section class="section about-us-area section-padding-100" id="about">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h2>welcome to <span>healthcare</span></h2>
-                            <p>The development and implementation of our healthcare standards is led by the industry experts who use them.Our healthcare user groups are open to pharmaceutical and medical devices manufacturers, wholesalers and distributors, group purchasing organisations, hospitals, pharmacies, logistics providers, governmental and regulatory bodies, and trade associations..</p>
-                            <p>Our mission is to increase patient safety, supply chain security and efficiency, traceability and accurate data synchronisation in healthcare.</p>
-                            <a href="about.html" class="btn  about-btn">read more</a>
+                        <div class="col-md-6 home_div">
+                            <h2 class="h2_bb">Who are we.</h2>
+                            <p>For far too long, Healthcare has been an ambiguous, intimidating transaction for consumers like you and us. It has been even more complex or worse still, irrelevant, in the context of Employee Healthcare.
+							Most organizations rely on Group Health Insurance or “Feel-Good” Health Checkup activities that provide very little incentive to the Employee and very little tangible employee health data to the organization’s HR Person or decision maker
+							.</p>
+                            <p>We at EasyBuyHealth believe that Healthcare should be Simple, Affordable & easy to Implement. It should also provide you – the HR or Admin person within your Organization-wide ‘Health Index’ on an Online Dashboard.</p>
+							
+							<p>Real, Employee-Health Index data that help you plan your Group Health Insurance better and focus on building productivity within your organization
+							<br/>Your Employees will feel like you REALLY CARE and get relevant Health Data about themselves that can help them plan theirs and their family’s lives, better.
+							</p>
+							<p>
+								So talk to us. We are building a NEW kind of Healthcare Ecosystem, using Technology & the participation of Service Providers & Consumers, to ensure that Healthcare is TRANSPARENT, SIMPLIFIED & AFFORDABLE.
+							</p>
+							<p>
+								EasyBuyHealth is now live across select companies in Asia, providing unique and relevant Healthcare Service Products, through its Integrated Employee Healthcare Packages.
+							</p>
+                            
                         </div>
                         <div class="col-md-6">
                             <div class="video-img">
@@ -166,106 +209,23 @@
             <!--    [FINISH ABOUT US AREA]-->
             
             <!--    [ START SERVICE AREA]-->
-            <section class="service-area section-padding-100 text-center" id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="section-heading">
-                                <h3>what services we provide</h3>
-                                <p>Simply dummy text of there has the randomised words.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, pariatur!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-margin-top">
-                        <!--    [ start single service item 1]-->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <i class="ion-ios-medkit"></i>
-                                <h4>Pulmonary</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae obcaecati itaque illo fuga veniam consequatur. </p>
-                            </div>
-                        </div>
-                        <!--    [finish single service item 1]-->
-                        
-                        <!--    [ start single service item 2]-->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <i class="ion-social-html5"></i>
-                                <h4>Dental</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae obcaecati itaque illo fuga veniam consequatur. </p>
-                            </div>
-                        </div>
-                        <!--    [finish single service item 2]-->
-                        
-                        <!--    [ start single service item 3]-->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <i class="fa fa-heartbeat"></i>
-                                <h4>X-ray</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae obcaecati itaque illo fuga veniam consequatur. </p>
-                            </div>
-                        </div>
-                        <!--    [finish single service item 3]-->
-                        
-                        <!--    [ start single service item 4]-->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <i class="ion-ios-pulse-strong"></i>
-                                <h4>Cardiology</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae obcaecati itaque illo fuga veniam consequatur. </p>
-                            </div>
-                        </div>
-                        <!--    [finish single service item 4]-->
-                        
-                        <!--    [ start single service item 5]-->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <i class="ion-ios-medical"></i>
-                                <h4>Neurology</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae obcaecati itaque illo fuga veniam consequatur. </p>
-                            </div>
-                        </div>
-                        <!--    [finish single service item 5]-->
-                        
-                        <!--    [ start single service item 6]-->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <i class="fa fa-ambulance"></i>
-                                <h4>Pulmonary</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae obcaecati itaque illo fuga veniam consequatur. </p>
-                            </div>
-                        </div>
-                        <!--    [finish single service item 6]-->
-                    </div>
-                </div>
-            </section>
+            
             <!--    [FINISH SERVICE AREA]-->
             
-            <!--    [ START CALL TO ACTION US AREA]-->
-            <section class="cta-area section-padding-100" id="cta"  data-stellar-background-ratio="0.6">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <h2>are you ready to purchase our template</h2>
-                            <a href="" class="btn btn-large cta-btn">purchase now <i class="fa fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--    [FINISH CALL TO ACTION US AREA]-->
-            
+
+				
             <!--    [ START WHY WE ARE THE BEST AREA]-->
-            <section class="why-we-are-best-area section-padding-100">
+            <section class="service-area why-we-are-best-area section-padding-100" id="why">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="section-heading">
-                                <h3>why we are the best</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! .</p>
+                                <h3>Why us.</h3>
+                                <p>Find out why MNCs, SMEs, Governments and NGOs love to use EasyBuyHealth Services.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="row row-margin-top">
+					 <div class="row row-margin-top best_list">
                         <div class="col-md-4">
                             <div class="why-we-are-best-content text-right">
                                 <div class="row">
@@ -273,8 +233,8 @@
                                     <div class="col-sm-12">
                                         <div class="single-best-item right-content">
                                             <i class="fa fa-user-md"></i>
-                                            <h4>Well Experienced Doctors</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis.</p>
+                                            <h4>Largest Healthcare Aggregator </h4>
+                                            <p>Over 439+ (9700+ Centres) Health Service Providers (Hospitals, Clinics & Diagnostic Centres).</p>
                                         </div>
                                     </div>
                                     <!--    [finish single best item]-->
@@ -282,8 +242,8 @@
                                     <div class="col-sm-12">
                                         <div class="single-best-item right-content">
                                             <i class="fa fa-heartbeat"></i>
-                                            <h4>special care for patients</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quod.</p>
+                                            <h4>Easy-to-use Online Platform / Entirely Digital / Go Paper Less</h4>
+                                            <p>View Employee Health Risk Assessment on a simple Dashboard (For Individual & HR)</p>
                                         </div>
                                     </div>
                                     <!--    [finish single best item]-->
@@ -291,8 +251,8 @@
                                     <div class="col-sm-12">
                                         <div class="single-best-item right-content">
                                             <i class="fa fa-hospital-o"></i>
-                                            <h4>Free Counseling</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quod.</p>
+                                            <h4>Control Your Info</h4>
+                                            <p>Have complete control over Employee Health Records through EasyBuyHealth, including scans & test reports.</p>
                                         </div>
                                     </div>
                                     <!--    [finish single best item]-->
@@ -311,8 +271,8 @@
                                     <div class="col-sm-12">
                                         <div class="single-best-item">
                                             <i class="ion-ios-telephone"></i>
-                                            <h4>Online Bill Payment</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quod.</p>
+                                            <h4>Actionable Insights</h4>
+                                            <p>Relevant information and suggestions to change the foods and diets in your organization to really make a difference.</p>
                                         </div>
                                     </div>
                                     <!--    [finish single best item]-->
@@ -320,8 +280,8 @@
                                     <div class="col-sm-12">
                                         <div class="single-best-item">
                                             <i class="fa fa-ambulance"></i>
-                                            <h4>ambulance service</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quod.</p>
+                                            <h4>Data Security</h4>
+                                            <p>Safe & Secure way to receive Healthcare Data through deep integration with Diagnostic Laboratories.</p>
                                         </div>
                                     </div>
                                     <!--    [finish single best item]-->
@@ -329,14 +289,61 @@
                                     <div class="col-sm-12">
                                         <div class="single-best-item">
                                             <i class="fa fa-h-square"></i>
-                                            <h4>Advanced Technology</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quod.</p>
+                                            <h4>Best Prices Guaranteed</h4>
+                                            <p>Honest Prices for Diagnostics, Pharmacies and Out-Patient Services.</p>
+                                        </div>
+                                    </div>
+                                    <!--    [finish single best item]-->
+									  <!--    [ start single best item]-->
+                                    <div class="col-sm-12">
+                                        <div class="single-best-item">
+                                            <i class="fa fa-h-square"></i>
+                                            <h4>On Call Services:</h4>
+                                          Doctor On-call, Counseling On-call and Ambulance On-call.
                                         </div>
                                     </div>
                                     <!--    [finish single best item]-->
                                 </div>
                             </div>
                         </div>
+                    </div>
+              
+                    <div class="row row-margin-top">
+					
+                     <!--<div class="col-md-6">
+                        <div class="col-md-12 list_div">
+							<!-- <ol>
+							  <li>Largest Healthcare Aggregator
+									<ol type="a" ><li><span>Over 439+ (9700+ Centres) Health Service Providers (Hospitals, Clinics & Diagnostic Centres)</span></li></ol>
+								</li>
+							  <li>Easy-to-use Online Platform / Entirely Digital / Go Paper Less</li>
+							  <li>Control Your Info</li>
+							  <li>Actionable Insights</li>
+							  <li>Data Security</li>
+							  <li>Best Prices Guaranteed</li>
+							  <li>On Call Services:</li>
+							</ol> -->
+<!-- <div class="row row-margin-top"><div class="col-md-12">1.	Largest Healthcare Aggregator </div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><ol  style="list-style: unset;"><li>Over 439+ (9700+ Centres) Health Service Providers (Hospitals, Clinics & Diagnostic Centres).</li></ol></div></div>
+<div class="row row-margin-top2"><div class="col-md-12">2. Easy-to-use Online Platform / Entirely Digital / Go Paper Less </div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><ol  style="list-style: unset;"><li>	View Employee Health Risk Assessment on a simple Dashboard (For Individual & HR)</li></ol></div></div>
+<div class="row row-margin-top2"><div class="col-md-12">3.	Control Your Info</div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><ol  style="list-style: unset;"><li>	Have complete control over Employee Health Records through EasyBuyHealth, including scans & test reports.</li></ol></div></div>
+<div class="row row-margin-top2"><div class="col-md-12">4.	Actionable Insights </div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><ol  style="list-style: unset;"><li>	Relevant information and suggestions to change the foods and diets in your organization to really make a difference.</li></ol></div></div>
+<div class="row row-margin-top2"><div class="col-md-12">5.	Data Security </div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><ol  style="list-style: unset;"><li>	Safe & Secure way to receive Healthcare Data through deep integration with Diagnostic Laboratories.</li></ol></div></div>
+<div class="row row-margin-top2"><div class="col-md-12">6.	Best Prices Guaranteed  </div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><ol  style="list-style: unset;"><li>	Honest Prices for Diagnostics, Pharmacies and Out-Patient Services.</li></ol></div></div>
+<div class="row row-margin-top2"><div class="col-md-12">7.	On Call Services: </div></div>
+<div class="row"><div class="col-md-11 col-md-offset-1"><li>Doctor On-call.</li>
+<li>Counseling On-call.</li>
+<li>Ambulance On-call.</li></ol></div></div>
+
+						</div> 
+						</div>-->
+                        
+                  
                     </div>
                 </div>
             </section>
@@ -345,25 +352,27 @@
             <!--    [ START APPOINTMENT AREA]-->
             <section class="appointment-area section-padding-100" id="appointment">
                 <div class="container">
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="col-sm-12 text-center">
                             <div class="section-heading">
-                                <h3>our Department</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam veniam vitae, minima nesciunt sed ipsa quia quod laudantium vero sint.</p>
+                                <h3>Our Clients</h3>
+                                <p>Find out the select Industries we are offering our Services to. 
+
+</p>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="row row-margin-top">
                         <div class="col-md-7">
                             <div class="hospital-department">
-                                <h3>hospital department</h3>
+                                <h3>Industry Verticals.</h3>
                                 <div class="row-margin-top"></div>
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                     <!--[ Start Accrodion Item 1]-->
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
                                             <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fa fa-plus"></i> advanced tecnology</a>
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fa fa-plus"></i> FoodHandlers</a>
                                             </h4>
                                         </div>
                                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -379,7 +388,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingTwo">
                                             <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-plus"></i> pulmonary department</a>
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-plus"></i> Insurance</a>
                                             </h4>
                                         </div>
                                         <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
@@ -395,7 +404,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingThree">
                                             <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-plus"></i> x-ray department</a>
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-plus"></i> Manufacturing</a>
                                             </h4>
                                         </div>
                                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -410,7 +419,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingFour">
                                             <h4 class="panel-title">
-                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-plus"></i>cardiology department</a>
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-plus"></i>Transportation</a>
                                             </h4>
                                         </div>
                                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
@@ -420,170 +429,67 @@
                                         </div>
                                     </div>
                                     <!--[Finish Accrodion Item 4]-->
+									<!--[ Start Accrodion Item 5]-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="fa fa-plus"></i> Education</a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+											<ol style="list-style: unset;margin-left:25px;"><li>Government & Ashram Schools</li><li>Mid-Level Schools </li><li>Elite Schools</li><ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--[Finish Accrodion Item 5]-->
+                                    
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="appointment-form">
-                                <h3>appointment form</h3>
-                                <div class="row-margin-top"></div>
+						<!----------------------->
+						   <div class="col-md-5">
+					
+						<div class="call_form">
+                                
+                                 <h3>REQUEST DEMO</h3>
+                                <div class="row-margin-top1"></div>
                                 <form action="#" method="post" enctype="multipart/form-data">
                                     <div class="row">
-                                        <div class="form-group col-sm-6">
-                                            <input type="text" name="fname" placeholder="Enter first name" class="form-control" required>
-                                        </div>
-                                        <div class="form-group col-sm-6">
-                                            <input type="text" name="lname" placeholder="Enter last name" class="form-control" required>
-                                        </div>
-                                        <div class="form-group col-sm-6">
-                                            <select name="date" class="form-control">
-                                                <option value="1">Appoinment Date</option>
-                                                <option value="2">Monday</option>
-                                                <option value="3">Tuesday</option>
-                                                <option value="4">Wednesday</option>
-                                                <option value="4">Thursday</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-sm-6">
-                                            <select name="doctor" class="form-control">
-                                                <option value="1">Select Doctor</option>
-                                                <option value="2">Dr. Felipe Keshawn</option>
-                                                <option value="3">Dr. Jonathan Stabile</option>
-                                                <option value="4">Dr. Lick Willmath</option>
-                                                <option value="5">Dr. Ashtyn Hailey</option>
-                                            </select>
+                                        
+										 <div class="form-group col-sm-12">
+                                           <h4> Don't see your Industry here? Request a call back.</h4>
+                                        </div> 
+										<div class="form-group col-sm-12">
+                                            <input type="text" name="organization" placeholder="Name of Organization*" class="form-control" required>
                                         </div>
                                         <div class="form-group col-sm-12">
-                                            <input type="email" name="email" placeholder="Enter email address" class="form-control" required>
+                                            <input type="text" name="Employees_size" placeholder="Number of Employees*" class="form-control" required>
                                         </div>
-                                        <div class="form-group col-sm-12">
-                                            <textarea name="apt_msg" rows="6" class="form-control" placeholder="Enter message" required></textarea>
+										<div class="form-group col-sm-12">
+                                            <input type="text" name="Mobile" placeholder="Mobile*" class="form-control" required>
                                         </div>
-                                        <div class="col-sm-12">
-                                            <button type="submit" class="btn">send appoinment <i class="fa fa-send"></i></button>
+										<div class="form-group col-sm-12">
+                                            <input type="text" name="Email" placeholder="Email" class="form-control" required>
+                                        </div>
+                                        <div class="col-sm-12	">
+                                            <button type="button" class="btn">Contact Me <i class="fa fa-send"></i></button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
+                       
+					</div>
+                
+						<!----------------------->
+						
                         </div>
-                    </div>
                 </div>
             </section>
             <!--    [FINISH APPOINTMENT AREA]-->
             
-            <!--    [ START GALLERY AREA]-->
-            <section class="gallery-area section-padding-100" id="gallery">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <div class="section-heading">
-                                <h3>Gallery</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! .</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-margin-top">
-                        <div class="gallery-content">
-                            <!--[ Start Single Gallery Item]-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single-gallery-item">
-                                    <a href="assets/img/portfolio1.jpg" class="popup">
-                                        <div class="effect-border-transition">
-                                            <img src="assets/img/portfolio1.jpg" alt="">
-                                            <div class="gallery-text text-center">
-                                                <h4>computer lab</h4>
-                                                <span>Lorem ipsum dolor sit amet.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--[Finish Single Gallery Item]-->
-                            
-                            <!--[ Start Single Gallery Item]-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single-gallery-item">
-                                    <a href="assets/img/portfolio2.jpg" class="popup">
-                                        <div class="effect-border-transition">
-                                            <img src="assets/img/portfolio2.jpg" alt="">
-                                            <div class="gallery-text text-center">
-                                                <h4>computer lab</h4>
-                                                <span>Lorem ipsum dolor sit amet.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--[Finish Single Gallery Item]-->
-                            
-                            <!--[ Start Single Gallery Item]-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single-gallery-item">
-                                    <a href="assets/img/portfolio3.jpg" class="popup">
-                                        <div class="effect-border-transition">
-                                            <img src="assets/img/portfolio3.jpg" alt="">
-                                            <div class="gallery-text text-center">
-                                                <h4>computer lab</h4>
-                                                <span>Lorem ipsum dolor sit amet.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--[Finish Single Gallery Item]-->
-                            
-                            <!--[ Start Single Gallery Item]-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single-gallery-item">
-                                    <a href="assets/img/portfolio4.jpg" class="popup">
-                                        <div class="effect-border-transition">
-                                            <img src="assets/img/portfolio4.jpg" alt="">
-                                            <div class="gallery-text text-center">
-                                                <h4>computer lab</h4>
-                                                <span>Lorem ipsum dolor sit amet.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--[Finish Single Gallery Item]-->
-                            
-                            <!--[ Start Single Gallery Item]-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single-gallery-item">
-                                    <a href="assets/img/portfolio5.jpg" class="popup">
-                                        <div class="effect-border-transition">
-                                            <img src="assets/img/portfolio5.jpg" alt="">
-                                            <div class="gallery-text text-center">
-                                                <h4>computer lab</h4>
-                                                <span>Lorem ipsum dolor sit amet.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--[Finish Single Gallery Item]-->
-                            
-                            <!--[ Start Single Gallery Item]-->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="single-gallery-item">
-                                    <a href="assets/img/portfolio6.jpg" class="popup">
-                                        <div class="effect-border-transition">
-                                            <img src="assets/img/portfolio6.jpg" alt="">
-                                            <div class="gallery-text text-center">
-                                                <h4>computer lab</h4>
-                                                <span>Lorem ipsum dolor sit amet.</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--[Finish Single Gallery Item]-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--    [FINISH GALLERY AREA]-->
+           
             
             <!--    [ START COUNTER AREA]-->
             <section class="counter-area section-padding-100" id="counter"  data-stellar-background-ratio="0.2">
@@ -591,8 +497,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="happy-patients">
-                                <h2>over 4,000+ Patients are fully trusted with their sweet love.</h2>
-                                <a href="#" class="btn btn-large counter-btn">join with us <i class="fa fa-thumbs-o-up"></i></a>
+                                <h2>Talk to us and see why organisations, big & small, across Asia are choosing us to manage their Employee Health.</h2>
+                                <!-- <a href="#" class="btn btn-large counter-btn">join with us <i class="fa fa-thumbs-o-up"></i></a> -->
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -600,32 +506,32 @@
                                 <!--[ Counter Item 1]-->
                                 <div class="single-counter">
                                     <i class="fa fa-ambulance"></i>
-                                    <h2>1562</h2>
-                                    <p>total ambulance</p>
+                                    <h2>439</h2>
+                                    <p>Health Service Partners</p>
                                 </div>
                                 <!--[Finish Counter Item 1]-->
                                 
                                 <!--[ Counter Item 2]-->
                                 <div class="single-counter">
                                     <i class="fa fa-hospital-o"></i>
-                                    <h2>609</h2>
-                                    <p>hospital rooms</p>
+                                    <h2>9000</h2>
+                                    <p>Plus Locations</p>
                                 </div>
                                 <!--[Finish Counter Item 2]-->
                                 
                                 <!--[ Counter Item 3]-->
                                 <div class="single-counter">
                                     <i class="fa fa-user-md"></i>
-                                    <h2>4156</h2>
-                                    <p>Satisfied Patients</p>
+                                    <h2>1511</h2>
+                                    <p>Tests</p>
                                 </div>
                                 <!--[Finish Counter Item 3]-->
                                 
                                 <!--[ Counter Item 4]-->
                                 <div class="single-counter">
                                     <i class="ion ion-ribbon-a"></i>
-                                    <h2>1500</h2>
-                                    <p>doctors medals</p>
+                                    <h2>3852</h2>
+                                    <p>Diseaes Covered</p>
                                 </div>
                                 <!--[Finish Counter Item 4]-->
                             </div>
@@ -635,212 +541,15 @@
             </section>
             <!--    [FINISH COUNTER AREA]-->
             
-            <!--    [ START DOCTORS TEAM AREA]-->
-            <section class="team-area section-padding-100" id="team">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="section-heading text-center">
-                                <h3>meet out Specialists</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! .</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-margin-top">
-                        <div class="doctors-info owl-carousel text-center">
-                            <!--[ Start Doctor info 1]-->
-                            <div class="single-doctor-info">
-                                <div class="doctor-img">
-                                    <img class="img-responsive" src="assets/img/doctor-team1.jpg" alt="">
-                                </div>
-                                <a href="#">
-                                    <h4>Dr. Jonathan Stabile</h4>
-                                    Specialty: <span>Internal Medicine</span>
-                                </a>
-                                <ul class="social-profile">
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                            <!--[Finish Doctor info 1]-->
-                            
-                            <!--[ Start Doctor info 2]-->
-                            <div class="single-doctor-info">
-                                <div class="doctor-img">
-                                    <img class="img-responsive" src="assets/img/doctor-team2.jpg" alt="">
-                                </div>
-                                <a href="#">
-                                    <h4>Dr. Ashtyn Hailey</h4>
-                                    Specialty: <span>Family Medicine</span>
-                                </a>
-                                <ul class="social-profile">
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                            <!--[Finish Doctor info 2]-->
-                            
-                            <!--[ Start Doctor info 3]-->
-                            <div class="single-doctor-info">
-                                <div class="doctor-img">
-                                    <img class="img-responsive" src="assets/img/doctor-team3.jpg" alt="">
-                                </div>
-                                <a href="#">
-                                    <h4>Dr. Michile Johnson</h4>
-                                    Specialty: <span>General Medicine</span>
-                                </a>
-                                <ul class="social-profile">
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                            <!--[Finish Doctor info 3]-->
-                            
-                            <!--[ Start Doctor info 3]-->
-                            <div class="single-doctor-info">
-                                <div class="doctor-img">
-                                    <img class="img-responsive" src="assets/img/doctor-team4.jpg" alt="">
-                                </div>
-                                <a href="#">
-                                    <h4>Dr. Felipe Keshawn</h4>
-                                    Specialty: <span>Lifestyle</span>
-                                </a>
-                                <ul class="social-profile">
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                            <!--[Finish Doctor info 3]-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--    [FINISH DOCTORS TEAM AREA]-->
-            
-            <!--    [ START PRICING TABLE AREA]-->
-            <section class="pricing-area section-padding-100" id="pricing">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="section-heading text-center">
-                                <h3>our pricing features</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! .</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row row-margin-top">
-                        <!--    [ Start Single Price Item]-->
-                        <div class="col-md-3 col-sm-6 text-center">
-                            <div class="single-pricing-item">
-                                <div class="pricing-head">
-                                    <h2><sup></sup>Free<sub> 1 month</sub></h2>
-                                    <h4>Start Up</h4>
-                                </div>
-                                <ul class="pricing-list">
-                                    <li><i class="fa fa-check"></i> one month traning</li>
-                                    <li><i class="fa fa-check"></i> 24/7 in Touch on the Phone</li>
-                                    <li><i class="fa fa-check"></i> Body Check 2 Times a Year</li>
-                                    <li><i class="fa fa-check"></i> 5 Departments</li>
-                                    <li><i class="fa fa-check"></i> 30 Facilities &amp; Tests</li>
-                                    <li><i class="fa fa-check"></i> Skype Meeting</li>
-                                    <li><i class="fa fa-check"></i> Perosnal Visit</li>
-                                </ul>
-                                <div class="pricing-footer">
-                                    <a href="#" class="btn  pricing-btn">order now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--    [Finish Single Price Item]-->
-                        
-                        <!--    [ Start Single Price Item]-->
-                        <div class="col-md-3 col-sm-6 text-center">
-                            <div class="single-pricing-item">
-                                <div class="pricing-head">
-                                    <h2><sup>$</sup>29<sub>/ month</sub></h2>
-                                    <h4>Standard</h4>
-                                </div>
-                                <ul class="pricing-list">
-                                    <li><i class="fa fa-check"></i> one month traning</li>
-                                    <li><i class="fa fa-check"></i> 24/7 in Touch on the Phone</li>
-                                    <li><i class="fa fa-check"></i> Body Check 2 Times a Year</li>
-                                    <li><i class="fa fa-check"></i> 5 Departments</li>
-                                    <li><i class="fa fa-check"></i> 30 Facilities &amp; Tests</li>
-                                    <li><i class="fa fa-check"></i> Skype Meeting</li>
-                                    <li><i class="fa fa-check"></i> Perosnal Visit</li>
-                                </ul>
-                                <div class="pricing-footer">
-                                    <a href="#" class="btn  pricing-btn">order now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--    [Finish Single Price Item]-->
-                        
-                        <!--    [ Start Single Price Item]-->
-                        <div class="col-md-3 col-sm-6 text-center">
-                            <div class="single-pricing-item active">
-                                <div class="pricing-head">
-                                    <h2><sup>$</sup>99<sub>/ month</sub></h2>
-                                    <h4>professional</h4>
-                                </div>
-                                <ul class="pricing-list">
-                                    <li><i class="fa fa-check"></i> one month traning</li>
-                                    <li><i class="fa fa-check"></i> 24/7 in Touch on the Phone</li>
-                                    <li><i class="fa fa-check"></i> Body Check 2 Times a Year</li>
-                                    <li><i class="fa fa-check"></i> 5 Departments</li>
-                                    <li><i class="fa fa-check"></i> 30 Facilities &amp; Tests</li>
-                                    <li><i class="fa fa-check"></i> Skype Meeting</li>
-                                    <li><i class="fa fa-check"></i> Perosnal Visit</li>
-                                </ul>
-                                <div class="pricing-footer">
-                                    <a href="#" class="btn  pricing-btn">order now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--    [Finish Single Price Item]-->
-                        
-                        <!--    [ Start Single Price Item]-->
-                        <div class="col-md-3 col-sm-6 text-center">
-                            <div class="single-pricing-item">
-                                <div class="pricing-head">
-                                    <h2><sup>$</sup>159<sub>/ month</sub></h2>
-                                    <h4>Advanced</h4>
-                                </div>
-                                <ul class="pricing-list">
-                                    <li><i class="fa fa-check"></i> one month traning</li>
-                                    <li><i class="fa fa-check"></i> 24/7 in Touch on the Phone</li>
-                                    <li><i class="fa fa-check"></i> Body Check 2 Times a Year</li>
-                                    <li><i class="fa fa-check"></i> 5 Departments</li>
-                                    <li><i class="fa fa-check"></i> 30 Facilities &amp; Tests</li>
-                                    <li><i class="fa fa-check"></i> Skype Meeting</li>
-                                    <li><i class="fa fa-check"></i> Perosnal Visit</li>
-                                </ul>
-                                <div class="pricing-footer">
-                                    <a href="#" class="btn  pricing-btn">order now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--    [Finish Single Price Item]-->
-                    </div>
-                </div>
-            </section>
-            <!--    [FINISH PRICING TABLE AREA]-->
-            
+              
             <!--    [ START TESTIMONIAL AREA]-->
             <section class="testimonial-area section-padding-100" id="testimonial">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="section-heading text-center">
-                                <h3>patients testimonial</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! .</p>
+                                <h3>Why they like us.</h3>
+                               <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, dolore mollitia at! .</p> -->
                             </div>
                         </div>
                     </div>
@@ -852,29 +561,10 @@
                                     <div class="testimonial-img width-square">
                                         <img src="assets/img/testimonial1.jpg" alt="">
                                     </div>
-                                    <p>The template is well built, well documented and easy to deploy. The customer support is super friendly and goes the extra mile to offer help!Itaque rem veniam nam atque saepe  <br>cumque aliquam commodi, facere aperiam laborum.</p>
-                                    <h4>rick willmath <small>business</small></h4>
+                                    <p>I got introduced to EBH through my work place here in Kolkata, and my experience has been excellent. I anyway wanted to get my routine health check up done and through EBH, I got a 40% Discount on the normal rates! Plus, I could choose from range of Diagnostic Centers that I was familiar with. It’s like buying an Airline Ticket on MakeMyTrip. Love it! Can’t wait for them to open this up to everyone, so I can recommend to friends who are not part of my Company.” </p>
+                                    <h4>Alok Chaturvedi, <small>Kolkata</small></h4>
                                 </div>
-                                <!--[Finish Single Testimonial]-->
-                                <!--[ Start Single Testimonial]-->
-                                <div class="single-testimonial">
-                                    <div class="testimonial-img width-square">
-                                        <img src="assets/img/testimonial2.jpg" alt="">
-                                    </div>
-                                    <p>Amazing experience with them Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rem veniam nam atque saepe cumque aliquam commodi, facere aperiam laborum.
-                                    <br>lorem ipsum dolor sit amet</p>
-                                    <h4>nick martin <small>designer</small></h4>
-                                </div>
-                                <!--[Finish Single Testimonial]-->
-                                <!--[ Start Single Testimonial]-->
-                                <div class="single-testimonial">
-                                    <div class="testimonial-img width-square">
-                                        <img src="assets/img/testimonial3.jpg" alt="">
-                                    </div>
-                                    <p>Amazing experience with them Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rem veniam nam atque saepe cumque aliquam commodi, facere aperiam laborum.
-                                    <br>lorem ipsum dolor sit amet</p>
-                                    <h4>micle Patrick <small>programmer</small></h4>
-                                </div>
+                               
                                 <!--[Finish Single Testimonial]-->
                             </div>
                         </div>
@@ -884,7 +574,7 @@
             <!--    [FINISH TESTIMONIAL AREA]-->
             
             <!--    [ START MAP AREA]-->
-            <div class="map-area" id="map"></div>
+         
             <!--    [FINISH MAP AREA]-->
             
             <!--    [ START FOOTER AREA]-->
@@ -895,24 +585,27 @@
                             <div class="col-sm-4">
                                 <div class="single-info">
                                     <i class="fa fa-map-o"></i>
-                                    <h5>healthCare address</h5>
-                                    1024 Barkler ave, Hazarinagor Brooklym Belgium City
+                                    <h5>India Corp. Office</h5>
+                                    907, A-Wing, Pranik Chambers,<br/>
+Saki Naka Junction,<br/>
+Andheri East,<br/>
+Mumbai 400072 INDIA<br/>
+
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="single-info">
                                     <i class="ion-ios-telephone"></i>
-                                    <h5>emergency support</h5>
-                                    Mobile: (+1) 800 433 633 <br>
-                                    Toll Free : (+1) 800 123 456
+                                    <h5>Talk to us</h5>
+                                   Contact: +91-22-3965-9004 <br>
+                            
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="single-info">
                                     <i class="ion ion-ios-email-outline"></i>
-                                    <h5>email us</h5>
-                                    ingo@websitename.com<br>
-                                    admin@support.com
+                                    <h5>Email us</h5>
+                                    HealthCheck@easybuyhealth.com
                                 </div>
                             </div>
                         </div>
@@ -920,49 +613,41 @@
                     <div class="row">
                         <div class="footer-widget">
                             <!--[ Start Footer Widget 1]-->
-                            <div class="col-md-3">
+                            <!--<div class="col-md-3">
                                 <div class="single-widget">
                                     <div class="padding-right-20">
                                         <div class="footer-logo">
                                             <a href="index.html">
-                                                <h2><span>health</span> care</h2>
+                                                <h2><span>Our</span>Vision</h2>
                                             </a>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis inventore, sapiente possimus fuga at, commodi in! Nemo ipsam reprehenderit quam.</p>
-                                        <ul class="opening-hour-list">
-                                            <li>monday - friday <span>9am - 5pm</span></li>
-                                            <li>tuesday <span>1am - 5pm</span></li>
-                                            <li>wednesday <span>9am - 5pm</span></li>
-                                        </ul>
+                                        <p>To be the World’s most Trusted, Consumer-Health Centric Company; to build a place where people can come to Find, Understand or Buy Healthcare.</p>
+                                        
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <!--[Finish Footer Widget 1]-->
                             
                             <!--[ Start Footer Widget 2]-->
-                            <div class="col-md-3">
+                            <!--<div class="col-md-3">
                                 <div class="single-widget">
                                     <h3>our services</h3>
                                     <ul class="service-list">
-										<li><a href="#">pulmnoary</a></li>
-										<li><a href="#">dental</a></li>
-										<li><a href="#">x-ray</a></li>
-										<li><a href="#">cardiology</a></li>
-										<li><a href="#">neurology</a></li>
-										<li><a href="#">Traumatology</a></li>
-										<li><a href="#">Pregnancy</a></li>
-										<li><a href="#">dental</a></li>
-										<li><a href="#">x-ray</a></li>
-										<li><a href="#">cardiology</a></li>
-										<li><a href="#">neurologics</a></li>
+										<li><a href="#">Foodhandllers</a></li>
+										<li><a href="#">Insurance</a></li>
+										<li><a href="#">Manufacturing</a></li>
+										<li><a href="#">Education</a></li>
+										<li><a href="#">Transportation</a></li>
+
 									</ul>
                                 </div>
-                            </div>
+                            </div>-->
                             <!--[Finish Footer Widget 2]-->
                             
                             <!--[ Start Footer Widget 3]-->
+							<!--
                             <div class="col-md-6">
-                                <div class="single-widget">
+                                 <div class="single-widget">
                                     <h3>leave a message</h3>
                                     <div class="contact-form" id="contact">
                                         <form action="assets/php/mail.php" method="post" enctype="multipart/form-data">
@@ -998,7 +683,7 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--[Finish Footer Widget 3]-->
                         </div>
                     </div>
@@ -1006,16 +691,14 @@
                         <div class="copyright-area">
                             <div class="col-sm-6 wow fadeInLeft" data-wow-delay=".1s">
                                 <div class="copyright-text">
-                                    &copy;copyright all right reserved | your site name
+                                    &copy;copyright all right reserved | www.easybuyhealth.com
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <nav class="footer-menu text-right wow fadeInRight" data-wow-delay=".1s">
                                     <ul>
                                         <li><a href="#">home</a></li>
-                                        <li><a href="#">sitemap</a></li>
-                                        <li><a href="#">faq</a></li>
-                                        <li><a href="#">privacy &amp; policy</a></li>
+                                        <li><a href="#">privacy policy</a></li>
                                     </ul>
                                 </nav>
                             </div>

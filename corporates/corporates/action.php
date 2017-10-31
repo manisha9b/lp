@@ -27,12 +27,39 @@ switch($action) {
 	case 'request_call':
 	
 						 $organization 	= isset($_POST['organization'])?$_POST['organization']:''; 	
+						 $website 	= isset($_POST['website'])?$_POST['website']:''; 	
 						 $emp_size 		= isset($_POST['emp_size'])?$_POST['emp_size']:'';		
 						 $email 		= isset($_POST['email'])?$_POST['email']:''; 		
-						 $mobile 		= isset($_POST['mobile'])?$_POST['mobile']:''; 		 
-						  $sql = "INSERT INTO `tbl_request_call` (`organization`, `emp_size`, `mobile`, `email`, `cdate`) VALUES ('$organization','$emp_size','$mobile','$email', NOW())";
+						 $mobile 		= isset($_POST['mobile'])?$_POST['mobile']:''; 		
+$first_name = "";						 
+						  $sql = "INSERT INTO `tbl_request_call` (`organization`, `emp_size`, `mobile`, `email`,website, `cdate`) VALUES ('$organization','$emp_size','$mobile','$email','$website', NOW())";
 							$database->query($sql);
-							echo "Thank You! for your request.";
+							echo  "Thank You! for your request.";
+							$email_header="<html><head></head><body>";
+
+							$content="Hi ".$first_name.",
+							<p>
+							
+Thank you for your interest in our Employee Healthcare Management packages.
+Our Sales Team will contact you within One Business Day to discuss your specific needs
+</p>
+Thanks,<br/>
+Pankaj	<br/>
+<a href=\"www.EasyBuyHealth.com\">www.EasyBuyHealth.com</a>";
+								
+							$email_footer="</body></html>";		
+
+							 $email_content	=	$email_header.$content;
+							$database->sendSmtpEmail('', $email_content, 'EasyBuyHealth: We’ve Got Your Request!', $email, $first_name);
+							$email_content ="<table border=\"0\">
+<tr><td>Organization</td><td>:$organization</td></tr>
+<tr><td>website</td><td>:$website</td></tr>
+<tr><td>Employee Size</td><td>:$emp_size</td></tr>
+<tr><td>website</td><td>:$email</td></tr>
+<tr><td>Designation</td><td>:$mobile</td></tr>
+</table>";
+							// $email_content	=	$email_header.$content;
+							$database->sendSmtpEmail('', $email_content, 'New Enquiry', 'manisha.yadav@easybuyhealth.com', $first_name);
 			break;
 	case 'contact':
 						include_once 'assets/php/mail.php';

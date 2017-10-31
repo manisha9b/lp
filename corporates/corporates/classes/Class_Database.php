@@ -319,4 +319,93 @@ class Database {
         rmdir($dirname);
         return true;
     }
+	
+    function sendSmtpEmail($mode, $message, $subject, $to_email, $to_name, $acc_id = NULL, $attach = NULL,$from_name=NUll,$from_email=NULL) {
+		
+        //$acc_settings = $this->getSettingInfo($acc_id);
+
+        /**
+         * This example shows making an SMTP connection with authentication.
+         */
+        //SMTP needs accurate times, and the PHP time zone MUST be set
+        //This should be done in your php.ini, but this is how to do it if you don't have access to that
+        //date_default_timezone_set('Etc/UTC');
+
+        date_default_timezone_set('Asia/Calcutta');
+	//	echo DOC_ROOT . 'phpmailer/PHPMailerAutoload.php';
+		//echo $message;die;
+        require_once DOC_ROOT . 'phpmailer/PHPMailerAutoload.php';
+        //Create a new PHPMailer instance
+        $mail = new PHPMailer;
+        //$mail =	clone $mail;
+        //Tell PHPMailer to use SMTP
+        //$mail->isSMTP();
+        //Whether to use SMTP authentication
+        $mail->SMTPAuth = true;
+        // secure transfer enabled REQUIRED for GMail
+        $mail->SMTPSecure = 'ssl';
+
+		$mail->Host = "smtp.gmail.com";
+		$mail->Port = 465;
+		$mail->Username = "admin@easybuyhealth.com";
+		$mail->Password = "ebh!@#098";
+
+        //Set who the message is to be sent from
+		if($from_name!='')
+		{
+			$mail->setFrom('admin@easybuyhealth.com', $from_name);
+		}
+		else
+		{
+			$mail->setFrom('admin@easybuyhealth.com', 'Easybuyhealth Admin');
+		}
+
+
+        //Set an alternative reply-to address
+        $mail->addReplyTo('admin@easybuyhealth.com', 'Easybuyhealth Admin');
+
+        //Enable SMTP debugging
+        // 0 = off (for production use)
+        // 1 = client messages
+        // 2 = client and server messages
+        $mail->SMTPDebug = 0;
+
+        //Ask for HTML-friendly debug output
+        $mail->Debugoutput = 'html';
+
+
+        //echo $mail->Username." - ".$to_email." - ".$to_name;
+        $mail->addAddress($to_email, $to_name);
+        $mail->addBCC('sujeet.karn@easybuyhealth.com');
+        //Set the subject lines
+        $mail->Subject = $subject;
+
+        //Read an HTML message body from an external file, convert referenced images to embedded,
+        //convert HTML into a basic plain-text alternative body
+        //$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
+
+        $mail->msgHTML($message);
+        //Replace the plain text body with one created manually
+        $mail->AltBody = 'This is a plain-text message body';
+        //Attach an image file
+		echo $message;
+        if (!empty($attach))
+            $mail->addAttachment($attach);
+        //send the message, check for errors
+
+		if (!$mail->send())
+		{
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        }
+		else {
+            //echo "IN send function.";
+            //sleep(10);
+            //echo "Message sent!";
+        }
+
+        $mail->ClearAddresses();
+
+        //$mail->SmtpClose();
+        //exit;
+    }
 	}

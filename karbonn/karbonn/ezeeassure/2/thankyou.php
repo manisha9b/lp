@@ -3,6 +3,9 @@ session_start();
 //print_r($_SESSION);
 include("includes/connectdb.php");
 	include_once("includes/define.php");
+	if(!isset($_SESSION['txnid'])){
+		header("Location: ".WEBSITE_URL);die;
+	}
 if (isset($_GET["sourcetype"]))
 {
 	$_SESSION["sourcetype"]=$_GET["sourcetype"];

@@ -49,7 +49,7 @@
 			echo " Thank You! Your Message Has Been Sent Successfully";
 		}else{
 			
-			echo " Oops! Something went wrong.we couldn't sent your message";
+			echo " Oops! Somethis went wrong.we couldn't sent your message";
 		}
 	}
 	

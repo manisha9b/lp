@@ -225,8 +225,8 @@ File           : Active.js
         },
         googleMap: function () {
             function map_init() {
-                var lat = 23.7788955, // Put your latitude Number here and
-                    log = 90.3959633, // Put your longitude Number here
+                var lat = 19.105674, // Put your latitude Number here and
+                    log = 72.887431, // Put your longitude Number here
                     mapOptions = {
                         zoom: 14,
                         center: new google.maps.LatLng(lat, log), // New York

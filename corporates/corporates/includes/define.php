@@ -7,7 +7,6 @@ define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/corporates/');//local
 define("WEBSITE_URL","https://www.easybuyhealth.com/corporates/");
 
 setcookie("HTTP_SERVER",HTTP_SERVER);
-
 define('DB_HOST', 'localhost');
 define('DB_USER', 'easybuyh_liveusr');
 define('DB_PASSWORD', '42ve4^2QLtrQ');

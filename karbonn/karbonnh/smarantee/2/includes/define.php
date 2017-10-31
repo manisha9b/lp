@@ -12,7 +12,7 @@ define("PAYU_URL","https://secure.payu.in");*/
 define("BRAND_PRICE",899);
 define("BRAND_NAME",'smaranteeh2');
 define("PRODUCT_NAME", 'SMARANTEE 899');
-function getModelLess($range = 5000){
+function getModelLess($range = 5001){
 	$result = array();
 	$sql = "select model_id,model from tbl_model where price_range<=".$range;
 	$html = '';
@@ -27,7 +27,7 @@ function getModelLess($range = 5000){
 	$result['html'] = $html;
 	return $result;
 }
-function getModelMore($range = 5000){
+function getModelMore($range = 5001){
 	$result = array();
 	$sql = "select model_id,model from tbl_model where price_range>=".$range;
 	$html = '';
