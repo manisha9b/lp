@@ -53,6 +53,22 @@ else
 		.none{
 			display:none;
 		}
+		@media screen and (max-width: 767px) {
+			.b_banner{
+				display:none;
+			}
+			.s_banner{
+				display:block;
+			}
+		}	
+		@media screen and (min-width: 768px) {
+			.b_banner{
+				display:block;
+			}
+			.s_banner{
+				display:none;
+			}
+		}
 		</style>
 	</head>
     
@@ -70,10 +86,12 @@ else
 	    <section>
 	    	<div class="wrapper container" id="section_bg" >
 		    	<div class="row" style="background-color: #666666;">
-		    		<div class="col-md-8" style="padding-right: 0%; padding-left:0%	;display:block;">
+		    		<div class="col-md-8 b_banner" style="padding-right: 0%; padding-left:0%	;">
 					<img src="images/ezee-assure1.jpg" class="img-responsive"> 
 					</div>
-					
+					<div class="col-md-8 s_banner" style="padding-right: 10px; padding-left:10px;">
+					<img src="images/banner_s.jpg" class="img-responsive"> 
+					</div>
 		    		<div id="dpfrm" class="col-sm-4" style="float:right;border-top: 1.32em solid #666666;padding-left: 0px;">
 		    			<div class="formbg" style="padding-top:0px;padding-bottom:0px;">
 		    				<h3 class="text-center fw-b" style="margin-top:8px;">Buy Now</h3>
@@ -475,7 +493,7 @@ else
 		<script type="text/javascript" src="js/custom.js"></script>
 		<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 		
-		<script type="text/javascript" src="js/requirement.js?v=0.00001"></script>
+		<script type="text/javascript" src="js/requirement.js?v=0.00002"></script>
 		<script type="text/javascript">
 		function startTimer(duration, display) {
 			var timer = duration, minutes, seconds;
